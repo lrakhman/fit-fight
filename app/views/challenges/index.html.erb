@@ -1,1 +1,8 @@
-<p>Logged in!</p>
+<h1>Challenges</h1>
+<%= link_to 'New Challenge', new_user_challenge_path %>
+<% @user.challenges.each do |challenge| %>
+  <p><%=challenge.user.fullname%>User</p>
+  <p><%=challenge.user.points.count%>User Points</p>
+  <p><%=challenge.challenger.fullname%>Challenger</p>
+  <p><%=challenge.challenger.points.count%>Challenger Points</p>
+<% end %>
