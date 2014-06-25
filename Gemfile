@@ -36,5 +36,9 @@ gem 'fitgem'
 # gem 'capistrano-rails', group: :development
 
 # Use debugger
-# gem 'debugger', group: [:development, :test]
-
+# gem 'debugger', group: [:development, :testpec-rails', '~> 3.0.0'
+group :development, :test do
+  gem 'rspec-rails', '~> 3.0.0'
+  gem 'capybara'
+end
+ 
