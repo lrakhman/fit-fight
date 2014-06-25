@@ -9,14 +9,16 @@ feature 'Enter Workout' do
       fill_in 'password', with: '123456'
     end
     click_on 'Login'
-    visit "/users/#{user.id}/workouts/new"
     within('form') do
       fill_in 'date', with: '06/25/2015'
+    end
+    click_on 'Enter a Workout'
+    within('form') do
       fill_in 'steps', with: '2000'
       fill_in 'distance', with: '3.5'
       fill_in 'active_time', with: '30'
     end
-    expect{ click_on 'Enter Workout' }.to change{ user.daily_workouts.count }.by(1)
+    expect{ click_on 'Workout!' }.to change{ user.daily_workouts.count }.by(1)
     expect(current_url).to eq user_url(user)
   end
 end

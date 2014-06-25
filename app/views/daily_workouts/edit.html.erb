@@ -1,0 +1,5 @@
+<h1><%= @daily_workout.user.fullname %>'s Workout for <%= @daily_workout.date %>!
+<%= form_for [@user, @daily_workout] do |f| %>
+  <%= f.label 'Number of Steps Taken: ' %>
+  <%= f.number_field :step, @daily_workout.step, step: 1 %>
+<% end %>

@@ -7,6 +7,4 @@ Rails.application.routes.draw do
   end
 
   resources :sessions, only: [:new, :create, :destroy]
-
-  get '/users/:id/workouts/new', to: 'users#workout'
 end
