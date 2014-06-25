@@ -21,7 +21,7 @@ before_filter :skip_password_attribute, only: :update
   end
 
   def edit
-		@post = User.find(params[:id])
+		@user = User.find(params[:id])
 	end
 
   def update
