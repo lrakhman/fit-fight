@@ -3,6 +3,6 @@
 <% @user.challenges.each do |challenge| %>
   <p><%=challenge.user.fullname%>User</p>
   <p><%=challenge.user_points%>User Points</p>
-  <p><%=challenge.challenger.fullname%>Challenger</p>
+  <p><%=challenge.challenger_id%>Challenger</p>
   <p><%=challenge.challenger_points%>Challenger Points</p>
 <% end %>
