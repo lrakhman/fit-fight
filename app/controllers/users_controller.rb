@@ -1,5 +1,5 @@
 class UsersController < ApplicationController
-
+before_filter :skip_password_attribute, only: :update
 	  include SessionsHelper
 
   def new
@@ -20,10 +20,31 @@ class UsersController < ApplicationController
     @user = current_user #session[:user_id]
   end
 
+  def edit
+		@user = User.find(params[:id])
+	end
+
+  def update
+		@user = User.find(params[:id])
+  	@user.update(user_params)
+
+  	flash.notice = "Account Updated!"
+
+  	redirect_to user_path(@user)
+	end
+
+
+
   private
 
   def user_params
-    params.require(:user).permit(:email, :password)
+    params.require(:user).permit(:fullname, :email, :password)
+  end
+
+  def skip_password_attribute
+    if params[:password].blank?
+      params.except!(:password)
+    end
   end
 
 end
