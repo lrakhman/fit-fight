@@ -40,5 +40,5 @@ gem 'fitgem'
 group :development, :test do
   gem 'rspec-rails', '~> 3.0.0'
   gem 'capybara'
+  gem 'database_cleaner', '~> 1.2.0'
 end
- 
