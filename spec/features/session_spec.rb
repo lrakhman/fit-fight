@@ -36,3 +36,20 @@ feature 'Login In' do
   end
 
 end
+
+feature 'Login Out' do
+
+  let! (:user) { User.create(email: 'pdebelak@example.com', password: '123456', fullname: 'Peter Debelak') }
+
+  scenario 'signs me out' do
+    visit '/'
+    within('form') do
+      fill_in 'email', with: 'pdebelak@example.com'
+      fill_in 'password', with: '123456'
+    end
+    click_on 'Login'
+    click_link 'Logout'
+    expect(current_path).to eq('/')
+    expect(page).not_to have_text("Logout")
+  end
+end
