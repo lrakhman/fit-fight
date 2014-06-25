@@ -38,3 +38,14 @@ feature 'New Challenge' do
     expect(page).to have_text 'There is no challenger with that email.'
   end
 end
+
+feature 'View Challenge' do
+
+  let! (:user) { User.create(email: 'pdebelak@example.com', password: '123456', fullname: 'Peter Debelak') }
+  let! (:user2) { User.create(email: 'syim@example.com', password: '123456', fullname: 'Stephen Yim') }
+  let! (:challenge) {Challenge.create()}
+
+
+  visit "/users/#{user.id}/challenges"
+
+end

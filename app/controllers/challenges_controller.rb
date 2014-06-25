@@ -8,6 +8,11 @@ class ChallengesController < ApplicationController
     @user = User.find(session[:user_id])
   end
 
+  def show
+    @user = User.find(session[:user_id])
+    @challenge = Challenge.find(params[:id])
+  end
+
   def create
     @user = User.find(session[:user_id])
     challenger = User.find_by_email(params[:challenger_email])
