@@ -9,4 +9,16 @@ class DailyWorkoutsController < ApplicationController
     @daily_workout = DailyWorkout.find(params[:id])
     @user = @daily_workout.user
   end
+
+  def update
+    daily_workout = DailyWorkout.find(params[:id])
+    daily_workout.update(daily_workout_params)
+    redirect_to user_path(daily_workout.user)
+  end
+
+  private
+
+  def daily_workout_params
+    params.require(:daily_workout).permit(:step, :distance, :active_time)
+  end
 end
