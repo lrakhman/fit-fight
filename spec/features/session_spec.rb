@@ -3,7 +3,7 @@ require 'spec_helper'
 feature 'Login In' do
 
   before do
-    User.create(email: 'pdebelak@example.com', password: '123456', full_name: 'Peter Debelak')
+    User.create(email: 'pdebelak@example.com', password: '123456', fullname: 'Peter Debelak')
   end
 
   context 'with valid credentials' do
@@ -25,7 +25,7 @@ feature 'Login In' do
   context "with invalid credentials" do
     scenario "does not sign me in" do
        # Given I'm on the login page
-      visit '/sessions/new'
+      visit '/'
       # And I have filled in the form with valid credentials
       within('#authenticate') do
         fill_in 'Email', with: 'pdebelak@example.co.uk'

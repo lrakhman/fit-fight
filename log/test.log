@@ -45,3 +45,28 @@
   [1m[36m (0.1ms)[0m  [1mcommit transaction[0m
   [1m[35m (0.1ms)[0m  begin transaction
   [1m[36m (0.1ms)[0m  [1mrollback transaction[0m
+  [1m[36m (670.2ms)[0m  [1mDELETE FROM "challenges";[0m
+  [1m[35m (0.2ms)[0m  SELECT name FROM sqlite_master WHERE type='table' AND name='sqlite_sequence';
+  [1m[36m (0.2ms)[0m  [1mDELETE FROM sqlite_sequence where name = 'challenges';[0m
+  [1m[35m (265.1ms)[0m  DELETE FROM "daily_workouts";
+  [1m[36m (0.2ms)[0m  [1mSELECT name FROM sqlite_master WHERE type='table' AND name='sqlite_sequence';[0m
+  [1m[35m (0.2ms)[0m  DELETE FROM sqlite_sequence where name = 'daily_workouts';
+  [1m[36m (297.0ms)[0m  [1mDELETE FROM "users";[0m
+  [1m[35m (0.2ms)[0m  SELECT name FROM sqlite_master WHERE type='table' AND name='sqlite_sequence';
+  [1m[36m (0.2ms)[0m  [1mDELETE FROM sqlite_sequence where name = 'users';[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36m (0.1ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36mUser Exists (0.2ms)[0m  [1mSELECT  1 AS one FROM "users"  WHERE "users"."email" = 'pdebelak@example.com' LIMIT 1[0m
+Binary data inserted for `string` type on column `password_digest`
+  [1m[35mSQL (0.6ms)[0m  INSERT INTO "users" ("created_at", "email", "fullname", "password_digest", "updated_at") VALUES (?, ?, ?, ?, ?)  [["created_at", "2014-06-25 19:04:53.933216"], ["email", "pdebelak@example.com"], ["fullname", "Peter Debelak"], ["password_digest", "$2a$04$crXwQYxg8nSBq5OVuRrmeezexTP3hsU3Nop.aXJYDECiivNgDqwo."], ["updated_at", "2014-06-25 19:04:53.933216"]]
+Started GET "/" for 127.0.0.1 at 2014-06-25 14:04:53 -0500
+  [1m[36m (0.2ms)[0m  [1mrollback transaction[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36m (0.1ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36mUser Exists (0.4ms)[0m  [1mSELECT  1 AS one FROM "users"  WHERE "users"."email" = 'pdebelak@example.com' LIMIT 1[0m
+Binary data inserted for `string` type on column `password_digest`
+  [1m[35mSQL (0.7ms)[0m  INSERT INTO "users" ("created_at", "email", "fullname", "password_digest", "updated_at") VALUES (?, ?, ?, ?, ?)  [["created_at", "2014-06-25 19:04:54.011310"], ["email", "pdebelak@example.com"], ["fullname", "Peter Debelak"], ["password_digest", "$2a$04$4gyUMG81w/a3zWnUTI7q6e9Xboaff58Db3mv80Bv09/IQLLtU1dAO"], ["updated_at", "2014-06-25 19:04:54.011310"]]
+Started GET "/sessions/new" for 127.0.0.1 at 2014-06-25 14:04:54 -0500
+  [1m[36m (0.3ms)[0m  [1mrollback transaction[0m
