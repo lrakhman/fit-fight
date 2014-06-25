@@ -4,9 +4,6 @@ class ChallengesController < ApplicationController
     @challenge = Challenge.where(user_id: session[:user_id])
   end
 
-  def show
-  end
-
   def new
     @user = User.find(session[:user_id])
   end
