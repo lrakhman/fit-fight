@@ -7,5 +7,5 @@ Rails.application.routes.draw do
 
   resources :sessions, only: [:new, :create, :destroy]
 
-  get '/users/:id/workouts/new', to: 'users#hat_making'
+  get '/users/:id/workouts/new', to: 'users#workout'
 end

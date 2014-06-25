@@ -20,6 +20,9 @@ class UsersController < ApplicationController
     @user = current_user #session[:user_id]
   end
 
+  def workout
+  end
+
   private
 
   def user_params
