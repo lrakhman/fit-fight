@@ -1,7 +1,7 @@
 <h1>Challenges</h1>
 <%= link_to 'New Challenge', new_user_challenge_path %>
 
-<%= form_tag new_user_daily_workout_path(@user) do %>
+<%= form_tag new_user_daily_workout_path(@user), method: :get do %>
   <%= date_field_tag 'date' %>
   <%= submit_tag 'Enter a Workout' %>
 <% end %>
