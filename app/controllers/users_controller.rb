@@ -38,7 +38,7 @@ before_filter :skip_password_attribute, only: :update
   private
 
   def user_params
-    params.require(:user).permit(:email, :password)
+    params.require(:user).permit(:fullname, :email, :password)
   end
 
   def skip_password_attribute
