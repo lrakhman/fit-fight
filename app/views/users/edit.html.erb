@@ -1,0 +1,29 @@
+<p>Edit Your Profile Info</p>
+
+<%= form_for @user do |f| %>
+  <ul>
+    <% @user.errors.full_messages.each do |error| %>
+    <li><%= error %></li>
+    <% end %>
+  </ul>
+  <p>
+    <%= f.label :fullname %><br>
+    <%= f.text_field :fullname %><br>
+  </p>
+  <p>
+    <%= f.label :email %><br>
+    <%= f.text_field :email %><br>
+  </p>
+  <p>
+    <%= f.label :password %><br>
+    <%= f.password_field :password %><br>
+  </p>
+
+  <p>
+  	<%= label_tag "I Have a Fitbit" %>
+  	<%= check_box_tag("I Have a Fitbit", value = '1', checked = false) %>
+  </p>
+  <p>
+    <%= f.submit "Update" %>
+  </p>
+<% end %>
