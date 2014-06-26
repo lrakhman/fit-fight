@@ -4,5 +4,6 @@
 
 <ul>
 	<li>start: <%= @challenge.start_date %> end: <%= @challenge.end_date %></li>
-	<li></li>
 </ul>
+
+<h1> Your steps today: <%= @user.daily_workouts.first.step %>, Challengers steps today: <%= @challenger.daily_workouts.first.step %>
