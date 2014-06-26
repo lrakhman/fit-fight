@@ -1,12 +1,14 @@
 <div id="main">
   <div id="content-1">
+    <%= link_to 'View Stats', user_challenge_path(@user.id, challenge.id) %>
     <h1><%= challenge.user.fullname %></h1>
     <%= image_tag('hero.png') %>
   </div>
   <div id="content-2">
     <div id="content-2-1">
       <h1>VS.</h1>
-      <h1>Points</h1>
+      <h1>Points: <%= challenge.user_points(@user) %></h1>
+      <h1>Challenger's points: <%= challenge.total_points - challenge.user_points(@user)%></h1>
     </div>
     <div id="content-2-2">
       <h1><%= challenge.challenger.fullname %></h1>

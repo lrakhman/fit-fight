@@ -19,6 +19,6 @@ class DailyWorkoutsController < ApplicationController
   private
 
   def daily_workout_params
-    params.require(:daily_workout).permit(:step, :distance, :active_time)
+    params.require(:daily_workout).permit(:steps, :distance, :active_time)
   end
 end

@@ -1,0 +1,42 @@
+<h1> Challenge Dashboard</h1>
+<h2> Your points = <%= @current_score %>
+<h2> <%= @challenger.fullname %>'s points = <%= @challenger_score %>
+<h2> <%= @user.fullname %> V. <%= @challenger.fullname %></h2>
+
+	<h3>start: <%= @challenge.start_date %> end: <%= @challenge.end_date %></h3>
+
+<h2> TOTAL STATS: </h2>
+<ul>
+	<li> Total steps: <%= @challenge.user_total_steps %> </li>
+		<p><%= @challenger.fullname %>'s total steps: <%= @challenge.challenger_total_steps %> </p>
+	<li> Total distance: <%= @challenge.user_total_distance %></li>
+		<p> <%= @challenger.fullname %>'s total distance: <%= @challenge.challenger_total_distance %> </p>
+	<li> Total active time: <%= @challenge.user_total_active_time %></li>
+		<p><%= @challenger.fullname %>'s total active time: <%= @challenge.challenger_total_active_time %> </p>
+</ul>
+
+<h2> BY DATE: </h2>
+	
+		
+<table>
+	<% @challenge.user_workouts.each do |user_workout| %>
+	<tr>		
+			<td>On <%= user_workout.date %></td>
+			<td><%= @user.fullname %>:</td>
+			<td>Steps: <%= user_workout.steps %></td>
+			<td>Distance: <%= user_workout.distance %></td>
+			<td>Active Time: <%= user_workout.active_time %></td>
+	</tr>
+	<% end %>
+	<tr>
+		<% @challenge.challenger_workouts.each do |challenger_workout| %>
+			<td>On <%= challenger_workout.date %></td>
+			<td><%= @challenge.challenger.fullname %>:</td>
+			<td>Steps: <%= challenger_workout.steps %></td>
+			<td>Distance: <%= challenger_workout.distance %></td>
+			<td>Active Time: <%= challenger_workout.active_time %></td>
+	</tr>
+	<% end %>
+</table>
+
+
