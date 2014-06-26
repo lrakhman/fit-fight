@@ -5,6 +5,29 @@ class Challenge < ActiveRecord::Base
 	has_many :user_workouts, through: :user, source: :daily_workouts
 	has_many :challenger_workouts, through: :challenger, source: :daily_workouts
 
+	def user_points(user)
+		user_points = 0
+		user.daily_workouts.each do |workout|
+			
+			challenger_workout = DailyWorkout.find_by_date(workout.date)
+			
+			if workout.steps > challenger_workout.steps
+				user_points += 1
+			end
+			if workout.distance > challenger_workout.distance
+				user_points += 1
+			end
+			if workout.active_time > challenger_workout.active_time
+				user_points += 1
+			end
+		end	
+		user_points
+	end
+
+	def total_points
+		self.user_workouts.count * 3
+	end
+
 	def user_total_steps
 		steps_array = self.user_workouts.map {|workout| workout.steps}
 		steps_array.inject(:+)

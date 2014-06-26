@@ -9,7 +9,7 @@
 
 <% @user.challenges.each do |challenge| %>
 	<h2><%= link_to 'View Stats', user_challenge_path(@user.id, challenge.id) %></h2>
-  <p>SCORE: <%=challenge.user_points%></p>
+  <p>SCORE: <%= challenge.user_points(@user) %></p>
   <p>CHALLENGER: <%=challenge.challenger.fullname%></p>
-  <p>CHALLENGER'S SCORE: <%=challenge.challenger_points%></p>
+  <p>CHALLENGER'S SCORE: <%= challenge.total_points - challenge.user_points(@user)%></p>
 <% end %>
