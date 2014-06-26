@@ -41,11 +41,15 @@ end
 
 feature 'View Challenge' do
 
-  let! (:user) { User.create(email: 'pdebelak@example.com', password: '123456', fullname: 'Peter Debelak') }
-  let! (:user2) { User.create(email: 'syim@example.com', password: '123456', fullname: 'Stephen Yim') }
-  let! (:challenge) {Challenge.create()}
+  let! (:user3) { User.create(email: 'pddebelak@example.com', password: '123456', fullname: 'Peter Debelak') }
+  let! (:user4) { User.create(email: 'syyim@example.com', password: '123456', fullname: 'Stephen Yim') }
+  let! (:challenge) {Challenge.create(user_id: 1, start_date: '2014-06-26', end_date: '2014-06-27', winner_id: nil, challenger_id: 2)}
+  let! (:challenge2) {Challenge.create(user_id: 1, start_date: '2014-07-26', end_date: '2014-07-28', winner_id: nil, challenger_id: 2)}
+  let! (:session) {session[:user_id] = 1}
 
-
-  visit "/users/#{user.id}/challenges"
+  scenario 'show page is accessible via the index' do
+    visit "/users/1/challenges" 
+    expect(page).to have_content "View Stats"
+  end
 
 end
