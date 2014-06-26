@@ -1,11 +1,10 @@
 class User < ActiveRecord::Base
-	validates :email, uniqueness: true, :format => /.+@.+\..+/
-	validates :password, presence: true
-
-	has_secure_password
-
+	# validates :email, uniqueness: true, :format => /.+@.+\..+/
 	has_many :challenges
 	has_many :daily_workouts
+
+	has_many :authorizations
+
 
 	def total_steps
 		steps_array = self.daily_workouts.map {|workout| workout.steps}
@@ -21,5 +20,5 @@ class User < ActiveRecord::Base
 		active_time_array = self.daily_workouts.map {|workout| workout.active_time}
 		active_time_array.inject(:+)
 	end
-	
+
 end
