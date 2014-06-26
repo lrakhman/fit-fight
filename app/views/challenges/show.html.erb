@@ -1,22 +1,45 @@
-<h1> Challenge </h1>
+<h1> Challenge Dashboard</h1>
 
-<h2> YOU ARE: <%= @challenge.user.fullname %><h2>
+<h2> <%= @user.fullname %> V. <%= @challenger.fullname %></h2>
+
+	<h3>start: <%= @challenge.start_date %> end: <%= @challenge.end_date %></h3>
+
+<h2> TOTAL STATS: </h2>
 
 <ul>
-	<li>start: <%= @challenge.start_date %> end: <%= @challenge.end_date %></li>
+	<li> Total steps: <%= @challenge.user_total_steps %> </li>
+
+		<p><%= @challenger.fullname %>'s total steps: <%= @challenge.challenger_total_steps %> </p>
+
+	<li> Total distance: <%= @challenge.user_total_distance %>
+
+		<p> <%= @challenger.fullname %>'s total distance: <%= @challenge.challenger_total_distance %> </p>
+
+	<li> Total active time: <%= @challenge.user_total_active_time %></li>
+
+		<p><%= @challenger.fullname %>'s total active time: <%= @challenge.challenger_total_active_time %> </p>
 </ul>
 
-<h3> Most recent steps: <%= @challenge.user_most_recent_steps %> <h3>
+<h2> BY DATE: </h2>
+	<% @challenge.user_workouts.each do |workout| %>
+	
+		<h3>On <%= workout.date %></h3>
+<table>
+	<tr>		
+			<td><%= @user.fullname %>:</td>
+			<td>Steps: <%= workout.steps %></td>
+			<td>Distance: <%= workout.distance %></td>
+			<td>Active Time: <%= workout.active_time %></td>
+		<% end %>
+	</tr>
+	<tr>
+			<td><%= @challenge.challenger.fullname %>:</td>
+		<% @challenge.challenger_workouts.each do |workout| %>
+			<td>Steps: <%= workout.steps %></td>
+			<td>Distance: <%= workout.distance %></td>
+			<td>Active Time: <%= workout.active_time %></td>
+		<% end %>
+	</tr>
+</table>
 
-<h3> <%= @challenger.fullname %>'s recent steps: <%= @challenge.challenger_most_recent_steps %> <h3>
 
-
-<h3> Most recent distance: <%= @challenge.user_most_recent_distance %>
-
-<h3> <%= @challenger.fullname %>'s recent distance: <%= @challenge.challenger_most_recent_distance %> </h3>
-
-<h3> Most recent active time: <%= @challenge.user_most_recent_active_time %></h3>
-
-<h3><%= @challenger.fullname %>'s recent active time: <%= @challenge.challenger_most_recent_active_time %> </h3>
-
-<h4> You received <%= %> points for today! </h4> 
