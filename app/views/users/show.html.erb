@@ -2,17 +2,16 @@
 <img src="">
 
 <div>
-	<p>Your steps for today: <%= @user.daily_workouts.first.step %></p>
+	<p>Your steps for today: <%= @user.get_most_recent_steps %></p>
 
 </div>
 
 <div>
-	<p>Your distance for today: <%= @user.daily_workouts.first.distance %></p>
+	<p>Your distance for today: <%= @user.get_most_recent_distance %></p>
 </div>
 
-
 <div>
-	<p>Your active time for today: <%= @user.daily_workouts.first.active_time %> </p>
+	<p>Your active time for today: <%= @user.get_most_recent_active_time %> </p>
 </div>
 
 <div>
