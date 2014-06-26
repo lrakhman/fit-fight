@@ -1,5 +1,5 @@
 .container {
-  padding: 30px;
+  width: 80%;
   margin: 0 auto;
 }
 #main {
@@ -20,10 +20,6 @@
   float: left;
   text-align: center;
 }
-#content-2-1 h1 {
-  padding-top: 75px; 
-}
-
 #content-2-2 {
   width: 50%;
   float: right;
