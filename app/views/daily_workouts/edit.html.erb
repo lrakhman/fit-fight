@@ -1,7 +1,7 @@
 <h1><%= @daily_workout.user.fullname %>'s Workout for <%= @daily_workout.date %>!</h1>
 <%= form_for [@user, @daily_workout] do |f| %>
   <%= f.label 'Number of Steps Taken:' %>
-  <%= f.number_field(:step, step: 1) %>
+  <%= f.number_field(:steps, step: 1) %>
   <%= f.label 'Distance Traveled: (in miles)' %>
   <%= f.number_field(:distance, step: 0.25) %>
   <%= f.label 'Active Time: (in minutes)' %>

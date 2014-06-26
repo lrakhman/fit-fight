@@ -8,15 +8,23 @@
   
   </head>
 <body>
-  <nav>
-    <ul>
-      <% if session[:user_id] %>
-        <li><%= link_to 'Logout', session_path(User.find(session[:user_id])), method: :delete %></li>
-      <% end %>
-    </ul>
-  </nav>
-<div class='container'>
+  <% if session[:user_id] %>
+    <% user = User.find(session[:user_id]) %>
+  <% end %>
+  <div id="top">
+    <header>
+      <h1>LOGO FOR FIT FIGHT</h1>
+    </header>
+    <nav>
+      <ul>
+        <% if session[:user_id] %>
+          <li><%= link_to 'Logout', session_path(user), method: :delete %></li>
+        <% end %>
+      </ul>
+    </nav>
+  </div>
+  <div class="container">
 <%= yield %>
-</div>
+  </div>
 </body>
 </html>

@@ -43,12 +43,12 @@ class SessionsController < ApplicationController
     #   if @user.authenticate(params[:password])
     #     session[:user_id] = @user.id
         
-        # redirect_to user_challenges_path(@user)
+    #     redirect_to user_challenges_path(@user)
     #   end
     # else
     #   @errors = "Your email or password is incorrect."
     #   render :new
-    # end
+    
   end
 
   def destroy

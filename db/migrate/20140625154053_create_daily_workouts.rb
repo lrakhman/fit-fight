@@ -3,7 +3,7 @@ class CreateDailyWorkouts < ActiveRecord::Migration
     create_table :daily_workouts do |t|
     	t.date :date
     	t.references :user
-    	t.integer :step
+    	t.integer :steps
     	t.float :distance
     	t.integer :active_time
 

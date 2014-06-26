@@ -1,10 +1,20 @@
 class ChallengesController < ApplicationController
   def index
     @user = User.find(session[:user_id])
+    
+    @challenge = Challenge.where(user_id: session[:user_id])
   end
 
   def new
     @user = User.find(session[:user_id])
+  end
+
+  def show
+    @user = User.find(session[:user_id])
+    @challenge = Challenge.find(params[:id])
+    @current_score = @challenge.user_points(@user)
+    @challenger_score = @challenge.total_points - @current_score 
+    @challenger = User.find(@challenge.challenger.id)
   end
 
   def create
