@@ -18,4 +18,19 @@ class User < ActiveRecord::Base
 	def get_most_recent_active_time
 		self.daily_workouts.first.active_time
 	end
+
+	def get_total_steps
+		steps_array = self.daily_workouts.map {|workout| workout.steps}
+		steps_array.inject(:+)
+	end
+
+	def get_total_distance
+		distance_array = self.daily_workouts.map {|workout| workout.distance}
+		distance_array.inject(:+)
+	end
+
+	def get_total_active_time
+		active_time_array = self.daily_workouts.map {|workout| workout.active_time}
+		active_time_array.inject(:+)
+	end
 end

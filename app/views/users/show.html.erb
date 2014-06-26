@@ -15,15 +15,15 @@
 </div>
 
 <div>
-	<p>Your TOTAL steps for this week: <%=  %> </p>
+	<p>Your TOTAL steps for this week: <%= @user.get_total_steps %> </p>
 </div>
 
 <div>
-	<p>Your TOTAL distance for this week: <%=  %> </p>
+	<p>Your TOTAL distance for this week: <%= @user.get_total_distance %> miles </p>
 </div>
 
 <div>
-	<p>Your TOTAL active time for this week: <%=  %> </p>
+	<p>Your TOTAL active time for this week: <%= @user.get_total_active_time %> minutes </p>
 </div>
 
 <p><%= link_to 'Edit my profile', edit_user_path %></p>
