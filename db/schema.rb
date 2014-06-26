@@ -11,7 +11,16 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20140625154053) do
+ActiveRecord::Schema.define(version: 20140626161028) do
+
+  create_table "authorizations", force: true do |t|
+    t.string   "provider"
+    t.string   "uid"
+    t.integer  "user_id"
+    t.string   "info"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+  end
 
   create_table "challenges", force: true do |t|
     t.integer  "user_id"
@@ -35,14 +44,11 @@ ActiveRecord::Schema.define(version: 20140625154053) do
 
   create_table "users", force: true do |t|
     t.string   "fullname"
-    t.string   "email",           null: false
-    t.string   "password_digest"
+    t.string   "email"
     t.string   "oauth_token"
     t.string   "oauth_secret"
     t.datetime "created_at"
     t.datetime "updated_at"
   end
-
-  add_index "users", ["email"], name: "index_users_on_email", unique: true
 
 end
