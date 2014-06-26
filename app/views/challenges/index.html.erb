@@ -2,14 +2,6 @@
 <%= link_to 'Stats Page', user_path(@user) %><br>
 <%= link_to 'New Challenge', new_user_challenge_path %>
 
-<%= form_tag new_user_daily_workout_path(@user), method: :get do %>
-  <%= date_field_tag 'date' %>
-  <%= submit_tag 'Enter a Workout' %>
-<% end %>
-
 <% @user.challenges.each do |challenge| %>
-	<h2><%= link_to 'View Stats', user_challenge_path(@user.id, challenge.id) %></h2>
-  <p>SCORE: <%= challenge.user_points(@user) %></p>
-  <p>CHALLENGER: <%=challenge.challenger.fullname%></p>
-  <p>CHALLENGER'S SCORE: <%= challenge.total_points - challenge.user_points(@user)%></p>
+  <%= render partial: 'challenge', locals: {challenge: challenge} %>
 <% end %>

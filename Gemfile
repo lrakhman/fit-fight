@@ -29,7 +29,7 @@ gem 'spring',        group: :development
 # Use ActiveModel has_secure_password
 gem 'bcrypt', '~> 3.1.7'
 gem 'fitgem'
-gem 'omniauth-fitbit'
+gem 'omniauth-fitbit', '~> 1.0.3'
 gem 'rails_12factor'
 # Use unicorn as the app server
 # gem 'unicorn'
