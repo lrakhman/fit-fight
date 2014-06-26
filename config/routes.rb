@@ -9,6 +9,7 @@ Rails.application.routes.draw do
   resources :sessions, only: [:new, :create, :destroy]
 
  	get   '/login', :to => 'sessions#new', :as => :login
+ 	get 	'/logout', :to => 'session#destroy'
 	match '/auth/:provider/callback', :to => 'sessions#create', via: [:get, :post]
 	match '/auth/failure', :to => 'sessions#failure', via: [:get, :post]
 end

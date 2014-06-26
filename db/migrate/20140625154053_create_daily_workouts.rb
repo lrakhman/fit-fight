@@ -6,6 +6,8 @@ class CreateDailyWorkouts < ActiveRecord::Migration
     	t.integer :steps
     	t.float :distance
     	t.integer :active_time
+      t.integer :age
+      t.integer :weight
 
       t.timestamps
     end

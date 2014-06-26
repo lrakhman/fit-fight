@@ -18,6 +18,7 @@
     <nav>
       <ul>
         <% if session[:user_id] %>
+          <li><%= link_to 'Update Profile', edit_user_path(session[:user_id]) %></li>
           <li><%= link_to 'Logout', session_path(user), method: :delete %></li>
         <% end %>
       </ul>

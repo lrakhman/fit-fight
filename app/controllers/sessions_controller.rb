@@ -15,44 +15,14 @@ class SessionsController < ApplicationController
     session[:user_id] = authorization.user_id
     redirect_to user_challenges_path(authorization.user)
 
-
-
-
-    # auth_hash = request.env['omniauth.auth']
-
-    # @authorization = Authorization.find_by_provider_and_uid(auth_hash['provider'], auth_hash['uid'])
-    # if @authorization 
-    #   render :text => "Welcome #{@authorization.user.fullname}!  You have already signed up"
-    # else
-
-      # user = User.new(oauth_token: params[:oauth_token], oauth_secret: params[:oauth_verifier])
-      # user.authorization.build :provider => auth_hash["provider"], :uid => auth_hash["uid"]
-      # user.save
-
-
-
-
-
-    # render :text => "Hello #{user.fullname}!  Thank you for signing up."
-
-
-    # end
-
-    # @user = User.find_by_email(params[:email])
-    # if @user
-    #   if @user.authenticate(params[:password])
-    #     session[:user_id] = @user.id
-        
-    #     redirect_to user_challenges_path(@user)
-    #   end
-    # else
-    #   @errors = "Your email or password is incorrect."
-    #   render :new
-    
   end
 
   def destroy
     session.clear
     redirect_to root_path
+  end
+
+  def failure
+    render :text => "Sorry, but you didn't allow access to our app!"
   end
 end
