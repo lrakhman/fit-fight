@@ -2,28 +2,28 @@
 <img src="">
 
 <div>
-	<p>Your steps for today: <%= @user.get_most_recent_steps %></p>
+	<p>Your steps for today: <%= @user.daily_workouts.first.steps %></p>
 
 </div>
 
 <div>
-	<p>Your distance for today: <%= @user.get_most_recent_distance %></p>
+	<p>Your distance for today: <%= @user.daily_workouts.first.distance %></p>
 </div>
 
 <div>
-	<p>Your active time for today: <%= @user.get_most_recent_active_time %> </p>
+	<p>Your active time for today: <%= @user.daily_workouts.first.active_time %> </p>
 </div>
 
 <div>
-	<p>Your TOTAL steps for this week: <%= @user.get_total_steps %> </p>
+	<p>Your TOTAL steps for this week: <%= @user.total_steps %> </p>
 </div>
 
 <div>
-	<p>Your TOTAL distance for this week: <%= @user.get_total_distance %> miles </p>
+	<p>Your TOTAL distance for this week: <%= @user.total_distance %> miles </p>
 </div>
 
 <div>
-	<p>Your TOTAL active time for this week: <%= @user.get_total_active_time %> minutes </p>
+	<p>Your TOTAL active time for this week: <%= @user.total_active_time %> minutes </p>
 </div>
 
 <p><%= link_to 'Edit my profile', edit_user_path %></p>
