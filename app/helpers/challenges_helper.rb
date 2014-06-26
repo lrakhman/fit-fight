@@ -1,16 +1,22 @@
 module ChallengesHelper
-	def has_challenge_for_current_date?(user)
-		user.daily_workouts.first.date == Time.now.strftime("%Y-%m-%d")
+	
+
+	def point_assignment
+		challenge.user_workouts.each do |workout| 
+			user_steps << workout.steps 
+			user_distance << workout.distance
+			user_active_time << workout.active_time
+		end
+
+		challenge.challenger_workouts.each do |workout|
+			challenger_steps << workout.steps 
+			challenger_distance << workout.distance
+			challenger_active_time << workout.active_time
+		end
 	end
 
-	def point_assignment_for_steps
-	end
-
-	def point_assignment_for_distance
-	end
-
-	def point_assignment_for_active_time
-	end
 
 
 end
+
+

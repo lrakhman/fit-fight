@@ -6,16 +6,17 @@
 	<li>start: <%= @challenge.start_date %> end: <%= @challenge.end_date %></li>
 </ul>
 
-<h3> Most recent steps: <%= @user.get_most_recent_steps %> <h3>
+<h3> Most recent steps: <%= @challenge.user_most_recent_steps %> <h3>
 
-<h3> <%= @challenger.fullname %>'s recent steps: <%= @challenger.get_most_recent_steps %> <h3>
+<h3> <%= @challenger.fullname %>'s recent steps: <%= @challenge.challenger_most_recent_steps %> <h3>
 
-<h3> Most recent distance: <%= @user.get_most_recent_distance %>
 
-<h3> <%= @challenger.fullname %>'s recent distance: <%= @challenger.get_most_recent_distance %> </h3>
+<h3> Most recent distance: <%= @challenge.user_most_recent_distance %>
 
-<h3> Most recent active time: <%= @user.get_most_recent_active_time %></h3>
+<h3> <%= @challenger.fullname %>'s recent distance: <%= @challenge.challenger_most_recent_distance %> </h3>
 
-<h3><%= @challenger.fullname %>'s recent active time: <%= @challenger.get_most_recent_active_time %> </h3>
+<h3> Most recent active time: <%= @challenge.user_most_recent_active_time %></h3>
+
+<h3><%= @challenger.fullname %>'s recent active time: <%= @challenge.challenger_most_recent_active_time %> </h3>
 
 <h4> You received <%= %> points for today! </h4> 
