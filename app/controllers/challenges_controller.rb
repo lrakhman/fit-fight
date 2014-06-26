@@ -1,8 +1,8 @@
 class ChallengesController < ApplicationController
   def index
     @user = User.find(session[:user_id])
-    
     @challenge = Challenge.where(user_id: session[:user_id])
+    @challenged_list = Challenge.where(challenger_id: session[:user_id])
   end
 
   def new
