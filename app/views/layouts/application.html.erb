@@ -8,7 +8,9 @@
   
   </head>
 <body>
-  <% user = User.find(session[:user_id]) %>
+  <% if session[:user_id %>
+    <% user = User.find(session[:user_id]) %>
+  <% end %>
   <div id="top">
     <header>
       <h1>LOGO FOR FIT FIGHT</h1>
