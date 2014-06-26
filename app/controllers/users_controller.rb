@@ -1,5 +1,5 @@
 class UsersController < ApplicationController
-before_filter :skip_password_attribute, only: :update
+
 	  include SessionsHelper
 
   def new
@@ -30,7 +30,7 @@ before_filter :skip_password_attribute, only: :update
 
   	flash.notice = "Account Updated!"
 
-  	redirect_to user_path(@user)
+  	redirect_to user_challenges_path(@user)
 	end
 
 
@@ -38,13 +38,7 @@ before_filter :skip_password_attribute, only: :update
   private
 
   def user_params
-    params.require(:user).permit(:fullname, :email, :password)
-  end
-
-  def skip_password_attribute
-    if params[:password].blank?
-      params.except!(:password)
-    end
+    params.require(:user).permit(:fullname, :email)
   end
 
 end

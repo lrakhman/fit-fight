@@ -40,6 +40,8 @@ ActiveRecord::Schema.define(version: 20140626161028) do
     t.integer  "steps"
     t.float    "distance"
     t.integer  "active_time"
+    t.integer  "age"
+    t.integer  "weight"
     t.datetime "created_at"
     t.datetime "updated_at"
   end
@@ -52,5 +54,7 @@ ActiveRecord::Schema.define(version: 20140626161028) do
     t.datetime "created_at"
     t.datetime "updated_at"
   end
+
+  add_index "users", ["email"], name: "index_users_on_email", unique: true
 
 end
