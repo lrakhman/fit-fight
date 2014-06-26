@@ -6,7 +6,7 @@ class Challenge < ActiveRecord::Base
 	has_many :challenger_workouts, through: :challenger, source: :daily_workouts
 
 	def user_points
-
+		
 	end
 
 	def challenger_points

@@ -2,7 +2,6 @@ class ChallengesController < ApplicationController
   def index
     @user = User.find(session[:user_id])
     @challenge = Challenge.where(user_id: session[:user_id])
-    @challenger = User.find(@challenge.challenger.id)
   end
 
   def new
@@ -12,6 +11,7 @@ class ChallengesController < ApplicationController
   def show
     @user = User.find(session[:user_id])
     @challenge = Challenge.find(params[:id])
+    @challenger = User.find(@challenge.challenger.id)
   end
 
   def create

@@ -7,7 +7,7 @@ class CreateChallenges < ActiveRecord::Migration
     	t.date :end_date
     	t.references :winner
     	t.references :challenger
-      t.intenger :challenger_points
+      t.integer :challenger_points
 
       t.timestamps
     end
