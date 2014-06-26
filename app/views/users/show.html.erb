@@ -1,14 +1,30 @@
 <h1>Your Stats, <%= @user.fullname %></h1>
+<img src="">
 
 <div>
-	<p>Your steps for today: <%= @user. %></p>
+	<p>Your steps for today: <%= @user.daily_workouts.first.step %></p>
+
 </div>
 
 <div>
-	<p>Your distance for today: <%=  %></p>
+	<p>Your distance for today: <%= @user.daily_workouts.first.distance %></p>
 </div>
 
 
 <div>
-	<p>Your active time for today: <%=  %> </p>
+	<p>Your active time for today: <%= @user.daily_workouts.first.active_time %> </p>
 </div>
+
+<div>
+	<p>Your TOTAL steps for this week: <%=  %> </p>
+</div>
+
+<div>
+	<p>Your TOTAL distance for this week: <%=  %> </p>
+</div>
+
+<div>
+	<p>Your TOTAL active time for this week: <%=  %> </p>
+</div>
+
+<p><%= link_to 'Edit my profile', edit_user_path %></p>
