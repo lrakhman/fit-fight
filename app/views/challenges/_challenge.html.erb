@@ -1,6 +1,13 @@
 <div id="main">
   <div id="content-1">
     <%= link_to 'View Stats', user_challenge_path(@user.id, challenge.id) %>
+
+    <% if get_winner(challenge) %>
+      <p>Winner: <%= get_winner(challenge).fullname %> </p>
+    <% else %>
+      <p>Front Runner: <%= get_front_runner(challenge).fullname %></p>
+    <% end %>
+
     <h1><%= challenge.user.fullname %></h1>
     <%= image_tag('hero.png') %>
   </div>
