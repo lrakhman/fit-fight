@@ -7,7 +7,7 @@
 #   Mayor.create(name: 'Emanuel', city: cities.first)
 
 
-User.create(fullname: "Mikee Pourhadi", email: "mikeepourhadi@gmail.com")
+User.create(fullname: "Mikee Pourhadi", email: "mikeepourhadi1@gmail.com")
 User.create(fullname: "Peter Debelak", email: "petersmells@gmail.com")
 User.create(fullname: "Steve Yim", email: "steve@gmail.com")
 
@@ -17,6 +17,11 @@ DailyWorkout.create(date: "2014-04-09", user_id: 2, steps: 2000, distance: 2, ac
 DailyWorkout.create(date: "2014-04-08", user_id: 2, steps: 3000, distance: 1, active_time: 31)
 DailyWorkout.create(date: "2014-04-08", user_id: 3, steps: 3000, distance: 1, active_time: 31)
 DailyWorkout.create(date: "2014-04-08", user_id: 3, steps: 3000, distance: 1, active_time: 31)
+DailyWorkout.create(date: "2014-04-10", user_id: 1, steps: 3000, distance: 1, active_time: 31)
+DailyWorkout.create(date: "2014-04-11", user_id: 1, steps: 3000, distance: 1, active_time: 31)
+DailyWorkout.create(date: "2014-04-12", user_id: 1, steps: 3000, distance: 1, active_time: 31)
+
 
 Challenge.create(user_id: 1, start_date: "2014-04-08", end_date: "2014-04-09", challenger_id: 2)
 Challenge.create(user_id: 2, start_date: "2014-04-08", end_date: "2014-04-09", challenger_id: 3)
+Challenge.create(user_id: 1, start_date: "2014-04-10", end_date: "2014-04-11", challenger_id: 3)

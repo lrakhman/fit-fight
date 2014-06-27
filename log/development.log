@@ -28,3 +28,1106 @@ Migrating to CreateDailyWorkouts (20140625154053)
             WHERE name='index_users_on_email' AND type='index'
 [0m
   [1m[36mUser Load (47.8ms)[0m  [1mSELECT "users".* FROM "users"[0m
+
+
+Started GET "/" for 127.0.0.1 at 2014-06-27 10:04:05 -0500
+
+ActiveRecord::NoDatabaseError (FATAL:  database "fit_fight_development" does not exist
+Run `$ bin/rake db:create db:migrate` to create your database):
+  activerecord (4.1.1) lib/active_record/connection_adapters/postgresql_adapter.rb:891:in `rescue in connect'
+  activerecord (4.1.1) lib/active_record/connection_adapters/postgresql_adapter.rb:881:in `connect'
+  activerecord (4.1.1) lib/active_record/connection_adapters/postgresql_adapter.rb:568:in `initialize'
+  activerecord (4.1.1) lib/active_record/connection_adapters/postgresql_adapter.rb:41:in `new'
+  activerecord (4.1.1) lib/active_record/connection_adapters/postgresql_adapter.rb:41:in `postgresql_connection'
+  activerecord (4.1.1) lib/active_record/connection_adapters/abstract/connection_pool.rb:435:in `new_connection'
+  activerecord (4.1.1) lib/active_record/connection_adapters/abstract/connection_pool.rb:445:in `checkout_new_connection'
+  activerecord (4.1.1) lib/active_record/connection_adapters/abstract/connection_pool.rb:416:in `acquire_connection'
+  activerecord (4.1.1) lib/active_record/connection_adapters/abstract/connection_pool.rb:351:in `block in checkout'
+  /Users/MikeePourhadi/.rbenv/versions/2.0.0-p451/lib/ruby/2.0.0/monitor.rb:211:in `mon_synchronize'
+  activerecord (4.1.1) lib/active_record/connection_adapters/abstract/connection_pool.rb:350:in `checkout'
+  activerecord (4.1.1) lib/active_record/connection_adapters/abstract/connection_pool.rb:265:in `block in connection'
+  /Users/MikeePourhadi/.rbenv/versions/2.0.0-p451/lib/ruby/2.0.0/monitor.rb:211:in `mon_synchronize'
+  activerecord (4.1.1) lib/active_record/connection_adapters/abstract/connection_pool.rb:264:in `connection'
+  activerecord (4.1.1) lib/active_record/connection_adapters/abstract/connection_pool.rb:541:in `retrieve_connection'
+  activerecord (4.1.1) lib/active_record/connection_handling.rb:113:in `retrieve_connection'
+  activerecord (4.1.1) lib/active_record/connection_handling.rb:87:in `connection'
+  activerecord (4.1.1) lib/active_record/migration.rb:388:in `check_pending!'
+  activerecord (4.1.1) lib/active_record/migration.rb:377:in `call'
+  actionpack (4.1.1) lib/action_dispatch/middleware/callbacks.rb:29:in `block in call'
+  activesupport (4.1.1) lib/active_support/callbacks.rb:82:in `run_callbacks'
+  actionpack (4.1.1) lib/action_dispatch/middleware/callbacks.rb:27:in `call'
+  actionpack (4.1.1) lib/action_dispatch/middleware/reloader.rb:73:in `call'
+  actionpack (4.1.1) lib/action_dispatch/middleware/remote_ip.rb:76:in `call'
+  actionpack (4.1.1) lib/action_dispatch/middleware/debug_exceptions.rb:17:in `call'
+  actionpack (4.1.1) lib/action_dispatch/middleware/show_exceptions.rb:30:in `call'
+  railties (4.1.1) lib/rails/rack/logger.rb:38:in `call_app'
+  railties (4.1.1) lib/rails/rack/logger.rb:20:in `block in call'
+  activesupport (4.1.1) lib/active_support/tagged_logging.rb:68:in `block in tagged'
+  activesupport (4.1.1) lib/active_support/tagged_logging.rb:26:in `tagged'
+  activesupport (4.1.1) lib/active_support/tagged_logging.rb:68:in `tagged'
+  railties (4.1.1) lib/rails/rack/logger.rb:20:in `call'
+  actionpack (4.1.1) lib/action_dispatch/middleware/request_id.rb:21:in `call'
+  rack (1.5.2) lib/rack/methodoverride.rb:21:in `call'
+  rack (1.5.2) lib/rack/runtime.rb:17:in `call'
+  activesupport (4.1.1) lib/active_support/cache/strategy/local_cache_middleware.rb:26:in `call'
+  rack (1.5.2) lib/rack/lock.rb:17:in `call'
+  actionpack (4.1.1) lib/action_dispatch/middleware/static.rb:64:in `call'
+  rack (1.5.2) lib/rack/sendfile.rb:112:in `call'
+  railties (4.1.1) lib/rails/engine.rb:514:in `call'
+  railties (4.1.1) lib/rails/application.rb:144:in `call'
+  rack (1.5.2) lib/rack/lock.rb:17:in `call'
+  rack (1.5.2) lib/rack/content_length.rb:14:in `call'
+  rack (1.5.2) lib/rack/handler/webrick.rb:60:in `service'
+  /Users/MikeePourhadi/.rbenv/versions/2.0.0-p451/lib/ruby/2.0.0/webrick/httpserver.rb:138:in `service'
+  /Users/MikeePourhadi/.rbenv/versions/2.0.0-p451/lib/ruby/2.0.0/webrick/httpserver.rb:94:in `run'
+  /Users/MikeePourhadi/.rbenv/versions/2.0.0-p451/lib/ruby/2.0.0/webrick/server.rb:295:in `block in start_thread'
+
+
+  Rendered /Users/MikeePourhadi/.rbenv/versions/2.0.0-p451/lib/ruby/gems/2.0.0/gems/actionpack-4.1.1/lib/action_dispatch/middleware/templates/rescues/_source.erb (0.9ms)
+  Rendered /Users/MikeePourhadi/.rbenv/versions/2.0.0-p451/lib/ruby/gems/2.0.0/gems/actionpack-4.1.1/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (28.6ms)
+  Rendered /Users/MikeePourhadi/.rbenv/versions/2.0.0-p451/lib/ruby/gems/2.0.0/gems/actionpack-4.1.1/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (1.9ms)
+  Rendered /Users/MikeePourhadi/.rbenv/versions/2.0.0-p451/lib/ruby/gems/2.0.0/gems/actionpack-4.1.1/lib/action_dispatch/middleware/templates/rescues/diagnostics.erb within rescues/layout (53.4ms)
+  [1m[36m (3.1ms)[0m  [1mCREATE TABLE "schema_migrations" ("version" character varying(255) NOT NULL) [0m
+  [1m[35m (1.8ms)[0m  CREATE UNIQUE INDEX  "unique_schema_migrations" ON "schema_migrations"  ("version")
+  [1m[36mActiveRecord::SchemaMigration Load (0.4ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+Migrating to CreateUsers (20140625152825)
+  [1m[35m (0.2ms)[0m  BEGIN
+  [1m[36m (5.6ms)[0m  [1mCREATE TABLE "users" ("id" serial primary key, "fullname" character varying(255), "email" character varying(255), "oauth_token" character varying(255), "oauth_secret" character varying(255), "created_at" timestamp, "updated_at" timestamp) [0m
+  [1m[35m (1.3ms)[0m  CREATE UNIQUE INDEX  "index_users_on_email" ON "users"  ("email")
+  [1m[36mSQL (0.4ms)[0m  [1mINSERT INTO "schema_migrations" ("version") VALUES ($1)[0m  [["version", "20140625152825"]]
+  [1m[35m (0.5ms)[0m  COMMIT
+Migrating to CreateChallenges (20140625153256)
+  [1m[36m (0.2ms)[0m  [1mBEGIN[0m
+  [1m[35m (3.3ms)[0m  CREATE TABLE "challenges" ("id" serial primary key, "user_id" integer, "user_points" integer, "start_date" date, "end_date" date, "winner_id" integer, "challenger_id" integer, "challenger_points" integer, "created_at" timestamp, "updated_at" timestamp) 
+  [1m[36mSQL (0.3ms)[0m  [1mINSERT INTO "schema_migrations" ("version") VALUES ($1)[0m  [["version", "20140625153256"]]
+  [1m[35m (0.5ms)[0m  COMMIT
+Migrating to CreateDailyWorkouts (20140625154053)
+  [1m[36m (0.2ms)[0m  [1mBEGIN[0m
+  [1m[35m (3.6ms)[0m  CREATE TABLE "daily_workouts" ("id" serial primary key, "date" date, "user_id" integer, "steps" integer, "distance" float, "active_time" integer, "age" integer, "weight" integer, "created_at" timestamp, "updated_at" timestamp) 
+  [1m[36mSQL (0.3ms)[0m  [1mINSERT INTO "schema_migrations" ("version") VALUES ($1)[0m  [["version", "20140625154053"]]
+  [1m[35m (0.4ms)[0m  COMMIT
+Migrating to CreateAuthorizations (20140626161028)
+  [1m[36m (0.2ms)[0m  [1mBEGIN[0m
+  [1m[35m (4.6ms)[0m  CREATE TABLE "authorizations" ("id" serial primary key, "provider" character varying(255), "uid" character varying(255), "user_id" integer, "info" character varying(255), "created_at" timestamp, "updated_at" timestamp) 
+  [1m[36mSQL (0.3ms)[0m  [1mINSERT INTO "schema_migrations" ("version") VALUES ($1)[0m  [["version", "20140626161028"]]
+  [1m[35m (0.5ms)[0m  COMMIT
+  [1m[36mActiveRecord::SchemaMigration Load (0.3ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+
+
+Started GET "/" for 127.0.0.1 at 2014-06-27 10:14:18 -0500
+  [1m[36mActiveRecord::SchemaMigration Load (0.6ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+Processing by SessionsController#new as HTML
+  Rendered sessions/new.html.erb within layouts/application (1.5ms)
+  [1m[35mUser Load (0.8ms)[0m  SELECT  "users".* FROM "users"  WHERE "users"."id" = $1 LIMIT 1  [["id", 1]]
+Completed 500 Internal Server Error in 518ms
+
+ActiveRecord::RecordNotFound (Couldn't find User with 'id'=1):
+  app/views/layouts/application.html.erb:12:in `_app_views_layouts_application_html_erb___4609294921490127062_70140632826560'
+
+
+  Rendered /Users/MikeePourhadi/.rbenv/versions/2.0.0-p451/lib/ruby/gems/2.0.0/gems/actionpack-4.1.1/lib/action_dispatch/middleware/templates/rescues/_source.erb (0.9ms)
+  Rendered /Users/MikeePourhadi/.rbenv/versions/2.0.0-p451/lib/ruby/gems/2.0.0/gems/actionpack-4.1.1/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (1.7ms)
+  Rendered /Users/MikeePourhadi/.rbenv/versions/2.0.0-p451/lib/ruby/gems/2.0.0/gems/actionpack-4.1.1/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (1.1ms)
+  Rendered /Users/MikeePourhadi/.rbenv/versions/2.0.0-p451/lib/ruby/gems/2.0.0/gems/actionpack-4.1.1/lib/action_dispatch/middleware/templates/rescues/diagnostics.erb within rescues/layout (23.3ms)
+
+
+Started GET "/" for 127.0.0.1 at 2014-06-27 10:14:27 -0500
+Processing by SessionsController#new as HTML
+  Rendered sessions/new.html.erb within layouts/application (0.1ms)
+Completed 200 OK in 5ms (Views: 4.1ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2014-06-27 10:14:27 -0500
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2014-06-27 10:14:27 -0500
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2014-06-27 10:14:27 -0500
+
+
+Started GET "/assets/sessions.js?body=1" for 127.0.0.1 at 2014-06-27 10:14:27 -0500
+
+
+Started GET "/assets/turbolinks.js?body=1" for 127.0.0.1 at 2014-06-27 10:14:27 -0500
+
+
+Started GET "/assets/users.js?body=1" for 127.0.0.1 at 2014-06-27 10:14:27 -0500
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2014-06-27 10:14:27 -0500
+
+
+Started GET "/assets/fit-fight-wall.png" for 127.0.0.1 at 2014-06-27 10:14:27 -0500
+
+
+Started GET "/auth/fitbit" for 127.0.0.1 at 2014-06-27 10:14:29 -0500
+
+
+Started GET "/auth/fitbit" for 127.0.0.1 at 2014-06-27 10:14:29 -0500
+
+
+Started GET "/auth/fitbit/callback?oauth_token=63e9bcc5caebe933d13362760bd8a4b3&oauth_verifier=1ibgbvqr7qlquinie93d3pmp0s" for 127.0.0.1 at 2014-06-27 10:14:32 -0500
+Processing by SessionsController#create as HTML
+  Parameters: {"oauth_token"=>"63e9bcc5caebe933d13362760bd8a4b3", "oauth_verifier"=>"1ibgbvqr7qlquinie93d3pmp0s", "provider"=>"fitbit"}
+  [1m[36mAuthorization Load (1.6ms)[0m  [1mSELECT  "authorizations".* FROM "authorizations"  WHERE "authorizations"."uid" = '2S4QZP' LIMIT 1[0m
+  [1m[35m (0.2ms)[0m  BEGIN
+  [1m[36mSQL (0.8ms)[0m  [1mINSERT INTO "users" ("created_at", "fullname", "oauth_secret", "oauth_token", "updated_at") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["created_at", "2014-06-27 15:14:32.915235"], ["fullname", "Michael Pourhadi"], ["oauth_secret", "62a17187589510b7c78875874202e7d5"], ["oauth_token", "b95a8a24ca84a2aae56706f917d2e1a3"], ["updated_at", "2014-06-27 15:14:32.915235"]]
+  [1m[35m (0.5ms)[0m  COMMIT
+  [1m[36m (0.2ms)[0m  [1mBEGIN[0m
+  [1m[35mAuthorization Exists (0.4ms)[0m  SELECT  1 AS one FROM "authorizations"  WHERE ("authorizations"."uid" = '2S4QZP' AND "authorizations"."provider" = 'fitbit') LIMIT 1
+  [1m[36mSQL (0.7ms)[0m  [1mINSERT INTO "authorizations" ("created_at", "provider", "uid", "updated_at", "user_id") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["created_at", "2014-06-27 15:14:32.947800"], ["provider", "fitbit"], ["uid", "2S4QZP"], ["updated_at", "2014-06-27 15:14:32.947800"], ["user_id", 1]]
+  [1m[35m (0.4ms)[0m  COMMIT
+Redirected to http://localhost:3000/users/1/challenges
+Completed 302 Found in 62ms (ActiveRecord: 7.9ms)
+
+
+Started GET "/users/1/challenges" for 127.0.0.1 at 2014-06-27 10:14:32 -0500
+Processing by ChallengesController#index as HTML
+  Parameters: {"user_id"=>"1"}
+  [1m[36mUser Load (0.5ms)[0m  [1mSELECT  "users".* FROM "users"  WHERE "users"."id" = $1 LIMIT 1[0m  [["id", 1]]
+  [1m[35mChallenge Load (0.6ms)[0m  SELECT "challenges".* FROM "challenges"  WHERE "challenges"."user_id" = $1  [["user_id", 1]]
+  [1m[36m (0.3ms)[0m  [1mSELECT COUNT(*) FROM "challenges"  WHERE "challenges"."challenger_id" = 1[0m
+  Rendered challenges/index.html.erb within layouts/application (66.5ms)
+  [1m[35mCACHE (0.0ms)[0m  SELECT  "users".* FROM "users"  WHERE "users"."id" = $1 LIMIT 1  [["id", 1]]
+Completed 200 OK in 83ms (Views: 69.0ms | ActiveRecord: 4.3ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2014-06-27 10:14:33 -0500
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2014-06-27 10:14:33 -0500
+
+
+Started GET "/assets/turbolinks.js?body=1" for 127.0.0.1 at 2014-06-27 10:14:33 -0500
+
+
+Started GET "/assets/users.js?body=1" for 127.0.0.1 at 2014-06-27 10:14:33 -0500
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2014-06-27 10:14:33 -0500
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2014-06-27 10:14:33 -0500
+
+
+Started GET "/assets/sessions.js?body=1" for 127.0.0.1 at 2014-06-27 10:14:33 -0500
+
+
+Started GET "/assets/fit-fight-wall.png" for 127.0.0.1 at 2014-06-27 10:14:33 -0500
+  [1m[36m (3.0ms)[0m  [1mCREATE TABLE "schema_migrations" ("version" character varying(255) NOT NULL) [0m
+  [1m[35m (1.7ms)[0m  CREATE UNIQUE INDEX  "unique_schema_migrations" ON "schema_migrations"  ("version")
+  [1m[36mActiveRecord::SchemaMigration Load (0.4ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+Migrating to CreateUsers (20140625152825)
+  [1m[35m (0.2ms)[0m  BEGIN
+  [1m[36m (5.9ms)[0m  [1mCREATE TABLE "users" ("id" serial primary key, "fullname" character varying(255), "email" character varying(255), "oauth_token" character varying(255), "oauth_secret" character varying(255), "created_at" timestamp, "updated_at" timestamp) [0m
+  [1m[35m (1.2ms)[0m  CREATE UNIQUE INDEX  "index_users_on_email" ON "users"  ("email")
+  [1m[36mSQL (0.4ms)[0m  [1mINSERT INTO "schema_migrations" ("version") VALUES ($1)[0m  [["version", "20140625152825"]]
+  [1m[35m (0.5ms)[0m  COMMIT
+Migrating to CreateChallenges (20140625153256)
+  [1m[36m (0.3ms)[0m  [1mBEGIN[0m
+  [1m[35m (3.4ms)[0m  CREATE TABLE "challenges" ("id" serial primary key, "user_id" integer, "user_points" integer, "start_date" date, "end_date" date, "winner_id" integer, "challenger_id" integer, "challenger_points" integer, "created_at" timestamp, "updated_at" timestamp) 
+  [1m[36mSQL (0.3ms)[0m  [1mINSERT INTO "schema_migrations" ("version") VALUES ($1)[0m  [["version", "20140625153256"]]
+  [1m[35m (0.5ms)[0m  COMMIT
+Migrating to CreateDailyWorkouts (20140625154053)
+  [1m[36m (0.5ms)[0m  [1mBEGIN[0m
+  [1m[35m (4.8ms)[0m  CREATE TABLE "daily_workouts" ("id" serial primary key, "date" date, "user_id" integer, "steps" integer, "distance" float, "active_time" integer, "age" integer, "weight" integer, "created_at" timestamp, "updated_at" timestamp) 
+  [1m[36mSQL (0.2ms)[0m  [1mINSERT INTO "schema_migrations" ("version") VALUES ($1)[0m  [["version", "20140625154053"]]
+  [1m[35m (0.5ms)[0m  COMMIT
+Migrating to CreateAuthorizations (20140626161028)
+  [1m[36m (0.2ms)[0m  [1mBEGIN[0m
+  [1m[35m (4.6ms)[0m  CREATE TABLE "authorizations" ("id" serial primary key, "provider" character varying(255), "uid" character varying(255), "user_id" integer, "info" character varying(255), "created_at" timestamp, "updated_at" timestamp) 
+  [1m[36mSQL (0.2ms)[0m  [1mINSERT INTO "schema_migrations" ("version") VALUES ($1)[0m  [["version", "20140626161028"]]
+  [1m[35m (0.6ms)[0m  COMMIT
+  [1m[36mActiveRecord::SchemaMigration Load (0.3ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+  [1m[36mActiveRecord::SchemaMigration Load (0.8ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+  [1m[35m (0.2ms)[0m  BEGIN
+  [1m[36mSQL (1.0ms)[0m  [1mINSERT INTO "users" ("created_at", "email", "fullname", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["created_at", "2014-06-27 15:32:52.968372"], ["email", "mikeepourhadi@gmail.com"], ["fullname", "Mikee Pourhadi"], ["updated_at", "2014-06-27 15:32:52.968372"]]
+  [1m[35m (0.4ms)[0m  COMMIT
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35mSQL (0.4ms)[0m  INSERT INTO "users" ("created_at", "email", "fullname", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"  [["created_at", "2014-06-27 15:32:52.974754"], ["email", "petersmells@gmail.com"], ["fullname", "Peter Debelak"], ["updated_at", "2014-06-27 15:32:52.974754"]]
+  [1m[36m (0.3ms)[0m  [1mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  BEGIN
+  [1m[36mSQL (0.3ms)[0m  [1mINSERT INTO "users" ("created_at", "email", "fullname", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["created_at", "2014-06-27 15:32:52.976974"], ["email", "steve@gmail.com"], ["fullname", "Steve Yim"], ["updated_at", "2014-06-27 15:32:52.976974"]]
+  [1m[35m (0.3ms)[0m  COMMIT
+  [1m[36m (0.3ms)[0m  [1mBEGIN[0m
+  [1m[35mSQL (1.6ms)[0m  INSERT INTO "daily_workouts" ("active_time", "created_at", "date", "distance", "steps", "updated_at", "user_id") VALUES ($1, $2, $3, $4, $5, $6, $7) RETURNING "id"  [["active_time", 40], ["created_at", "2014-06-27 15:32:52.995643"], ["date", "2014-04-08"], ["distance", 2.0], ["steps", 2000], ["updated_at", "2014-06-27 15:32:52.995643"], ["user_id", 1]]
+  [1m[36m (0.3ms)[0m  [1mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  BEGIN
+  [1m[36mSQL (0.3ms)[0m  [1mINSERT INTO "daily_workouts" ("active_time", "created_at", "date", "distance", "steps", "updated_at", "user_id") VALUES ($1, $2, $3, $4, $5, $6, $7) RETURNING "id"[0m  [["active_time", 20], ["created_at", "2014-06-27 15:32:53.001906"], ["date", "2014-04-09"], ["distance", 3.0], ["steps", 3000], ["updated_at", "2014-06-27 15:32:53.001906"], ["user_id", 1]]
+  [1m[35m (0.4ms)[0m  COMMIT
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35mSQL (0.3ms)[0m  INSERT INTO "daily_workouts" ("active_time", "created_at", "date", "distance", "steps", "updated_at", "user_id") VALUES ($1, $2, $3, $4, $5, $6, $7) RETURNING "id"  [["active_time", 40], ["created_at", "2014-06-27 15:32:53.004127"], ["date", "2014-04-09"], ["distance", 2.0], ["steps", 2000], ["updated_at", "2014-06-27 15:32:53.004127"], ["user_id", 2]]
+  [1m[36m (0.4ms)[0m  [1mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  BEGIN
+  [1m[36mSQL (0.3ms)[0m  [1mINSERT INTO "daily_workouts" ("active_time", "created_at", "date", "distance", "steps", "updated_at", "user_id") VALUES ($1, $2, $3, $4, $5, $6, $7) RETURNING "id"[0m  [["active_time", 31], ["created_at", "2014-06-27 15:32:53.006114"], ["date", "2014-04-08"], ["distance", 1.0], ["steps", 3000], ["updated_at", "2014-06-27 15:32:53.006114"], ["user_id", 2]]
+  [1m[35m (0.3ms)[0m  COMMIT
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35mSQL (0.3ms)[0m  INSERT INTO "daily_workouts" ("active_time", "created_at", "date", "distance", "steps", "updated_at", "user_id") VALUES ($1, $2, $3, $4, $5, $6, $7) RETURNING "id"  [["active_time", 31], ["created_at", "2014-06-27 15:32:53.008028"], ["date", "2014-04-08"], ["distance", 1.0], ["steps", 3000], ["updated_at", "2014-06-27 15:32:53.008028"], ["user_id", 3]]
+  [1m[36m (0.4ms)[0m  [1mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  BEGIN
+  [1m[36mSQL (0.3ms)[0m  [1mINSERT INTO "daily_workouts" ("active_time", "created_at", "date", "distance", "steps", "updated_at", "user_id") VALUES ($1, $2, $3, $4, $5, $6, $7) RETURNING "id"[0m  [["active_time", 31], ["created_at", "2014-06-27 15:32:53.009967"], ["date", "2014-04-08"], ["distance", 1.0], ["steps", 3000], ["updated_at", "2014-06-27 15:32:53.009967"], ["user_id", 3]]
+  [1m[35m (0.4ms)[0m  COMMIT
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35mSQL (0.2ms)[0m  INSERT INTO "daily_workouts" ("active_time", "created_at", "date", "distance", "steps", "updated_at", "user_id") VALUES ($1, $2, $3, $4, $5, $6, $7) RETURNING "id"  [["active_time", 31], ["created_at", "2014-06-27 15:32:53.012036"], ["date", "2014-04-10"], ["distance", 1.0], ["steps", 3000], ["updated_at", "2014-06-27 15:32:53.012036"], ["user_id", 1]]
+  [1m[36m (0.3ms)[0m  [1mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  BEGIN
+  [1m[36mSQL (0.2ms)[0m  [1mINSERT INTO "daily_workouts" ("active_time", "created_at", "date", "distance", "steps", "updated_at", "user_id") VALUES ($1, $2, $3, $4, $5, $6, $7) RETURNING "id"[0m  [["active_time", 31], ["created_at", "2014-06-27 15:32:53.013759"], ["date", "2014-04-11"], ["distance", 1.0], ["steps", 3000], ["updated_at", "2014-06-27 15:32:53.013759"], ["user_id", 1]]
+  [1m[35m (0.4ms)[0m  COMMIT
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35mSQL (0.2ms)[0m  INSERT INTO "daily_workouts" ("active_time", "created_at", "date", "distance", "steps", "updated_at", "user_id") VALUES ($1, $2, $3, $4, $5, $6, $7) RETURNING "id"  [["active_time", 31], ["created_at", "2014-06-27 15:32:53.015626"], ["date", "2014-04-12"], ["distance", 1.0], ["steps", 3000], ["updated_at", "2014-06-27 15:32:53.015626"], ["user_id", 1]]
+  [1m[36m (0.3ms)[0m  [1mCOMMIT[0m
+  [1m[36mActiveRecord::SchemaMigration Load (0.6ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+  [1m[35m (0.2ms)[0m  BEGIN
+  [1m[36mSQL (1.0ms)[0m  [1mINSERT INTO "users" ("created_at", "email", "fullname", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["created_at", "2014-06-27 15:33:13.689684"], ["email", "mikeepourhadi@gmail.com"], ["fullname", "Mikee Pourhadi"], ["updated_at", "2014-06-27 15:33:13.689684"]]
+PG::UniqueViolation: ERROR:  duplicate key value violates unique constraint "index_users_on_email"
+DETAIL:  Key (email)=(mikeepourhadi@gmail.com) already exists.
+: INSERT INTO "users" ("created_at", "email", "fullname", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"
+  [1m[35m (0.2ms)[0m  ROLLBACK
+  [1m[36mActiveRecord::SchemaMigration Load (0.7ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+  [1m[35m (0.2ms)[0m  BEGIN
+  [1m[36mSQL (0.7ms)[0m  [1mINSERT INTO "users" ("created_at", "email", "fullname", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["created_at", "2014-06-27 15:34:02.917469"], ["email", "mikeepourhadi1@gmail.com"], ["fullname", "Mikee Pourhadi"], ["updated_at", "2014-06-27 15:34:02.917469"]]
+  [1m[35m (0.5ms)[0m  COMMIT
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35mSQL (0.6ms)[0m  INSERT INTO "users" ("created_at", "email", "fullname", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"  [["created_at", "2014-06-27 15:34:02.923749"], ["email", "petersmells@gmail.com"], ["fullname", "Peter Debelak"], ["updated_at", "2014-06-27 15:34:02.923749"]]
+PG::UniqueViolation: ERROR:  duplicate key value violates unique constraint "index_users_on_email"
+DETAIL:  Key (email)=(petersmells@gmail.com) already exists.
+: INSERT INTO "users" ("created_at", "email", "fullname", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"
+  [1m[36m (0.2ms)[0m  [1mROLLBACK[0m
+  [1m[36mUser Load (0.8ms)[0m  [1mSELECT "users".* FROM "users"[0m
+  [1m[36m (3.2ms)[0m  [1mCREATE TABLE "schema_migrations" ("version" character varying(255) NOT NULL) [0m
+  [1m[35m (2.6ms)[0m  CREATE UNIQUE INDEX  "unique_schema_migrations" ON "schema_migrations"  ("version")
+  [1m[36mActiveRecord::SchemaMigration Load (0.4ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+Migrating to CreateUsers (20140625152825)
+  [1m[35m (0.2ms)[0m  BEGIN
+  [1m[36m (5.7ms)[0m  [1mCREATE TABLE "users" ("id" serial primary key, "fullname" character varying(255), "email" character varying(255), "oauth_token" character varying(255), "oauth_secret" character varying(255), "created_at" timestamp, "updated_at" timestamp) [0m
+  [1m[35m (3.4ms)[0m  CREATE UNIQUE INDEX  "index_users_on_email" ON "users"  ("email")
+  [1m[36mSQL (0.4ms)[0m  [1mINSERT INTO "schema_migrations" ("version") VALUES ($1)[0m  [["version", "20140625152825"]]
+  [1m[35m (0.5ms)[0m  COMMIT
+Migrating to CreateChallenges (20140625153256)
+  [1m[36m (0.2ms)[0m  [1mBEGIN[0m
+  [1m[35m (3.9ms)[0m  CREATE TABLE "challenges" ("id" serial primary key, "user_id" integer, "user_points" integer, "start_date" date, "end_date" date, "winner_id" integer, "challenger_id" integer, "challenger_points" integer, "created_at" timestamp, "updated_at" timestamp) 
+  [1m[36mSQL (0.4ms)[0m  [1mINSERT INTO "schema_migrations" ("version") VALUES ($1)[0m  [["version", "20140625153256"]]
+  [1m[35m (0.5ms)[0m  COMMIT
+Migrating to CreateDailyWorkouts (20140625154053)
+  [1m[36m (0.3ms)[0m  [1mBEGIN[0m
+  [1m[35m (3.6ms)[0m  CREATE TABLE "daily_workouts" ("id" serial primary key, "date" date, "user_id" integer, "steps" integer, "distance" float, "active_time" integer, "age" integer, "weight" integer, "created_at" timestamp, "updated_at" timestamp) 
+  [1m[36mSQL (0.2ms)[0m  [1mINSERT INTO "schema_migrations" ("version") VALUES ($1)[0m  [["version", "20140625154053"]]
+  [1m[35m (0.5ms)[0m  COMMIT
+Migrating to CreateAuthorizations (20140626161028)
+  [1m[36m (0.2ms)[0m  [1mBEGIN[0m
+  [1m[35m (4.5ms)[0m  CREATE TABLE "authorizations" ("id" serial primary key, "provider" character varying(255), "uid" character varying(255), "user_id" integer, "info" character varying(255), "created_at" timestamp, "updated_at" timestamp) 
+  [1m[36mSQL (0.3ms)[0m  [1mINSERT INTO "schema_migrations" ("version") VALUES ($1)[0m  [["version", "20140626161028"]]
+  [1m[35m (0.5ms)[0m  COMMIT
+  [1m[36mActiveRecord::SchemaMigration Load (0.3ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+  [1m[36mActiveRecord::SchemaMigration Load (0.5ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+  [1m[35m (0.2ms)[0m  BEGIN
+  [1m[36mSQL (1.0ms)[0m  [1mINSERT INTO "users" ("created_at", "email", "fullname", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["created_at", "2014-06-27 15:34:58.950769"], ["email", "mikeepourhadi1@gmail.com"], ["fullname", "Mikee Pourhadi"], ["updated_at", "2014-06-27 15:34:58.950769"]]
+  [1m[35m (0.4ms)[0m  COMMIT
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35mSQL (0.4ms)[0m  INSERT INTO "users" ("created_at", "email", "fullname", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"  [["created_at", "2014-06-27 15:34:58.957522"], ["email", "petersmells@gmail.com"], ["fullname", "Peter Debelak"], ["updated_at", "2014-06-27 15:34:58.957522"]]
+  [1m[36m (0.3ms)[0m  [1mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  BEGIN
+  [1m[36mSQL (0.3ms)[0m  [1mINSERT INTO "users" ("created_at", "email", "fullname", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["created_at", "2014-06-27 15:34:58.959685"], ["email", "steve@gmail.com"], ["fullname", "Steve Yim"], ["updated_at", "2014-06-27 15:34:58.959685"]]
+  [1m[35m (0.4ms)[0m  COMMIT
+  [1m[36m (0.3ms)[0m  [1mBEGIN[0m
+  [1m[35mSQL (1.1ms)[0m  INSERT INTO "daily_workouts" ("active_time", "created_at", "date", "distance", "steps", "updated_at", "user_id") VALUES ($1, $2, $3, $4, $5, $6, $7) RETURNING "id"  [["active_time", 40], ["created_at", "2014-06-27 15:34:58.977645"], ["date", "2014-04-08"], ["distance", 2.0], ["steps", 2000], ["updated_at", "2014-06-27 15:34:58.977645"], ["user_id", 1]]
+  [1m[36m (0.5ms)[0m  [1mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  BEGIN
+  [1m[36mSQL (0.3ms)[0m  [1mINSERT INTO "daily_workouts" ("active_time", "created_at", "date", "distance", "steps", "updated_at", "user_id") VALUES ($1, $2, $3, $4, $5, $6, $7) RETURNING "id"[0m  [["active_time", 20], ["created_at", "2014-06-27 15:34:58.984137"], ["date", "2014-04-09"], ["distance", 3.0], ["steps", 3000], ["updated_at", "2014-06-27 15:34:58.984137"], ["user_id", 1]]
+  [1m[35m (0.4ms)[0m  COMMIT
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35mSQL (0.3ms)[0m  INSERT INTO "daily_workouts" ("active_time", "created_at", "date", "distance", "steps", "updated_at", "user_id") VALUES ($1, $2, $3, $4, $5, $6, $7) RETURNING "id"  [["active_time", 40], ["created_at", "2014-06-27 15:34:58.986291"], ["date", "2014-04-09"], ["distance", 2.0], ["steps", 2000], ["updated_at", "2014-06-27 15:34:58.986291"], ["user_id", 2]]
+  [1m[36m (0.4ms)[0m  [1mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  BEGIN
+  [1m[36mSQL (0.3ms)[0m  [1mINSERT INTO "daily_workouts" ("active_time", "created_at", "date", "distance", "steps", "updated_at", "user_id") VALUES ($1, $2, $3, $4, $5, $6, $7) RETURNING "id"[0m  [["active_time", 31], ["created_at", "2014-06-27 15:34:58.988322"], ["date", "2014-04-08"], ["distance", 1.0], ["steps", 3000], ["updated_at", "2014-06-27 15:34:58.988322"], ["user_id", 2]]
+  [1m[35m (0.4ms)[0m  COMMIT
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35mSQL (0.3ms)[0m  INSERT INTO "daily_workouts" ("active_time", "created_at", "date", "distance", "steps", "updated_at", "user_id") VALUES ($1, $2, $3, $4, $5, $6, $7) RETURNING "id"  [["active_time", 31], ["created_at", "2014-06-27 15:34:58.990366"], ["date", "2014-04-08"], ["distance", 1.0], ["steps", 3000], ["updated_at", "2014-06-27 15:34:58.990366"], ["user_id", 3]]
+  [1m[36m (0.4ms)[0m  [1mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  BEGIN
+  [1m[36mSQL (0.3ms)[0m  [1mINSERT INTO "daily_workouts" ("active_time", "created_at", "date", "distance", "steps", "updated_at", "user_id") VALUES ($1, $2, $3, $4, $5, $6, $7) RETURNING "id"[0m  [["active_time", 31], ["created_at", "2014-06-27 15:34:58.992399"], ["date", "2014-04-08"], ["distance", 1.0], ["steps", 3000], ["updated_at", "2014-06-27 15:34:58.992399"], ["user_id", 3]]
+  [1m[35m (0.4ms)[0m  COMMIT
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35mSQL (0.2ms)[0m  INSERT INTO "daily_workouts" ("active_time", "created_at", "date", "distance", "steps", "updated_at", "user_id") VALUES ($1, $2, $3, $4, $5, $6, $7) RETURNING "id"  [["active_time", 31], ["created_at", "2014-06-27 15:34:58.994472"], ["date", "2014-04-10"], ["distance", 1.0], ["steps", 3000], ["updated_at", "2014-06-27 15:34:58.994472"], ["user_id", 1]]
+  [1m[36m (0.4ms)[0m  [1mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  BEGIN
+  [1m[36mSQL (0.2ms)[0m  [1mINSERT INTO "daily_workouts" ("active_time", "created_at", "date", "distance", "steps", "updated_at", "user_id") VALUES ($1, $2, $3, $4, $5, $6, $7) RETURNING "id"[0m  [["active_time", 31], ["created_at", "2014-06-27 15:34:58.996425"], ["date", "2014-04-11"], ["distance", 1.0], ["steps", 3000], ["updated_at", "2014-06-27 15:34:58.996425"], ["user_id", 1]]
+  [1m[35m (0.3ms)[0m  COMMIT
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35mSQL (0.3ms)[0m  INSERT INTO "daily_workouts" ("active_time", "created_at", "date", "distance", "steps", "updated_at", "user_id") VALUES ($1, $2, $3, $4, $5, $6, $7) RETURNING "id"  [["active_time", 31], ["created_at", "2014-06-27 15:34:58.998308"], ["date", "2014-04-12"], ["distance", 1.0], ["steps", 3000], ["updated_at", "2014-06-27 15:34:58.998308"], ["user_id", 1]]
+  [1m[36m (0.4ms)[0m  [1mCOMMIT[0m
+  [1m[36m (117.3ms)[0m  [1mDROP DATABASE IF EXISTS "fit_fight_development"[0m
+  [1m[35m (364.9ms)[0m  CREATE DATABASE "fit_fight_development" ENCODING = 'unicode'
+  [1m[36mSQL (0.4ms)[0m  [1mCREATE EXTENSION IF NOT EXISTS "plpgsql"[0m
+  [1m[35m (8.4ms)[0m  CREATE TABLE "authorizations" ("id" serial primary key, "provider" character varying(255), "uid" character varying(255), "user_id" integer, "info" character varying(255), "created_at" timestamp, "updated_at" timestamp) 
+  [1m[36m (4.7ms)[0m  [1mCREATE TABLE "challenges" ("id" serial primary key, "user_id" integer, "user_points" integer, "start_date" date, "end_date" date, "winner_id" integer, "challenger_id" integer, "challenger_points" integer, "created_at" timestamp, "updated_at" timestamp) [0m
+  [1m[35m (3.9ms)[0m  CREATE TABLE "daily_workouts" ("id" serial primary key, "date" date, "user_id" integer, "steps" integer, "distance" float, "active_time" integer, "age" integer, "weight" integer, "created_at" timestamp, "updated_at" timestamp) 
+  [1m[36m (6.4ms)[0m  [1mCREATE TABLE "users" ("id" serial primary key, "fullname" character varying(255), "email" character varying(255), "oauth_token" character varying(255), "oauth_secret" character varying(255), "created_at" timestamp, "updated_at" timestamp) [0m
+  [1m[35m (1.6ms)[0m  CREATE UNIQUE INDEX  "index_users_on_email" ON "users" USING btree ("email")
+  [1m[36m (1.2ms)[0m  [1mCREATE TABLE "schema_migrations" ("version" character varying(255) NOT NULL) [0m
+  [1m[35m (1.7ms)[0m  CREATE UNIQUE INDEX  "unique_schema_migrations" ON "schema_migrations"  ("version")
+  [1m[36m (0.5ms)[0m  [1mSELECT version FROM "schema_migrations"[0m
+  [1m[35m (0.7ms)[0m  INSERT INTO "schema_migrations" (version) VALUES ('20140626161028')
+  [1m[36m (0.6ms)[0m  [1mINSERT INTO "schema_migrations" (version) VALUES ('20140625152825')[0m
+  [1m[35m (2.0ms)[0m  INSERT INTO "schema_migrations" (version) VALUES ('20140625153256')
+  [1m[36m (0.5ms)[0m  [1mINSERT INTO "schema_migrations" (version) VALUES ('20140625154053')[0m
+  [1m[35mActiveRecord::SchemaMigration Load (0.2ms)[0m  SELECT "schema_migrations".* FROM "schema_migrations"
+  [1m[36m (0.2ms)[0m  [1mBEGIN[0m
+  [1m[35mSQL (0.9ms)[0m  INSERT INTO "users" ("created_at", "email", "fullname", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"  [["created_at", "2014-06-27 15:36:04.395793"], ["email", "mikeepourhadi1@gmail.com"], ["fullname", "Mikee Pourhadi"], ["updated_at", "2014-06-27 15:36:04.395793"]]
+  [1m[36m (0.4ms)[0m  [1mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  BEGIN
+  [1m[36mSQL (0.6ms)[0m  [1mINSERT INTO "users" ("created_at", "email", "fullname", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["created_at", "2014-06-27 15:36:04.402512"], ["email", "petersmells@gmail.com"], ["fullname", "Peter Debelak"], ["updated_at", "2014-06-27 15:36:04.402512"]]
+  [1m[35m (0.7ms)[0m  COMMIT
+  [1m[36m (0.2ms)[0m  [1mBEGIN[0m
+  [1m[35mSQL (0.4ms)[0m  INSERT INTO "users" ("created_at", "email", "fullname", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"  [["created_at", "2014-06-27 15:36:04.406179"], ["email", "steve@gmail.com"], ["fullname", "Steve Yim"], ["updated_at", "2014-06-27 15:36:04.406179"]]
+  [1m[36m (0.4ms)[0m  [1mCOMMIT[0m
+  [1m[35m (0.2ms)[0m  BEGIN
+  [1m[36mSQL (0.7ms)[0m  [1mINSERT INTO "daily_workouts" ("active_time", "created_at", "date", "distance", "steps", "updated_at", "user_id") VALUES ($1, $2, $3, $4, $5, $6, $7) RETURNING "id"[0m  [["active_time", 40], ["created_at", "2014-06-27 15:36:04.423277"], ["date", "2014-04-08"], ["distance", 2.0], ["steps", 2000], ["updated_at", "2014-06-27 15:36:04.423277"], ["user_id", 1]]
+  [1m[35m (0.3ms)[0m  COMMIT
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35mSQL (0.4ms)[0m  INSERT INTO "daily_workouts" ("active_time", "created_at", "date", "distance", "steps", "updated_at", "user_id") VALUES ($1, $2, $3, $4, $5, $6, $7) RETURNING "id"  [["active_time", 20], ["created_at", "2014-06-27 15:36:04.426747"], ["date", "2014-04-09"], ["distance", 3.0], ["steps", 3000], ["updated_at", "2014-06-27 15:36:04.426747"], ["user_id", 1]]
+  [1m[36m (0.4ms)[0m  [1mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  BEGIN
+  [1m[36mSQL (0.3ms)[0m  [1mINSERT INTO "daily_workouts" ("active_time", "created_at", "date", "distance", "steps", "updated_at", "user_id") VALUES ($1, $2, $3, $4, $5, $6, $7) RETURNING "id"[0m  [["active_time", 40], ["created_at", "2014-06-27 15:36:04.429470"], ["date", "2014-04-09"], ["distance", 2.0], ["steps", 2000], ["updated_at", "2014-06-27 15:36:04.429470"], ["user_id", 2]]
+  [1m[35m (0.4ms)[0m  COMMIT
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35mSQL (0.3ms)[0m  INSERT INTO "daily_workouts" ("active_time", "created_at", "date", "distance", "steps", "updated_at", "user_id") VALUES ($1, $2, $3, $4, $5, $6, $7) RETURNING "id"  [["active_time", 31], ["created_at", "2014-06-27 15:36:04.431480"], ["date", "2014-04-08"], ["distance", 1.0], ["steps", 3000], ["updated_at", "2014-06-27 15:36:04.431480"], ["user_id", 2]]
+  [1m[36m (0.3ms)[0m  [1mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  BEGIN
+  [1m[36mSQL (0.3ms)[0m  [1mINSERT INTO "daily_workouts" ("active_time", "created_at", "date", "distance", "steps", "updated_at", "user_id") VALUES ($1, $2, $3, $4, $5, $6, $7) RETURNING "id"[0m  [["active_time", 31], ["created_at", "2014-06-27 15:36:04.433497"], ["date", "2014-04-08"], ["distance", 1.0], ["steps", 3000], ["updated_at", "2014-06-27 15:36:04.433497"], ["user_id", 3]]
+  [1m[35m (0.4ms)[0m  COMMIT
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35mSQL (0.3ms)[0m  INSERT INTO "daily_workouts" ("active_time", "created_at", "date", "distance", "steps", "updated_at", "user_id") VALUES ($1, $2, $3, $4, $5, $6, $7) RETURNING "id"  [["active_time", 31], ["created_at", "2014-06-27 15:36:04.435632"], ["date", "2014-04-08"], ["distance", 1.0], ["steps", 3000], ["updated_at", "2014-06-27 15:36:04.435632"], ["user_id", 3]]
+  [1m[36m (0.4ms)[0m  [1mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  BEGIN
+  [1m[36mSQL (0.2ms)[0m  [1mINSERT INTO "daily_workouts" ("active_time", "created_at", "date", "distance", "steps", "updated_at", "user_id") VALUES ($1, $2, $3, $4, $5, $6, $7) RETURNING "id"[0m  [["active_time", 31], ["created_at", "2014-06-27 15:36:04.438226"], ["date", "2014-04-10"], ["distance", 1.0], ["steps", 3000], ["updated_at", "2014-06-27 15:36:04.438226"], ["user_id", 1]]
+  [1m[35m (0.3ms)[0m  COMMIT
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35mSQL (0.2ms)[0m  INSERT INTO "daily_workouts" ("active_time", "created_at", "date", "distance", "steps", "updated_at", "user_id") VALUES ($1, $2, $3, $4, $5, $6, $7) RETURNING "id"  [["active_time", 31], ["created_at", "2014-06-27 15:36:04.440084"], ["date", "2014-04-11"], ["distance", 1.0], ["steps", 3000], ["updated_at", "2014-06-27 15:36:04.440084"], ["user_id", 1]]
+  [1m[36m (0.4ms)[0m  [1mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  BEGIN
+  [1m[36mSQL (0.2ms)[0m  [1mINSERT INTO "daily_workouts" ("active_time", "created_at", "date", "distance", "steps", "updated_at", "user_id") VALUES ($1, $2, $3, $4, $5, $6, $7) RETURNING "id"[0m  [["active_time", 31], ["created_at", "2014-06-27 15:36:04.442010"], ["date", "2014-04-12"], ["distance", 1.0], ["steps", 3000], ["updated_at", "2014-06-27 15:36:04.442010"], ["user_id", 1]]
+  [1m[35m (0.3ms)[0m  COMMIT
+  [1m[36m (6.9ms)[0m  [1mCREATE TABLE "schema_migrations" ("version" character varying(255) NOT NULL) [0m
+  [1m[35m (2.8ms)[0m  CREATE UNIQUE INDEX  "unique_schema_migrations" ON "schema_migrations"  ("version")
+  [1m[36mActiveRecord::SchemaMigration Load (0.8ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+Migrating to CreateUsers (20140625152825)
+  [1m[35m (0.2ms)[0m  BEGIN
+  [1m[36m (10.2ms)[0m  [1mCREATE TABLE "users" ("id" serial primary key, "fullname" character varying(255), "email" character varying(255), "oauth_token" character varying(255), "oauth_secret" character varying(255), "created_at" timestamp, "updated_at" timestamp) [0m
+  [1m[35m (1.9ms)[0m  CREATE UNIQUE INDEX  "index_users_on_email" ON "users"  ("email")
+  [1m[36mSQL (0.8ms)[0m  [1mINSERT INTO "schema_migrations" ("version") VALUES ($1)[0m  [["version", "20140625152825"]]
+  [1m[35m (0.6ms)[0m  COMMIT
+Migrating to CreateChallenges (20140625153256)
+  [1m[36m (0.3ms)[0m  [1mBEGIN[0m
+  [1m[35m (4.6ms)[0m  CREATE TABLE "challenges" ("id" serial primary key, "user_id" integer, "user_points" integer, "start_date" date, "end_date" date, "winner_id" integer, "challenger_id" integer, "challenger_points" integer, "created_at" timestamp, "updated_at" timestamp) 
+  [1m[36mSQL (0.3ms)[0m  [1mINSERT INTO "schema_migrations" ("version") VALUES ($1)[0m  [["version", "20140625153256"]]
+  [1m[35m (2.1ms)[0m  COMMIT
+Migrating to CreateDailyWorkouts (20140625154053)
+  [1m[36m (0.4ms)[0m  [1mBEGIN[0m
+  [1m[35m (3.6ms)[0m  CREATE TABLE "daily_workouts" ("id" serial primary key, "date" date, "user_id" integer, "steps" integer, "distance" float, "active_time" integer, "age" integer, "weight" integer, "created_at" timestamp, "updated_at" timestamp) 
+  [1m[36mSQL (0.2ms)[0m  [1mINSERT INTO "schema_migrations" ("version") VALUES ($1)[0m  [["version", "20140625154053"]]
+  [1m[35m (0.5ms)[0m  COMMIT
+Migrating to CreateAuthorizations (20140626161028)
+  [1m[36m (0.2ms)[0m  [1mBEGIN[0m
+  [1m[35m (4.7ms)[0m  CREATE TABLE "authorizations" ("id" serial primary key, "provider" character varying(255), "uid" character varying(255), "user_id" integer, "info" character varying(255), "created_at" timestamp, "updated_at" timestamp) 
+  [1m[36mSQL (0.4ms)[0m  [1mINSERT INTO "schema_migrations" ("version") VALUES ($1)[0m  [["version", "20140626161028"]]
+  [1m[35m (0.5ms)[0m  COMMIT
+  [1m[36mActiveRecord::SchemaMigration Load (0.3ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+  [1m[36mActiveRecord::SchemaMigration Load (0.6ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+  [1m[35m (0.2ms)[0m  BEGIN
+  [1m[36mSQL (2.5ms)[0m  [1mINSERT INTO "users" ("created_at", "email", "fullname", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["created_at", "2014-06-27 15:43:09.272249"], ["email", "mikeepourhadi1@gmail.com"], ["fullname", "Mikee Pourhadi"], ["updated_at", "2014-06-27 15:43:09.272249"]]
+  [1m[35m (0.4ms)[0m  COMMIT
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35mSQL (0.4ms)[0m  INSERT INTO "users" ("created_at", "email", "fullname", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"  [["created_at", "2014-06-27 15:43:09.280359"], ["email", "petersmells@gmail.com"], ["fullname", "Peter Debelak"], ["updated_at", "2014-06-27 15:43:09.280359"]]
+  [1m[36m (0.4ms)[0m  [1mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  BEGIN
+  [1m[36mSQL (0.3ms)[0m  [1mINSERT INTO "users" ("created_at", "email", "fullname", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["created_at", "2014-06-27 15:43:09.282580"], ["email", "steve@gmail.com"], ["fullname", "Steve Yim"], ["updated_at", "2014-06-27 15:43:09.282580"]]
+  [1m[35m (0.4ms)[0m  COMMIT
+  [1m[36m (0.2ms)[0m  [1mBEGIN[0m
+  [1m[35mSQL (1.4ms)[0m  INSERT INTO "daily_workouts" ("active_time", "created_at", "date", "distance", "steps", "updated_at", "user_id") VALUES ($1, $2, $3, $4, $5, $6, $7) RETURNING "id"  [["active_time", 40], ["created_at", "2014-06-27 15:43:09.299113"], ["date", "2014-04-08"], ["distance", 2.0], ["steps", 2000], ["updated_at", "2014-06-27 15:43:09.299113"], ["user_id", 1]]
+  [1m[36m (0.4ms)[0m  [1mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  BEGIN
+  [1m[36mSQL (0.3ms)[0m  [1mINSERT INTO "daily_workouts" ("active_time", "created_at", "date", "distance", "steps", "updated_at", "user_id") VALUES ($1, $2, $3, $4, $5, $6, $7) RETURNING "id"[0m  [["active_time", 20], ["created_at", "2014-06-27 15:43:09.303274"], ["date", "2014-04-09"], ["distance", 3.0], ["steps", 3000], ["updated_at", "2014-06-27 15:43:09.303274"], ["user_id", 1]]
+  [1m[35m (0.4ms)[0m  COMMIT
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35mSQL (0.3ms)[0m  INSERT INTO "daily_workouts" ("active_time", "created_at", "date", "distance", "steps", "updated_at", "user_id") VALUES ($1, $2, $3, $4, $5, $6, $7) RETURNING "id"  [["active_time", 40], ["created_at", "2014-06-27 15:43:09.305444"], ["date", "2014-04-09"], ["distance", 2.0], ["steps", 2000], ["updated_at", "2014-06-27 15:43:09.305444"], ["user_id", 2]]
+  [1m[36m (0.3ms)[0m  [1mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  BEGIN
+  [1m[36mSQL (0.3ms)[0m  [1mINSERT INTO "daily_workouts" ("active_time", "created_at", "date", "distance", "steps", "updated_at", "user_id") VALUES ($1, $2, $3, $4, $5, $6, $7) RETURNING "id"[0m  [["active_time", 31], ["created_at", "2014-06-27 15:43:09.307388"], ["date", "2014-04-08"], ["distance", 1.0], ["steps", 3000], ["updated_at", "2014-06-27 15:43:09.307388"], ["user_id", 2]]
+  [1m[35m (0.4ms)[0m  COMMIT
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35mSQL (0.3ms)[0m  INSERT INTO "daily_workouts" ("active_time", "created_at", "date", "distance", "steps", "updated_at", "user_id") VALUES ($1, $2, $3, $4, $5, $6, $7) RETURNING "id"  [["active_time", 31], ["created_at", "2014-06-27 15:43:09.309343"], ["date", "2014-04-08"], ["distance", 1.0], ["steps", 3000], ["updated_at", "2014-06-27 15:43:09.309343"], ["user_id", 3]]
+  [1m[36m (0.3ms)[0m  [1mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  BEGIN
+  [1m[36mSQL (0.3ms)[0m  [1mINSERT INTO "daily_workouts" ("active_time", "created_at", "date", "distance", "steps", "updated_at", "user_id") VALUES ($1, $2, $3, $4, $5, $6, $7) RETURNING "id"[0m  [["active_time", 31], ["created_at", "2014-06-27 15:43:09.311350"], ["date", "2014-04-08"], ["distance", 1.0], ["steps", 3000], ["updated_at", "2014-06-27 15:43:09.311350"], ["user_id", 3]]
+  [1m[35m (0.3ms)[0m  COMMIT
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35mSQL (0.2ms)[0m  INSERT INTO "daily_workouts" ("active_time", "created_at", "date", "distance", "steps", "updated_at", "user_id") VALUES ($1, $2, $3, $4, $5, $6, $7) RETURNING "id"  [["active_time", 31], ["created_at", "2014-06-27 15:43:09.313258"], ["date", "2014-04-10"], ["distance", 1.0], ["steps", 3000], ["updated_at", "2014-06-27 15:43:09.313258"], ["user_id", 1]]
+  [1m[36m (0.3ms)[0m  [1mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  BEGIN
+  [1m[36mSQL (0.2ms)[0m  [1mINSERT INTO "daily_workouts" ("active_time", "created_at", "date", "distance", "steps", "updated_at", "user_id") VALUES ($1, $2, $3, $4, $5, $6, $7) RETURNING "id"[0m  [["active_time", 31], ["created_at", "2014-06-27 15:43:09.315069"], ["date", "2014-04-11"], ["distance", 1.0], ["steps", 3000], ["updated_at", "2014-06-27 15:43:09.315069"], ["user_id", 1]]
+  [1m[35m (0.3ms)[0m  COMMIT
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35mSQL (0.2ms)[0m  INSERT INTO "daily_workouts" ("active_time", "created_at", "date", "distance", "steps", "updated_at", "user_id") VALUES ($1, $2, $3, $4, $5, $6, $7) RETURNING "id"  [["active_time", 31], ["created_at", "2014-06-27 15:43:09.316930"], ["date", "2014-04-12"], ["distance", 1.0], ["steps", 3000], ["updated_at", "2014-06-27 15:43:09.316930"], ["user_id", 1]]
+  [1m[36m (0.3ms)[0m  [1mCOMMIT[0m
+  [1m[36m (119.6ms)[0m  [1mDROP DATABASE IF EXISTS "fit_fight_development"[0m
+  [1m[35m (361.1ms)[0m  CREATE DATABASE "fit_fight_development" ENCODING = 'unicode'
+  [1m[36mSQL (0.4ms)[0m  [1mCREATE EXTENSION IF NOT EXISTS "plpgsql"[0m
+  [1m[35m (9.2ms)[0m  CREATE TABLE "authorizations" ("id" serial primary key, "provider" character varying(255), "uid" character varying(255), "user_id" integer, "info" character varying(255), "created_at" timestamp, "updated_at" timestamp) 
+  [1m[36m (5.4ms)[0m  [1mCREATE TABLE "challenges" ("id" serial primary key, "user_id" integer, "user_points" integer, "start_date" date, "end_date" date, "winner_id" integer, "challenger_id" integer, "challenger_points" integer, "created_at" timestamp, "updated_at" timestamp) [0m
+  [1m[35m (4.2ms)[0m  CREATE TABLE "daily_workouts" ("id" serial primary key, "date" date, "user_id" integer, "steps" integer, "distance" float, "active_time" integer, "age" integer, "weight" integer, "created_at" timestamp, "updated_at" timestamp) 
+  [1m[36m (6.0ms)[0m  [1mCREATE TABLE "users" ("id" serial primary key, "fullname" character varying(255), "email" character varying(255), "oauth_token" character varying(255), "oauth_secret" character varying(255), "created_at" timestamp, "updated_at" timestamp) [0m
+  [1m[35m (1.7ms)[0m  CREATE UNIQUE INDEX  "index_users_on_email" ON "users" USING btree ("email")
+  [1m[36m (1.5ms)[0m  [1mCREATE TABLE "schema_migrations" ("version" character varying(255) NOT NULL) [0m
+  [1m[35m (1.4ms)[0m  CREATE UNIQUE INDEX  "unique_schema_migrations" ON "schema_migrations"  ("version")
+  [1m[36m (0.4ms)[0m  [1mSELECT version FROM "schema_migrations"[0m
+  [1m[35m (0.6ms)[0m  INSERT INTO "schema_migrations" (version) VALUES ('20140626161028')
+  [1m[36m (0.5ms)[0m  [1mINSERT INTO "schema_migrations" (version) VALUES ('20140625152825')[0m
+  [1m[35m (0.4ms)[0m  INSERT INTO "schema_migrations" (version) VALUES ('20140625153256')
+  [1m[36m (0.4ms)[0m  [1mINSERT INTO "schema_migrations" (version) VALUES ('20140625154053')[0m
+  [1m[35mActiveRecord::SchemaMigration Load (0.2ms)[0m  SELECT "schema_migrations".* FROM "schema_migrations"
+  [1m[36m (0.2ms)[0m  [1mBEGIN[0m
+  [1m[35mSQL (0.8ms)[0m  INSERT INTO "users" ("created_at", "email", "fullname", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"  [["created_at", "2014-06-27 15:44:35.134989"], ["email", "mikeepourhadi1@gmail.com"], ["fullname", "Mikee Pourhadi"], ["updated_at", "2014-06-27 15:44:35.134989"]]
+  [1m[36m (0.4ms)[0m  [1mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  BEGIN
+  [1m[36mSQL (0.4ms)[0m  [1mINSERT INTO "users" ("created_at", "email", "fullname", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["created_at", "2014-06-27 15:44:35.141390"], ["email", "petersmells@gmail.com"], ["fullname", "Peter Debelak"], ["updated_at", "2014-06-27 15:44:35.141390"]]
+  [1m[35m (0.4ms)[0m  COMMIT
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35mSQL (0.3ms)[0m  INSERT INTO "users" ("created_at", "email", "fullname", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"  [["created_at", "2014-06-27 15:44:35.143609"], ["email", "steve@gmail.com"], ["fullname", "Steve Yim"], ["updated_at", "2014-06-27 15:44:35.143609"]]
+  [1m[36m (0.3ms)[0m  [1mCOMMIT[0m
+  [1m[35m (0.2ms)[0m  BEGIN
+  [1m[36mSQL (0.6ms)[0m  [1mINSERT INTO "daily_workouts" ("active_time", "created_at", "date", "distance", "steps", "updated_at", "user_id") VALUES ($1, $2, $3, $4, $5, $6, $7) RETURNING "id"[0m  [["active_time", 40], ["created_at", "2014-06-27 15:44:35.161972"], ["date", "2014-04-08"], ["distance", 2.0], ["steps", 2000], ["updated_at", "2014-06-27 15:44:35.161972"], ["user_id", 1]]
+  [1m[35m (0.4ms)[0m  COMMIT
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35mSQL (0.7ms)[0m  INSERT INTO "daily_workouts" ("active_time", "created_at", "date", "distance", "steps", "updated_at", "user_id") VALUES ($1, $2, $3, $4, $5, $6, $7) RETURNING "id"  [["active_time", 20], ["created_at", "2014-06-27 15:44:35.165316"], ["date", "2014-04-09"], ["distance", 3.0], ["steps", 3000], ["updated_at", "2014-06-27 15:44:35.165316"], ["user_id", 1]]
+  [1m[36m (0.6ms)[0m  [1mCOMMIT[0m
+  [1m[35m (0.2ms)[0m  BEGIN
+  [1m[36mSQL (0.3ms)[0m  [1mINSERT INTO "daily_workouts" ("active_time", "created_at", "date", "distance", "steps", "updated_at", "user_id") VALUES ($1, $2, $3, $4, $5, $6, $7) RETURNING "id"[0m  [["active_time", 40], ["created_at", "2014-06-27 15:44:35.168894"], ["date", "2014-04-09"], ["distance", 2.0], ["steps", 2000], ["updated_at", "2014-06-27 15:44:35.168894"], ["user_id", 2]]
+  [1m[35m (0.4ms)[0m  COMMIT
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35mSQL (0.3ms)[0m  INSERT INTO "daily_workouts" ("active_time", "created_at", "date", "distance", "steps", "updated_at", "user_id") VALUES ($1, $2, $3, $4, $5, $6, $7) RETURNING "id"  [["active_time", 31], ["created_at", "2014-06-27 15:44:35.171157"], ["date", "2014-04-08"], ["distance", 1.0], ["steps", 3000], ["updated_at", "2014-06-27 15:44:35.171157"], ["user_id", 2]]
+  [1m[36m (0.3ms)[0m  [1mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  BEGIN
+  [1m[36mSQL (0.3ms)[0m  [1mINSERT INTO "daily_workouts" ("active_time", "created_at", "date", "distance", "steps", "updated_at", "user_id") VALUES ($1, $2, $3, $4, $5, $6, $7) RETURNING "id"[0m  [["active_time", 31], ["created_at", "2014-06-27 15:44:35.173326"], ["date", "2014-04-08"], ["distance", 1.0], ["steps", 3000], ["updated_at", "2014-06-27 15:44:35.173326"], ["user_id", 3]]
+  [1m[35m (0.3ms)[0m  COMMIT
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35mSQL (0.3ms)[0m  INSERT INTO "daily_workouts" ("active_time", "created_at", "date", "distance", "steps", "updated_at", "user_id") VALUES ($1, $2, $3, $4, $5, $6, $7) RETURNING "id"  [["active_time", 31], ["created_at", "2014-06-27 15:44:35.175500"], ["date", "2014-04-08"], ["distance", 1.0], ["steps", 3000], ["updated_at", "2014-06-27 15:44:35.175500"], ["user_id", 3]]
+  [1m[36m (0.5ms)[0m  [1mCOMMIT[0m
+  [1m[35m (0.2ms)[0m  BEGIN
+  [1m[36mSQL (0.3ms)[0m  [1mINSERT INTO "daily_workouts" ("active_time", "created_at", "date", "distance", "steps", "updated_at", "user_id") VALUES ($1, $2, $3, $4, $5, $6, $7) RETURNING "id"[0m  [["active_time", 31], ["created_at", "2014-06-27 15:44:35.178132"], ["date", "2014-04-10"], ["distance", 1.0], ["steps", 3000], ["updated_at", "2014-06-27 15:44:35.178132"], ["user_id", 1]]
+  [1m[35m (0.5ms)[0m  COMMIT
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35mSQL (0.2ms)[0m  INSERT INTO "daily_workouts" ("active_time", "created_at", "date", "distance", "steps", "updated_at", "user_id") VALUES ($1, $2, $3, $4, $5, $6, $7) RETURNING "id"  [["active_time", 31], ["created_at", "2014-06-27 15:44:35.180837"], ["date", "2014-04-11"], ["distance", 1.0], ["steps", 3000], ["updated_at", "2014-06-27 15:44:35.180837"], ["user_id", 1]]
+  [1m[36m (0.3ms)[0m  [1mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  BEGIN
+  [1m[36mSQL (0.3ms)[0m  [1mINSERT INTO "daily_workouts" ("active_time", "created_at", "date", "distance", "steps", "updated_at", "user_id") VALUES ($1, $2, $3, $4, $5, $6, $7) RETURNING "id"[0m  [["active_time", 31], ["created_at", "2014-06-27 15:44:35.183034"], ["date", "2014-04-12"], ["distance", 1.0], ["steps", 3000], ["updated_at", "2014-06-27 15:44:35.183034"], ["user_id", 1]]
+  [1m[35m (0.4ms)[0m  COMMIT
+  [1m[36m (115.7ms)[0m  [1mDROP DATABASE IF EXISTS "fit_fight_development"[0m
+  [1m[35m (367.2ms)[0m  CREATE DATABASE "fit_fight_development" ENCODING = 'unicode'
+  [1m[36mSQL (0.4ms)[0m  [1mCREATE EXTENSION IF NOT EXISTS "plpgsql"[0m
+  [1m[35m (10.1ms)[0m  CREATE TABLE "authorizations" ("id" serial primary key, "provider" character varying(255), "uid" character varying(255), "user_id" integer, "info" character varying(255), "created_at" timestamp, "updated_at" timestamp) 
+  [1m[36m (4.6ms)[0m  [1mCREATE TABLE "challenges" ("id" serial primary key, "user_id" integer, "user_points" integer, "start_date" date, "end_date" date, "winner_id" integer, "challenger_id" integer, "challenger_points" integer, "created_at" timestamp, "updated_at" timestamp) [0m
+  [1m[35m (4.5ms)[0m  CREATE TABLE "daily_workouts" ("id" serial primary key, "date" date, "user_id" integer, "steps" integer, "distance" float, "active_time" integer, "age" integer, "weight" integer, "created_at" timestamp, "updated_at" timestamp) 
+  [1m[36m (7.0ms)[0m  [1mCREATE TABLE "users" ("id" serial primary key, "fullname" character varying(255), "email" character varying(255), "oauth_token" character varying(255), "oauth_secret" character varying(255), "created_at" timestamp, "updated_at" timestamp) [0m
+  [1m[35m (1.7ms)[0m  CREATE UNIQUE INDEX  "index_users_on_email" ON "users" USING btree ("email")
+  [1m[36m (1.0ms)[0m  [1mCREATE TABLE "schema_migrations" ("version" character varying(255) NOT NULL) [0m
+  [1m[35m (1.4ms)[0m  CREATE UNIQUE INDEX  "unique_schema_migrations" ON "schema_migrations"  ("version")
+  [1m[36m (0.4ms)[0m  [1mSELECT version FROM "schema_migrations"[0m
+  [1m[35m (0.6ms)[0m  INSERT INTO "schema_migrations" (version) VALUES ('20140626161028')
+  [1m[36m (0.5ms)[0m  [1mINSERT INTO "schema_migrations" (version) VALUES ('20140625152825')[0m
+  [1m[35m (0.4ms)[0m  INSERT INTO "schema_migrations" (version) VALUES ('20140625153256')
+  [1m[36m (0.3ms)[0m  [1mINSERT INTO "schema_migrations" (version) VALUES ('20140625154053')[0m
+  [1m[35mActiveRecord::SchemaMigration Load (0.2ms)[0m  SELECT "schema_migrations".* FROM "schema_migrations"
+  [1m[36m (0.2ms)[0m  [1mBEGIN[0m
+  [1m[35mSQL (0.8ms)[0m  INSERT INTO "users" ("created_at", "email", "fullname", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"  [["created_at", "2014-06-27 15:46:46.839008"], ["email", "mikeepourhadi1@gmail.com"], ["fullname", "Mikee Pourhadi"], ["updated_at", "2014-06-27 15:46:46.839008"]]
+  [1m[36m (0.4ms)[0m  [1mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  BEGIN
+  [1m[36mSQL (0.4ms)[0m  [1mINSERT INTO "users" ("created_at", "email", "fullname", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["created_at", "2014-06-27 15:46:46.845327"], ["email", "petersmells@gmail.com"], ["fullname", "Peter Debelak"], ["updated_at", "2014-06-27 15:46:46.845327"]]
+  [1m[35m (0.4ms)[0m  COMMIT
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35mSQL (0.3ms)[0m  INSERT INTO "users" ("created_at", "email", "fullname", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"  [["created_at", "2014-06-27 15:46:46.847552"], ["email", "steve@gmail.com"], ["fullname", "Steve Yim"], ["updated_at", "2014-06-27 15:46:46.847552"]]
+  [1m[36m (0.3ms)[0m  [1mCOMMIT[0m
+  [1m[35m (0.2ms)[0m  BEGIN
+  [1m[36mSQL (0.6ms)[0m  [1mINSERT INTO "daily_workouts" ("active_time", "created_at", "date", "distance", "steps", "updated_at", "user_id") VALUES ($1, $2, $3, $4, $5, $6, $7) RETURNING "id"[0m  [["active_time", 40], ["created_at", "2014-06-27 15:46:46.865005"], ["date", "2014-04-08"], ["distance", 2.0], ["steps", 2000], ["updated_at", "2014-06-27 15:46:46.865005"], ["user_id", 1]]
+  [1m[35m (0.9ms)[0m  COMMIT
+  [1m[36m (0.2ms)[0m  [1mBEGIN[0m
+  [1m[35mSQL (0.6ms)[0m  INSERT INTO "daily_workouts" ("active_time", "created_at", "date", "distance", "steps", "updated_at", "user_id") VALUES ($1, $2, $3, $4, $5, $6, $7) RETURNING "id"  [["active_time", 20], ["created_at", "2014-06-27 15:46:46.869389"], ["date", "2014-04-09"], ["distance", 3.0], ["steps", 3000], ["updated_at", "2014-06-27 15:46:46.869389"], ["user_id", 1]]
+  [1m[36m (0.4ms)[0m  [1mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  BEGIN
+  [1m[36mSQL (0.3ms)[0m  [1mINSERT INTO "daily_workouts" ("active_time", "created_at", "date", "distance", "steps", "updated_at", "user_id") VALUES ($1, $2, $3, $4, $5, $6, $7) RETURNING "id"[0m  [["active_time", 40], ["created_at", "2014-06-27 15:46:46.872576"], ["date", "2014-04-09"], ["distance", 2.0], ["steps", 2000], ["updated_at", "2014-06-27 15:46:46.872576"], ["user_id", 2]]
+  [1m[35m (0.4ms)[0m  COMMIT
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35mSQL (0.3ms)[0m  INSERT INTO "daily_workouts" ("active_time", "created_at", "date", "distance", "steps", "updated_at", "user_id") VALUES ($1, $2, $3, $4, $5, $6, $7) RETURNING "id"  [["active_time", 31], ["created_at", "2014-06-27 15:46:46.874853"], ["date", "2014-04-08"], ["distance", 1.0], ["steps", 3000], ["updated_at", "2014-06-27 15:46:46.874853"], ["user_id", 2]]
+  [1m[36m (0.4ms)[0m  [1mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  BEGIN
+  [1m[36mSQL (0.3ms)[0m  [1mINSERT INTO "daily_workouts" ("active_time", "created_at", "date", "distance", "steps", "updated_at", "user_id") VALUES ($1, $2, $3, $4, $5, $6, $7) RETURNING "id"[0m  [["active_time", 31], ["created_at", "2014-06-27 15:46:46.877129"], ["date", "2014-04-08"], ["distance", 1.0], ["steps", 3000], ["updated_at", "2014-06-27 15:46:46.877129"], ["user_id", 3]]
+  [1m[35m (0.4ms)[0m  COMMIT
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35mSQL (0.5ms)[0m  INSERT INTO "daily_workouts" ("active_time", "created_at", "date", "distance", "steps", "updated_at", "user_id") VALUES ($1, $2, $3, $4, $5, $6, $7) RETURNING "id"  [["active_time", 31], ["created_at", "2014-06-27 15:46:46.879413"], ["date", "2014-04-08"], ["distance", 1.0], ["steps", 3000], ["updated_at", "2014-06-27 15:46:46.879413"], ["user_id", 3]]
+  [1m[36m (0.4ms)[0m  [1mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  BEGIN
+  [1m[36mSQL (0.3ms)[0m  [1mINSERT INTO "daily_workouts" ("active_time", "created_at", "date", "distance", "steps", "updated_at", "user_id") VALUES ($1, $2, $3, $4, $5, $6, $7) RETURNING "id"[0m  [["active_time", 31], ["created_at", "2014-06-27 15:46:46.882138"], ["date", "2014-04-10"], ["distance", 1.0], ["steps", 3000], ["updated_at", "2014-06-27 15:46:46.882138"], ["user_id", 1]]
+  [1m[35m (0.4ms)[0m  COMMIT
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35mSQL (0.3ms)[0m  INSERT INTO "daily_workouts" ("active_time", "created_at", "date", "distance", "steps", "updated_at", "user_id") VALUES ($1, $2, $3, $4, $5, $6, $7) RETURNING "id"  [["active_time", 31], ["created_at", "2014-06-27 15:46:46.884321"], ["date", "2014-04-11"], ["distance", 1.0], ["steps", 3000], ["updated_at", "2014-06-27 15:46:46.884321"], ["user_id", 1]]
+  [1m[36m (0.3ms)[0m  [1mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  BEGIN
+  [1m[36mSQL (0.2ms)[0m  [1mINSERT INTO "daily_workouts" ("active_time", "created_at", "date", "distance", "steps", "updated_at", "user_id") VALUES ($1, $2, $3, $4, $5, $6, $7) RETURNING "id"[0m  [["active_time", 31], ["created_at", "2014-06-27 15:46:46.886327"], ["date", "2014-04-12"], ["distance", 1.0], ["steps", 3000], ["updated_at", "2014-06-27 15:46:46.886327"], ["user_id", 1]]
+  [1m[35m (0.4ms)[0m  COMMIT
+  [1m[36m (116.9ms)[0m  [1mDROP DATABASE IF EXISTS "fit_fight_development"[0m
+  [1m[35m (360.6ms)[0m  CREATE DATABASE "fit_fight_development" ENCODING = 'unicode'
+  [1m[36mSQL (0.4ms)[0m  [1mCREATE EXTENSION IF NOT EXISTS "plpgsql"[0m
+  [1m[35m (9.3ms)[0m  CREATE TABLE "authorizations" ("id" serial primary key, "provider" character varying(255), "uid" character varying(255), "user_id" integer, "info" character varying(255), "created_at" timestamp, "updated_at" timestamp) 
+  [1m[36m (4.6ms)[0m  [1mCREATE TABLE "challenges" ("id" serial primary key, "user_id" integer, "user_points" integer, "start_date" date, "end_date" date, "winner_id" integer, "challenger_id" integer, "challenger_points" integer, "created_at" timestamp, "updated_at" timestamp) [0m
+  [1m[35m (3.6ms)[0m  CREATE TABLE "daily_workouts" ("id" serial primary key, "date" date, "user_id" integer, "steps" integer, "distance" float, "active_time" integer, "age" integer, "weight" integer, "created_at" timestamp, "updated_at" timestamp) 
+  [1m[36m (5.5ms)[0m  [1mCREATE TABLE "users" ("id" serial primary key, "fullname" character varying(255), "email" character varying(255), "oauth_token" character varying(255), "oauth_secret" character varying(255), "created_at" timestamp, "updated_at" timestamp) [0m
+  [1m[35m (2.4ms)[0m  CREATE UNIQUE INDEX  "index_users_on_email" ON "users" USING btree ("email")
+  [1m[36m (1.1ms)[0m  [1mCREATE TABLE "schema_migrations" ("version" character varying(255) NOT NULL) [0m
+  [1m[35m (1.4ms)[0m  CREATE UNIQUE INDEX  "unique_schema_migrations" ON "schema_migrations"  ("version")
+  [1m[36m (0.5ms)[0m  [1mSELECT version FROM "schema_migrations"[0m
+  [1m[35m (1.0ms)[0m  INSERT INTO "schema_migrations" (version) VALUES ('20140626161028')
+  [1m[36m (0.8ms)[0m  [1mINSERT INTO "schema_migrations" (version) VALUES ('20140625152825')[0m
+  [1m[35m (0.8ms)[0m  INSERT INTO "schema_migrations" (version) VALUES ('20140625153256')
+  [1m[36m (0.5ms)[0m  [1mINSERT INTO "schema_migrations" (version) VALUES ('20140625154053')[0m
+  [1m[35mActiveRecord::SchemaMigration Load (0.3ms)[0m  SELECT "schema_migrations".* FROM "schema_migrations"
+  [1m[36m (0.2ms)[0m  [1mBEGIN[0m
+  [1m[35mSQL (0.9ms)[0m  INSERT INTO "users" ("created_at", "email", "fullname", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"  [["created_at", "2014-06-27 15:55:07.497464"], ["email", "mikeepourhadi1@gmail.com"], ["fullname", "Mikee Pourhadi"], ["updated_at", "2014-06-27 15:55:07.497464"]]
+  [1m[36m (0.4ms)[0m  [1mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  BEGIN
+  [1m[36mSQL (0.4ms)[0m  [1mINSERT INTO "users" ("created_at", "email", "fullname", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["created_at", "2014-06-27 15:55:07.504069"], ["email", "petersmells@gmail.com"], ["fullname", "Peter Debelak"], ["updated_at", "2014-06-27 15:55:07.504069"]]
+  [1m[35m (0.4ms)[0m  COMMIT
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35mSQL (0.3ms)[0m  INSERT INTO "users" ("created_at", "email", "fullname", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"  [["created_at", "2014-06-27 15:55:07.506376"], ["email", "steve@gmail.com"], ["fullname", "Steve Yim"], ["updated_at", "2014-06-27 15:55:07.506376"]]
+  [1m[36m (0.3ms)[0m  [1mCOMMIT[0m
+  [1m[35m (0.2ms)[0m  BEGIN
+  [1m[36mSQL (0.7ms)[0m  [1mINSERT INTO "daily_workouts" ("active_time", "created_at", "date", "distance", "steps", "updated_at", "user_id") VALUES ($1, $2, $3, $4, $5, $6, $7) RETURNING "id"[0m  [["active_time", 40], ["created_at", "2014-06-27 15:55:07.523302"], ["date", "2014-04-08"], ["distance", 2.0], ["steps", 2000], ["updated_at", "2014-06-27 15:55:07.523302"], ["user_id", 1]]
+  [1m[35m (0.3ms)[0m  COMMIT
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35mSQL (0.3ms)[0m  INSERT INTO "daily_workouts" ("active_time", "created_at", "date", "distance", "steps", "updated_at", "user_id") VALUES ($1, $2, $3, $4, $5, $6, $7) RETURNING "id"  [["active_time", 20], ["created_at", "2014-06-27 15:55:07.526545"], ["date", "2014-04-09"], ["distance", 3.0], ["steps", 3000], ["updated_at", "2014-06-27 15:55:07.526545"], ["user_id", 1]]
+  [1m[36m (0.3ms)[0m  [1mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  BEGIN
+  [1m[36mSQL (0.4ms)[0m  [1mINSERT INTO "daily_workouts" ("active_time", "created_at", "date", "distance", "steps", "updated_at", "user_id") VALUES ($1, $2, $3, $4, $5, $6, $7) RETURNING "id"[0m  [["active_time", 40], ["created_at", "2014-06-27 15:55:07.528856"], ["date", "2014-04-09"], ["distance", 2.0], ["steps", 2000], ["updated_at", "2014-06-27 15:55:07.528856"], ["user_id", 2]]
+  [1m[35m (0.4ms)[0m  COMMIT
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35mSQL (0.3ms)[0m  INSERT INTO "daily_workouts" ("active_time", "created_at", "date", "distance", "steps", "updated_at", "user_id") VALUES ($1, $2, $3, $4, $5, $6, $7) RETURNING "id"  [["active_time", 31], ["created_at", "2014-06-27 15:55:07.531524"], ["date", "2014-04-08"], ["distance", 1.0], ["steps", 3000], ["updated_at", "2014-06-27 15:55:07.531524"], ["user_id", 2]]
+  [1m[36m (0.3ms)[0m  [1mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  BEGIN
+  [1m[36mSQL (0.3ms)[0m  [1mINSERT INTO "daily_workouts" ("active_time", "created_at", "date", "distance", "steps", "updated_at", "user_id") VALUES ($1, $2, $3, $4, $5, $6, $7) RETURNING "id"[0m  [["active_time", 31], ["created_at", "2014-06-27 15:55:07.533719"], ["date", "2014-04-08"], ["distance", 1.0], ["steps", 3000], ["updated_at", "2014-06-27 15:55:07.533719"], ["user_id", 3]]
+  [1m[35m (0.3ms)[0m  COMMIT
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35mSQL (0.4ms)[0m  INSERT INTO "daily_workouts" ("active_time", "created_at", "date", "distance", "steps", "updated_at", "user_id") VALUES ($1, $2, $3, $4, $5, $6, $7) RETURNING "id"  [["active_time", 31], ["created_at", "2014-06-27 15:55:07.535818"], ["date", "2014-04-08"], ["distance", 1.0], ["steps", 3000], ["updated_at", "2014-06-27 15:55:07.535818"], ["user_id", 3]]
+  [1m[36m (0.4ms)[0m  [1mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  BEGIN
+  [1m[36mSQL (0.2ms)[0m  [1mINSERT INTO "daily_workouts" ("active_time", "created_at", "date", "distance", "steps", "updated_at", "user_id") VALUES ($1, $2, $3, $4, $5, $6, $7) RETURNING "id"[0m  [["active_time", 31], ["created_at", "2014-06-27 15:55:07.538287"], ["date", "2014-04-10"], ["distance", 1.0], ["steps", 3000], ["updated_at", "2014-06-27 15:55:07.538287"], ["user_id", 1]]
+  [1m[35m (0.4ms)[0m  COMMIT
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35mSQL (0.2ms)[0m  INSERT INTO "daily_workouts" ("active_time", "created_at", "date", "distance", "steps", "updated_at", "user_id") VALUES ($1, $2, $3, $4, $5, $6, $7) RETURNING "id"  [["active_time", 31], ["created_at", "2014-06-27 15:55:07.540216"], ["date", "2014-04-11"], ["distance", 1.0], ["steps", 3000], ["updated_at", "2014-06-27 15:55:07.540216"], ["user_id", 1]]
+  [1m[36m (0.4ms)[0m  [1mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  BEGIN
+  [1m[36mSQL (0.2ms)[0m  [1mINSERT INTO "daily_workouts" ("active_time", "created_at", "date", "distance", "steps", "updated_at", "user_id") VALUES ($1, $2, $3, $4, $5, $6, $7) RETURNING "id"[0m  [["active_time", 31], ["created_at", "2014-06-27 15:55:07.542097"], ["date", "2014-04-12"], ["distance", 1.0], ["steps", 3000], ["updated_at", "2014-06-27 15:55:07.542097"], ["user_id", 1]]
+  [1m[35m (0.3ms)[0m  COMMIT
+  [1m[36m (119.2ms)[0m  [1mDROP DATABASE IF EXISTS "fit_fight_development"[0m
+  [1m[35m (360.3ms)[0m  CREATE DATABASE "fit_fight_development" ENCODING = 'unicode'
+  [1m[36mSQL (0.4ms)[0m  [1mCREATE EXTENSION IF NOT EXISTS "plpgsql"[0m
+  [1m[35m (7.8ms)[0m  CREATE TABLE "authorizations" ("id" serial primary key, "provider" character varying(255), "uid" character varying(255), "user_id" integer, "info" character varying(255), "created_at" timestamp, "updated_at" timestamp) 
+  [1m[36m (4.3ms)[0m  [1mCREATE TABLE "challenges" ("id" serial primary key, "user_id" integer, "user_points" integer, "start_date" date, "end_date" date, "winner_id" integer, "challenger_id" integer, "challenger_points" integer, "created_at" timestamp, "updated_at" timestamp) [0m
+  [1m[35m (3.6ms)[0m  CREATE TABLE "daily_workouts" ("id" serial primary key, "date" date, "user_id" integer, "steps" integer, "distance" float, "active_time" integer, "age" integer, "weight" integer, "created_at" timestamp, "updated_at" timestamp) 
+  [1m[36m (5.6ms)[0m  [1mCREATE TABLE "users" ("id" serial primary key, "fullname" character varying(255), "email" character varying(255), "oauth_token" character varying(255), "oauth_secret" character varying(255), "created_at" timestamp, "updated_at" timestamp) [0m
+  [1m[35m (1.6ms)[0m  CREATE UNIQUE INDEX  "index_users_on_email" ON "users" USING btree ("email")
+  [1m[36m (1.4ms)[0m  [1mCREATE TABLE "schema_migrations" ("version" character varying(255) NOT NULL) [0m
+  [1m[35m (1.4ms)[0m  CREATE UNIQUE INDEX  "unique_schema_migrations" ON "schema_migrations"  ("version")
+  [1m[36m (0.4ms)[0m  [1mSELECT version FROM "schema_migrations"[0m
+  [1m[35m (0.7ms)[0m  INSERT INTO "schema_migrations" (version) VALUES ('20140626161028')
+  [1m[36m (0.5ms)[0m  [1mINSERT INTO "schema_migrations" (version) VALUES ('20140625152825')[0m
+  [1m[35m (0.4ms)[0m  INSERT INTO "schema_migrations" (version) VALUES ('20140625153256')
+  [1m[36m (0.3ms)[0m  [1mINSERT INTO "schema_migrations" (version) VALUES ('20140625154053')[0m
+  [1m[35mActiveRecord::SchemaMigration Load (0.3ms)[0m  SELECT "schema_migrations".* FROM "schema_migrations"
+  [1m[36m (0.2ms)[0m  [1mBEGIN[0m
+  [1m[35mSQL (1.1ms)[0m  INSERT INTO "users" ("created_at", "email", "fullname", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"  [["created_at", "2014-06-27 15:56:28.846660"], ["email", "mikeepourhadi1@gmail.com"], ["fullname", "Mikee Pourhadi"], ["updated_at", "2014-06-27 15:56:28.846660"]]
+  [1m[36m (0.4ms)[0m  [1mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  BEGIN
+  [1m[36mSQL (0.4ms)[0m  [1mINSERT INTO "users" ("created_at", "email", "fullname", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["created_at", "2014-06-27 15:56:28.853541"], ["email", "petersmells@gmail.com"], ["fullname", "Peter Debelak"], ["updated_at", "2014-06-27 15:56:28.853541"]]
+  [1m[35m (0.4ms)[0m  COMMIT
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35mSQL (0.4ms)[0m  INSERT INTO "users" ("created_at", "email", "fullname", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"  [["created_at", "2014-06-27 15:56:28.855875"], ["email", "steve@gmail.com"], ["fullname", "Steve Yim"], ["updated_at", "2014-06-27 15:56:28.855875"]]
+  [1m[36m (0.5ms)[0m  [1mCOMMIT[0m
+  [1m[35m (0.2ms)[0m  BEGIN
+  [1m[36mSQL (0.6ms)[0m  [1mINSERT INTO "daily_workouts" ("active_time", "created_at", "date", "distance", "steps", "updated_at", "user_id") VALUES ($1, $2, $3, $4, $5, $6, $7) RETURNING "id"[0m  [["active_time", 40], ["created_at", "2014-06-27 15:56:28.873170"], ["date", "2014-04-08"], ["distance", 2.0], ["steps", 2000], ["updated_at", "2014-06-27 15:56:28.873170"], ["user_id", 1]]
+  [1m[35m (0.5ms)[0m  COMMIT
+  [1m[36m (0.2ms)[0m  [1mBEGIN[0m
+  [1m[35mSQL (0.5ms)[0m  INSERT INTO "daily_workouts" ("active_time", "created_at", "date", "distance", "steps", "updated_at", "user_id") VALUES ($1, $2, $3, $4, $5, $6, $7) RETURNING "id"  [["active_time", 20], ["created_at", "2014-06-27 15:56:28.877088"], ["date", "2014-04-09"], ["distance", 3.0], ["steps", 3000], ["updated_at", "2014-06-27 15:56:28.877088"], ["user_id", 1]]
+  [1m[36m (0.5ms)[0m  [1mCOMMIT[0m
+  [1m[35m (0.2ms)[0m  BEGIN
+  [1m[36mSQL (0.3ms)[0m  [1mINSERT INTO "daily_workouts" ("active_time", "created_at", "date", "distance", "steps", "updated_at", "user_id") VALUES ($1, $2, $3, $4, $5, $6, $7) RETURNING "id"[0m  [["active_time", 40], ["created_at", "2014-06-27 15:56:28.880172"], ["date", "2014-04-09"], ["distance", 2.0], ["steps", 2000], ["updated_at", "2014-06-27 15:56:28.880172"], ["user_id", 2]]
+  [1m[35m (0.3ms)[0m  COMMIT
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35mSQL (0.3ms)[0m  INSERT INTO "daily_workouts" ("active_time", "created_at", "date", "distance", "steps", "updated_at", "user_id") VALUES ($1, $2, $3, $4, $5, $6, $7) RETURNING "id"  [["active_time", 31], ["created_at", "2014-06-27 15:56:28.882448"], ["date", "2014-04-08"], ["distance", 1.0], ["steps", 3000], ["updated_at", "2014-06-27 15:56:28.882448"], ["user_id", 2]]
+  [1m[36m (0.4ms)[0m  [1mCOMMIT[0m
+  [1m[35m (0.2ms)[0m  BEGIN
+  [1m[36mSQL (0.3ms)[0m  [1mINSERT INTO "daily_workouts" ("active_time", "created_at", "date", "distance", "steps", "updated_at", "user_id") VALUES ($1, $2, $3, $4, $5, $6, $7) RETURNING "id"[0m  [["active_time", 31], ["created_at", "2014-06-27 15:56:28.884737"], ["date", "2014-04-08"], ["distance", 1.0], ["steps", 3000], ["updated_at", "2014-06-27 15:56:28.884737"], ["user_id", 3]]
+  [1m[35m (0.3ms)[0m  COMMIT
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35mSQL (0.3ms)[0m  INSERT INTO "daily_workouts" ("active_time", "created_at", "date", "distance", "steps", "updated_at", "user_id") VALUES ($1, $2, $3, $4, $5, $6, $7) RETURNING "id"  [["active_time", 31], ["created_at", "2014-06-27 15:56:28.886991"], ["date", "2014-04-08"], ["distance", 1.0], ["steps", 3000], ["updated_at", "2014-06-27 15:56:28.886991"], ["user_id", 3]]
+  [1m[36m (0.4ms)[0m  [1mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  BEGIN
+  [1m[36mSQL (0.2ms)[0m  [1mINSERT INTO "daily_workouts" ("active_time", "created_at", "date", "distance", "steps", "updated_at", "user_id") VALUES ($1, $2, $3, $4, $5, $6, $7) RETURNING "id"[0m  [["active_time", 31], ["created_at", "2014-06-27 15:56:28.888926"], ["date", "2014-04-10"], ["distance", 1.0], ["steps", 3000], ["updated_at", "2014-06-27 15:56:28.888926"], ["user_id", 1]]
+  [1m[35m (0.3ms)[0m  COMMIT
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35mSQL (0.2ms)[0m  INSERT INTO "daily_workouts" ("active_time", "created_at", "date", "distance", "steps", "updated_at", "user_id") VALUES ($1, $2, $3, $4, $5, $6, $7) RETURNING "id"  [["active_time", 31], ["created_at", "2014-06-27 15:56:28.890794"], ["date", "2014-04-11"], ["distance", 1.0], ["steps", 3000], ["updated_at", "2014-06-27 15:56:28.890794"], ["user_id", 1]]
+  [1m[36m (0.4ms)[0m  [1mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  BEGIN
+  [1m[36mSQL (0.2ms)[0m  [1mINSERT INTO "daily_workouts" ("active_time", "created_at", "date", "distance", "steps", "updated_at", "user_id") VALUES ($1, $2, $3, $4, $5, $6, $7) RETURNING "id"[0m  [["active_time", 31], ["created_at", "2014-06-27 15:56:28.892672"], ["date", "2014-04-12"], ["distance", 1.0], ["steps", 3000], ["updated_at", "2014-06-27 15:56:28.892672"], ["user_id", 1]]
+  [1m[35m (0.4ms)[0m  COMMIT
+  [1m[36m (113.3ms)[0m  [1mDROP DATABASE IF EXISTS "fit_fight_development"[0m
+  [1m[35m (345.5ms)[0m  CREATE DATABASE "fit_fight_development" ENCODING = 'unicode'
+  [1m[36mSQL (0.4ms)[0m  [1mCREATE EXTENSION IF NOT EXISTS "plpgsql"[0m
+  [1m[35m (9.3ms)[0m  CREATE TABLE "authorizations" ("id" serial primary key, "provider" character varying(255), "uid" character varying(255), "user_id" integer, "info" character varying(255), "created_at" timestamp, "updated_at" timestamp) 
+  [1m[36m (4.5ms)[0m  [1mCREATE TABLE "challenges" ("id" serial primary key, "user_id" integer, "user_points" integer, "start_date" date, "end_date" date, "winner_id" integer, "challenger_id" integer, "challenger_points" integer, "created_at" timestamp, "updated_at" timestamp) [0m
+  [1m[35m (4.7ms)[0m  CREATE TABLE "daily_workouts" ("id" serial primary key, "date" date, "user_id" integer, "steps" integer, "distance" float, "active_time" integer, "age" integer, "weight" integer, "created_at" timestamp, "updated_at" timestamp) 
+  [1m[36m (4.7ms)[0m  [1mCREATE TABLE "users" ("id" serial primary key, "fullname" character varying(255), "email" character varying(255), "oauth_token" character varying(255), "oauth_secret" character varying(255), "created_at" timestamp, "updated_at" timestamp) [0m
+  [1m[35m (1.6ms)[0m  CREATE UNIQUE INDEX  "index_users_on_email" ON "users" USING btree ("email")
+  [1m[36m (1.4ms)[0m  [1mCREATE TABLE "schema_migrations" ("version" character varying(255) NOT NULL) [0m
+  [1m[35m (1.6ms)[0m  CREATE UNIQUE INDEX  "unique_schema_migrations" ON "schema_migrations"  ("version")
+  [1m[36m (0.4ms)[0m  [1mSELECT version FROM "schema_migrations"[0m
+  [1m[35m (0.6ms)[0m  INSERT INTO "schema_migrations" (version) VALUES ('20140626161028')
+  [1m[36m (0.4ms)[0m  [1mINSERT INTO "schema_migrations" (version) VALUES ('20140625152825')[0m
+  [1m[35m (0.3ms)[0m  INSERT INTO "schema_migrations" (version) VALUES ('20140625153256')
+  [1m[36m (0.3ms)[0m  [1mINSERT INTO "schema_migrations" (version) VALUES ('20140625154053')[0m
+  [1m[35mActiveRecord::SchemaMigration Load (0.7ms)[0m  SELECT "schema_migrations".* FROM "schema_migrations"
+  [1m[36m (0.2ms)[0m  [1mBEGIN[0m
+  [1m[35mSQL (0.8ms)[0m  INSERT INTO "users" ("created_at", "email", "fullname", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"  [["created_at", "2014-06-27 15:59:19.846328"], ["email", "mikeepourhadi1@gmail.com"], ["fullname", "Mikee Pourhadi"], ["updated_at", "2014-06-27 15:59:19.846328"]]
+  [1m[36m (0.4ms)[0m  [1mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  BEGIN
+  [1m[36mSQL (0.5ms)[0m  [1mINSERT INTO "users" ("created_at", "email", "fullname", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["created_at", "2014-06-27 15:59:19.852703"], ["email", "petersmells@gmail.com"], ["fullname", "Peter Debelak"], ["updated_at", "2014-06-27 15:59:19.852703"]]
+  [1m[35m (0.3ms)[0m  COMMIT
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35mSQL (0.3ms)[0m  INSERT INTO "users" ("created_at", "email", "fullname", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"  [["created_at", "2014-06-27 15:59:19.854981"], ["email", "steve@gmail.com"], ["fullname", "Steve Yim"], ["updated_at", "2014-06-27 15:59:19.854981"]]
+  [1m[36m (0.3ms)[0m  [1mCOMMIT[0m
+  [1m[35m (0.2ms)[0m  BEGIN
+  [1m[36mSQL (0.7ms)[0m  [1mINSERT INTO "daily_workouts" ("active_time", "created_at", "date", "distance", "steps", "updated_at", "user_id") VALUES ($1, $2, $3, $4, $5, $6, $7) RETURNING "id"[0m  [["active_time", 40], ["created_at", "2014-06-27 15:59:19.875133"], ["date", "2014-04-08"], ["distance", 2.0], ["steps", 2000], ["updated_at", "2014-06-27 15:59:19.875133"], ["user_id", 1]]
+  [1m[35m (0.4ms)[0m  COMMIT
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35mSQL (0.4ms)[0m  INSERT INTO "daily_workouts" ("active_time", "created_at", "date", "distance", "steps", "updated_at", "user_id") VALUES ($1, $2, $3, $4, $5, $6, $7) RETURNING "id"  [["active_time", 20], ["created_at", "2014-06-27 15:59:19.878720"], ["date", "2014-04-09"], ["distance", 3.0], ["steps", 3000], ["updated_at", "2014-06-27 15:59:19.878720"], ["user_id", 1]]
+  [1m[36m (0.5ms)[0m  [1mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  BEGIN
+  [1m[36mSQL (0.4ms)[0m  [1mINSERT INTO "daily_workouts" ("active_time", "created_at", "date", "distance", "steps", "updated_at", "user_id") VALUES ($1, $2, $3, $4, $5, $6, $7) RETURNING "id"[0m  [["active_time", 40], ["created_at", "2014-06-27 15:59:19.881047"], ["date", "2014-04-09"], ["distance", 2.0], ["steps", 2000], ["updated_at", "2014-06-27 15:59:19.881047"], ["user_id", 2]]
+  [1m[35m (0.4ms)[0m  COMMIT
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35mSQL (0.4ms)[0m  INSERT INTO "daily_workouts" ("active_time", "created_at", "date", "distance", "steps", "updated_at", "user_id") VALUES ($1, $2, $3, $4, $5, $6, $7) RETURNING "id"  [["active_time", 31], ["created_at", "2014-06-27 15:59:19.883438"], ["date", "2014-04-08"], ["distance", 1.0], ["steps", 3000], ["updated_at", "2014-06-27 15:59:19.883438"], ["user_id", 2]]
+  [1m[36m (0.4ms)[0m  [1mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  BEGIN
+  [1m[36mSQL (0.3ms)[0m  [1mINSERT INTO "daily_workouts" ("active_time", "created_at", "date", "distance", "steps", "updated_at", "user_id") VALUES ($1, $2, $3, $4, $5, $6, $7) RETURNING "id"[0m  [["active_time", 31], ["created_at", "2014-06-27 15:59:19.885890"], ["date", "2014-04-08"], ["distance", 1.0], ["steps", 3000], ["updated_at", "2014-06-27 15:59:19.885890"], ["user_id", 3]]
+  [1m[35m (0.3ms)[0m  COMMIT
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35mSQL (0.3ms)[0m  INSERT INTO "daily_workouts" ("active_time", "created_at", "date", "distance", "steps", "updated_at", "user_id") VALUES ($1, $2, $3, $4, $5, $6, $7) RETURNING "id"  [["active_time", 31], ["created_at", "2014-06-27 15:59:19.887825"], ["date", "2014-04-08"], ["distance", 1.0], ["steps", 3000], ["updated_at", "2014-06-27 15:59:19.887825"], ["user_id", 3]]
+  [1m[36m (0.4ms)[0m  [1mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  BEGIN
+  [1m[36mSQL (0.2ms)[0m  [1mINSERT INTO "daily_workouts" ("active_time", "created_at", "date", "distance", "steps", "updated_at", "user_id") VALUES ($1, $2, $3, $4, $5, $6, $7) RETURNING "id"[0m  [["active_time", 31], ["created_at", "2014-06-27 15:59:19.889796"], ["date", "2014-04-10"], ["distance", 1.0], ["steps", 3000], ["updated_at", "2014-06-27 15:59:19.889796"], ["user_id", 1]]
+  [1m[35m (0.3ms)[0m  COMMIT
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35mSQL (0.2ms)[0m  INSERT INTO "daily_workouts" ("active_time", "created_at", "date", "distance", "steps", "updated_at", "user_id") VALUES ($1, $2, $3, $4, $5, $6, $7) RETURNING "id"  [["active_time", 31], ["created_at", "2014-06-27 15:59:19.891659"], ["date", "2014-04-11"], ["distance", 1.0], ["steps", 3000], ["updated_at", "2014-06-27 15:59:19.891659"], ["user_id", 1]]
+  [1m[36m (0.4ms)[0m  [1mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  BEGIN
+  [1m[36mSQL (0.3ms)[0m  [1mINSERT INTO "daily_workouts" ("active_time", "created_at", "date", "distance", "steps", "updated_at", "user_id") VALUES ($1, $2, $3, $4, $5, $6, $7) RETURNING "id"[0m  [["active_time", 31], ["created_at", "2014-06-27 15:59:19.893547"], ["date", "2014-04-12"], ["distance", 1.0], ["steps", 3000], ["updated_at", "2014-06-27 15:59:19.893547"], ["user_id", 1]]
+  [1m[35m (0.4ms)[0m  COMMIT
+  [1m[36m (116.2ms)[0m  [1mDROP DATABASE IF EXISTS "fit_fight_development"[0m
+  [1m[35m (234.4ms)[0m  CREATE DATABASE "fit_fight_development" ENCODING = 'unicode'
+  [1m[36mSQL (0.4ms)[0m  [1mCREATE EXTENSION IF NOT EXISTS "plpgsql"[0m
+  [1m[35m (12.0ms)[0m  CREATE TABLE "authorizations" ("id" serial primary key, "provider" character varying(255), "uid" character varying(255), "user_id" integer, "info" character varying(255), "created_at" timestamp, "updated_at" timestamp) 
+  [1m[36m (4.3ms)[0m  [1mCREATE TABLE "challenges" ("id" serial primary key, "user_id" integer, "user_points" integer, "start_date" date, "end_date" date, "winner_id" integer, "challenger_id" integer, "challenger_points" integer, "created_at" timestamp, "updated_at" timestamp) [0m
+  [1m[35m (4.0ms)[0m  CREATE TABLE "daily_workouts" ("id" serial primary key, "date" date, "user_id" integer, "steps" integer, "distance" float, "active_time" integer, "age" integer, "weight" integer, "created_at" timestamp, "updated_at" timestamp) 
+  [1m[36m (9.4ms)[0m  [1mCREATE TABLE "users" ("id" serial primary key, "fullname" character varying(255), "email" character varying(255), "oauth_token" character varying(255), "oauth_secret" character varying(255), "created_at" timestamp, "updated_at" timestamp) [0m
+  [1m[35m (2.3ms)[0m  CREATE UNIQUE INDEX  "index_users_on_email" ON "users" USING btree ("email")
+  [1m[36m (2.2ms)[0m  [1mCREATE TABLE "schema_migrations" ("version" character varying(255) NOT NULL) [0m
+  [1m[35m (3.3ms)[0m  CREATE UNIQUE INDEX  "unique_schema_migrations" ON "schema_migrations"  ("version")
+  [1m[36m (0.6ms)[0m  [1mSELECT version FROM "schema_migrations"[0m
+  [1m[35m (0.8ms)[0m  INSERT INTO "schema_migrations" (version) VALUES ('20140626161028')
+  [1m[36m (0.7ms)[0m  [1mINSERT INTO "schema_migrations" (version) VALUES ('20140625152825')[0m
+  [1m[35m (0.5ms)[0m  INSERT INTO "schema_migrations" (version) VALUES ('20140625153256')
+  [1m[36m (0.5ms)[0m  [1mINSERT INTO "schema_migrations" (version) VALUES ('20140625154053')[0m
+  [1m[35mActiveRecord::SchemaMigration Load (0.3ms)[0m  SELECT "schema_migrations".* FROM "schema_migrations"
+  [1m[36m (0.2ms)[0m  [1mBEGIN[0m
+  [1m[35mSQL (1.8ms)[0m  INSERT INTO "users" ("created_at", "email", "fullname", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"  [["created_at", "2014-06-27 15:59:32.931482"], ["email", "mikeepourhadi1@gmail.com"], ["fullname", "Mikee Pourhadi"], ["updated_at", "2014-06-27 15:59:32.931482"]]
+  [1m[36m (0.5ms)[0m  [1mCOMMIT[0m
+  [1m[35m (0.2ms)[0m  BEGIN
+  [1m[36mSQL (0.5ms)[0m  [1mINSERT INTO "users" ("created_at", "email", "fullname", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["created_at", "2014-06-27 15:59:32.941230"], ["email", "petersmells@gmail.com"], ["fullname", "Peter Debelak"], ["updated_at", "2014-06-27 15:59:32.941230"]]
+  [1m[35m (0.4ms)[0m  COMMIT
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35mSQL (0.3ms)[0m  INSERT INTO "users" ("created_at", "email", "fullname", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"  [["created_at", "2014-06-27 15:59:32.943780"], ["email", "steve@gmail.com"], ["fullname", "Steve Yim"], ["updated_at", "2014-06-27 15:59:32.943780"]]
+  [1m[36m (0.3ms)[0m  [1mCOMMIT[0m
+  [1m[35m (0.3ms)[0m  BEGIN
+  [1m[36mSQL (1.1ms)[0m  [1mINSERT INTO "daily_workouts" ("active_time", "created_at", "date", "distance", "steps", "updated_at", "user_id") VALUES ($1, $2, $3, $4, $5, $6, $7) RETURNING "id"[0m  [["active_time", 40], ["created_at", "2014-06-27 15:59:32.965113"], ["date", "2014-04-08"], ["distance", 2.0], ["steps", 2000], ["updated_at", "2014-06-27 15:59:32.965113"], ["user_id", 1]]
+  [1m[35m (1.7ms)[0m  COMMIT
+  [1m[36m (0.2ms)[0m  [1mBEGIN[0m
+  [1m[35mSQL (0.5ms)[0m  INSERT INTO "daily_workouts" ("active_time", "created_at", "date", "distance", "steps", "updated_at", "user_id") VALUES ($1, $2, $3, $4, $5, $6, $7) RETURNING "id"  [["active_time", 20], ["created_at", "2014-06-27 15:59:32.973036"], ["date", "2014-04-09"], ["distance", 3.0], ["steps", 3000], ["updated_at", "2014-06-27 15:59:32.973036"], ["user_id", 1]]
+  [1m[36m (0.4ms)[0m  [1mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  BEGIN
+  [1m[36mSQL (0.3ms)[0m  [1mINSERT INTO "daily_workouts" ("active_time", "created_at", "date", "distance", "steps", "updated_at", "user_id") VALUES ($1, $2, $3, $4, $5, $6, $7) RETURNING "id"[0m  [["active_time", 40], ["created_at", "2014-06-27 15:59:32.975945"], ["date", "2014-04-09"], ["distance", 2.0], ["steps", 2000], ["updated_at", "2014-06-27 15:59:32.975945"], ["user_id", 2]]
+  [1m[35m (0.4ms)[0m  COMMIT
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35mSQL (0.3ms)[0m  INSERT INTO "daily_workouts" ("active_time", "created_at", "date", "distance", "steps", "updated_at", "user_id") VALUES ($1, $2, $3, $4, $5, $6, $7) RETURNING "id"  [["active_time", 31], ["created_at", "2014-06-27 15:59:32.978236"], ["date", "2014-04-08"], ["distance", 1.0], ["steps", 3000], ["updated_at", "2014-06-27 15:59:32.978236"], ["user_id", 2]]
+  [1m[36m (0.4ms)[0m  [1mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  BEGIN
+  [1m[36mSQL (0.4ms)[0m  [1mINSERT INTO "daily_workouts" ("active_time", "created_at", "date", "distance", "steps", "updated_at", "user_id") VALUES ($1, $2, $3, $4, $5, $6, $7) RETURNING "id"[0m  [["active_time", 31], ["created_at", "2014-06-27 15:59:32.980457"], ["date", "2014-04-08"], ["distance", 1.0], ["steps", 3000], ["updated_at", "2014-06-27 15:59:32.980457"], ["user_id", 3]]
+  [1m[35m (0.4ms)[0m  COMMIT
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35mSQL (1.9ms)[0m  INSERT INTO "daily_workouts" ("active_time", "created_at", "date", "distance", "steps", "updated_at", "user_id") VALUES ($1, $2, $3, $4, $5, $6, $7) RETURNING "id"  [["active_time", 31], ["created_at", "2014-06-27 15:59:32.983415"], ["date", "2014-04-08"], ["distance", 1.0], ["steps", 3000], ["updated_at", "2014-06-27 15:59:32.983415"], ["user_id", 3]]
+  [1m[36m (0.4ms)[0m  [1mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  BEGIN
+  [1m[36mSQL (0.3ms)[0m  [1mINSERT INTO "daily_workouts" ("active_time", "created_at", "date", "distance", "steps", "updated_at", "user_id") VALUES ($1, $2, $3, $4, $5, $6, $7) RETURNING "id"[0m  [["active_time", 31], ["created_at", "2014-06-27 15:59:32.987910"], ["date", "2014-04-10"], ["distance", 1.0], ["steps", 3000], ["updated_at", "2014-06-27 15:59:32.987910"], ["user_id", 1]]
+  [1m[35m (0.3ms)[0m  COMMIT
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35mSQL (0.2ms)[0m  INSERT INTO "daily_workouts" ("active_time", "created_at", "date", "distance", "steps", "updated_at", "user_id") VALUES ($1, $2, $3, $4, $5, $6, $7) RETURNING "id"  [["active_time", 31], ["created_at", "2014-06-27 15:59:32.990019"], ["date", "2014-04-11"], ["distance", 1.0], ["steps", 3000], ["updated_at", "2014-06-27 15:59:32.990019"], ["user_id", 1]]
+  [1m[36m (0.3ms)[0m  [1mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  BEGIN
+  [1m[36mSQL (0.3ms)[0m  [1mINSERT INTO "daily_workouts" ("active_time", "created_at", "date", "distance", "steps", "updated_at", "user_id") VALUES ($1, $2, $3, $4, $5, $6, $7) RETURNING "id"[0m  [["active_time", 31], ["created_at", "2014-06-27 15:59:32.991975"], ["date", "2014-04-12"], ["distance", 1.0], ["steps", 3000], ["updated_at", "2014-06-27 15:59:32.991975"], ["user_id", 1]]
+  [1m[35m (0.3ms)[0m  COMMIT
+  [1m[36m (117.1ms)[0m  [1mDROP DATABASE IF EXISTS "fit_fight_development"[0m
+  [1m[35m (372.1ms)[0m  CREATE DATABASE "fit_fight_development" ENCODING = 'unicode'
+  [1m[36mSQL (0.4ms)[0m  [1mCREATE EXTENSION IF NOT EXISTS "plpgsql"[0m
+  [1m[35m (10.8ms)[0m  CREATE TABLE "authorizations" ("id" serial primary key, "provider" character varying(255), "uid" character varying(255), "user_id" integer, "info" character varying(255), "created_at" timestamp, "updated_at" timestamp) 
+  [1m[36m (3.4ms)[0m  [1mCREATE TABLE "challenges" ("id" serial primary key, "user_id" integer, "user_points" integer, "start_date" date, "end_date" date, "winner_id" integer, "challenger_id" integer, "challenger_points" integer, "created_at" timestamp, "updated_at" timestamp) [0m
+  [1m[35m (3.5ms)[0m  CREATE TABLE "daily_workouts" ("id" serial primary key, "date" date, "user_id" integer, "steps" integer, "distance" float, "active_time" integer, "age" integer, "weight" integer, "created_at" timestamp, "updated_at" timestamp) 
+  [1m[36m (4.8ms)[0m  [1mCREATE TABLE "users" ("id" serial primary key, "fullname" character varying(255), "email" character varying(255), "oauth_token" character varying(255), "oauth_secret" character varying(255), "created_at" timestamp, "updated_at" timestamp) [0m
+  [1m[35m (1.6ms)[0m  CREATE UNIQUE INDEX  "index_users_on_email" ON "users" USING btree ("email")
+  [1m[36m (2.0ms)[0m  [1mCREATE TABLE "schema_migrations" ("version" character varying(255) NOT NULL) [0m
+  [1m[35m (1.4ms)[0m  CREATE UNIQUE INDEX  "unique_schema_migrations" ON "schema_migrations"  ("version")
+  [1m[36m (0.5ms)[0m  [1mSELECT version FROM "schema_migrations"[0m
+  [1m[35m (0.6ms)[0m  INSERT INTO "schema_migrations" (version) VALUES ('20140626161028')
+  [1m[36m (0.5ms)[0m  [1mINSERT INTO "schema_migrations" (version) VALUES ('20140625152825')[0m
+  [1m[35m (0.3ms)[0m  INSERT INTO "schema_migrations" (version) VALUES ('20140625153256')
+  [1m[36m (0.3ms)[0m  [1mINSERT INTO "schema_migrations" (version) VALUES ('20140625154053')[0m
+  [1m[35mActiveRecord::SchemaMigration Load (0.2ms)[0m  SELECT "schema_migrations".* FROM "schema_migrations"
+  [1m[36m (0.2ms)[0m  [1mBEGIN[0m
+  [1m[35mSQL (1.3ms)[0m  INSERT INTO "users" ("created_at", "email", "fullname", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"  [["created_at", "2014-06-27 16:05:55.610955"], ["email", "mikeepourhadi1@gmail.com"], ["fullname", "Mikee Pourhadi"], ["updated_at", "2014-06-27 16:05:55.610955"]]
+  [1m[36m (0.5ms)[0m  [1mCOMMIT[0m
+  [1m[35m (0.2ms)[0m  BEGIN
+  [1m[36mSQL (0.4ms)[0m  [1mINSERT INTO "users" ("created_at", "email", "fullname", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["created_at", "2014-06-27 16:05:55.618915"], ["email", "petersmells@gmail.com"], ["fullname", "Peter Debelak"], ["updated_at", "2014-06-27 16:05:55.618915"]]
+  [1m[35m (0.4ms)[0m  COMMIT
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35mSQL (0.4ms)[0m  INSERT INTO "users" ("created_at", "email", "fullname", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"  [["created_at", "2014-06-27 16:05:55.621348"], ["email", "steve@gmail.com"], ["fullname", "Steve Yim"], ["updated_at", "2014-06-27 16:05:55.621348"]]
+  [1m[36m (0.4ms)[0m  [1mCOMMIT[0m
+  [1m[35m (0.3ms)[0m  BEGIN
+  [1m[36mSQL (0.8ms)[0m  [1mINSERT INTO "daily_workouts" ("active_time", "created_at", "date", "distance", "steps", "updated_at", "user_id") VALUES ($1, $2, $3, $4, $5, $6, $7) RETURNING "id"[0m  [["active_time", 40], ["created_at", "2014-06-27 16:05:55.638490"], ["date", "2014-04-08"], ["distance", 2.0], ["steps", 2000], ["updated_at", "2014-06-27 16:05:55.638490"], ["user_id", 1]]
+  [1m[35m (0.4ms)[0m  COMMIT
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35mSQL (0.3ms)[0m  INSERT INTO "daily_workouts" ("active_time", "created_at", "date", "distance", "steps", "updated_at", "user_id") VALUES ($1, $2, $3, $4, $5, $6, $7) RETURNING "id"  [["active_time", 20], ["created_at", "2014-06-27 16:05:55.642302"], ["date", "2014-04-09"], ["distance", 3.0], ["steps", 3000], ["updated_at", "2014-06-27 16:05:55.642302"], ["user_id", 1]]
+  [1m[36m (0.3ms)[0m  [1mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  BEGIN
+  [1m[36mSQL (0.3ms)[0m  [1mINSERT INTO "daily_workouts" ("active_time", "created_at", "date", "distance", "steps", "updated_at", "user_id") VALUES ($1, $2, $3, $4, $5, $6, $7) RETURNING "id"[0m  [["active_time", 40], ["created_at", "2014-06-27 16:05:55.644489"], ["date", "2014-04-09"], ["distance", 2.0], ["steps", 2000], ["updated_at", "2014-06-27 16:05:55.644489"], ["user_id", 2]]
+  [1m[35m (0.4ms)[0m  COMMIT
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35mSQL (0.5ms)[0m  INSERT INTO "daily_workouts" ("active_time", "created_at", "date", "distance", "steps", "updated_at", "user_id") VALUES ($1, $2, $3, $4, $5, $6, $7) RETURNING "id"  [["active_time", 31], ["created_at", "2014-06-27 16:05:55.646678"], ["date", "2014-04-08"], ["distance", 1.0], ["steps", 3000], ["updated_at", "2014-06-27 16:05:55.646678"], ["user_id", 2]]
+  [1m[36m (0.4ms)[0m  [1mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  BEGIN
+  [1m[36mSQL (0.8ms)[0m  [1mINSERT INTO "daily_workouts" ("active_time", "created_at", "date", "distance", "steps", "updated_at", "user_id") VALUES ($1, $2, $3, $4, $5, $6, $7) RETURNING "id"[0m  [["active_time", 31], ["created_at", "2014-06-27 16:05:55.649628"], ["date", "2014-04-08"], ["distance", 1.0], ["steps", 3000], ["updated_at", "2014-06-27 16:05:55.649628"], ["user_id", 3]]
+  [1m[35m (0.3ms)[0m  COMMIT
+  [1m[36m (0.2ms)[0m  [1mBEGIN[0m
+  [1m[35mSQL (0.4ms)[0m  INSERT INTO "daily_workouts" ("active_time", "created_at", "date", "distance", "steps", "updated_at", "user_id") VALUES ($1, $2, $3, $4, $5, $6, $7) RETURNING "id"  [["active_time", 31], ["created_at", "2014-06-27 16:05:55.652712"], ["date", "2014-04-08"], ["distance", 1.0], ["steps", 3000], ["updated_at", "2014-06-27 16:05:55.652712"], ["user_id", 3]]
+  [1m[36m (0.4ms)[0m  [1mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  BEGIN
+  [1m[36mSQL (0.2ms)[0m  [1mINSERT INTO "daily_workouts" ("active_time", "created_at", "date", "distance", "steps", "updated_at", "user_id") VALUES ($1, $2, $3, $4, $5, $6, $7) RETURNING "id"[0m  [["active_time", 31], ["created_at", "2014-06-27 16:05:55.655143"], ["date", "2014-04-10"], ["distance", 1.0], ["steps", 3000], ["updated_at", "2014-06-27 16:05:55.655143"], ["user_id", 1]]
+  [1m[35m (0.4ms)[0m  COMMIT
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35mSQL (0.2ms)[0m  INSERT INTO "daily_workouts" ("active_time", "created_at", "date", "distance", "steps", "updated_at", "user_id") VALUES ($1, $2, $3, $4, $5, $6, $7) RETURNING "id"  [["active_time", 31], ["created_at", "2014-06-27 16:05:55.657286"], ["date", "2014-04-11"], ["distance", 1.0], ["steps", 3000], ["updated_at", "2014-06-27 16:05:55.657286"], ["user_id", 1]]
+  [1m[36m (0.4ms)[0m  [1mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  BEGIN
+  [1m[36mSQL (0.3ms)[0m  [1mINSERT INTO "daily_workouts" ("active_time", "created_at", "date", "distance", "steps", "updated_at", "user_id") VALUES ($1, $2, $3, $4, $5, $6, $7) RETURNING "id"[0m  [["active_time", 31], ["created_at", "2014-06-27 16:05:55.659370"], ["date", "2014-04-12"], ["distance", 1.0], ["steps", 3000], ["updated_at", "2014-06-27 16:05:55.659370"], ["user_id", 1]]
+  [1m[35m (0.4ms)[0m  COMMIT
+  [1m[36m (117.6ms)[0m  [1mDROP DATABASE IF EXISTS "fit_fight_development"[0m
+  [1m[35m (237.2ms)[0m  CREATE DATABASE "fit_fight_development" ENCODING = 'unicode'
+  [1m[36mSQL (0.4ms)[0m  [1mCREATE EXTENSION IF NOT EXISTS "plpgsql"[0m
+  [1m[35m (9.8ms)[0m  CREATE TABLE "authorizations" ("id" serial primary key, "provider" character varying(255), "uid" character varying(255), "user_id" integer, "info" character varying(255), "created_at" timestamp, "updated_at" timestamp) 
+  [1m[36m (3.3ms)[0m  [1mCREATE TABLE "challenges" ("id" serial primary key, "user_id" integer, "user_points" integer, "start_date" date, "end_date" date, "winner_id" integer, "challenger_id" integer, "challenger_points" integer, "created_at" timestamp, "updated_at" timestamp) [0m
+  [1m[35m (3.4ms)[0m  CREATE TABLE "daily_workouts" ("id" serial primary key, "date" date, "user_id" integer, "steps" integer, "distance" float, "active_time" integer, "age" integer, "weight" integer, "created_at" timestamp, "updated_at" timestamp) 
+  [1m[36m (5.8ms)[0m  [1mCREATE TABLE "users" ("id" serial primary key, "fullname" character varying(255), "email" character varying(255), "oauth_token" character varying(255), "oauth_secret" character varying(255), "created_at" timestamp, "updated_at" timestamp) [0m
+  [1m[35m (2.0ms)[0m  CREATE UNIQUE INDEX  "index_users_on_email" ON "users" USING btree ("email")
+  [1m[36m (1.1ms)[0m  [1mCREATE TABLE "schema_migrations" ("version" character varying(255) NOT NULL) [0m
+  [1m[35m (1.3ms)[0m  CREATE UNIQUE INDEX  "unique_schema_migrations" ON "schema_migrations"  ("version")
+  [1m[36m (0.6ms)[0m  [1mSELECT version FROM "schema_migrations"[0m
+  [1m[35m (0.6ms)[0m  INSERT INTO "schema_migrations" (version) VALUES ('20140626161028')
+  [1m[36m (0.5ms)[0m  [1mINSERT INTO "schema_migrations" (version) VALUES ('20140625152825')[0m
+  [1m[35m (0.4ms)[0m  INSERT INTO "schema_migrations" (version) VALUES ('20140625153256')
+  [1m[36m (0.3ms)[0m  [1mINSERT INTO "schema_migrations" (version) VALUES ('20140625154053')[0m
+  [1m[35mActiveRecord::SchemaMigration Load (0.3ms)[0m  SELECT "schema_migrations".* FROM "schema_migrations"
+  [1m[36m (0.2ms)[0m  [1mBEGIN[0m
+  [1m[35mSQL (1.2ms)[0m  INSERT INTO "users" ("created_at", "email", "fullname", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"  [["created_at", "2014-06-27 16:06:14.081199"], ["email", "mikeepourhadi1@gmail.com"], ["fullname", "Mikee Pourhadi"], ["updated_at", "2014-06-27 16:06:14.081199"]]
+  [1m[36m (0.4ms)[0m  [1mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  BEGIN
+  [1m[36mSQL (0.4ms)[0m  [1mINSERT INTO "users" ("created_at", "email", "fullname", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["created_at", "2014-06-27 16:06:14.089775"], ["email", "petersmells@gmail.com"], ["fullname", "Peter Debelak"], ["updated_at", "2014-06-27 16:06:14.089775"]]
+  [1m[35m (0.3ms)[0m  COMMIT
+  [1m[36m (0.2ms)[0m  [1mBEGIN[0m
+  [1m[35mSQL (0.6ms)[0m  INSERT INTO "users" ("created_at", "email", "fullname", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"  [["created_at", "2014-06-27 16:06:14.092477"], ["email", "steve@gmail.com"], ["fullname", "Steve Yim"], ["updated_at", "2014-06-27 16:06:14.092477"]]
+  [1m[36m (0.6ms)[0m  [1mCOMMIT[0m
+  [1m[35m (0.2ms)[0m  BEGIN
+  [1m[36mSQL (0.7ms)[0m  [1mINSERT INTO "daily_workouts" ("active_time", "created_at", "date", "distance", "steps", "updated_at", "user_id") VALUES ($1, $2, $3, $4, $5, $6, $7) RETURNING "id"[0m  [["active_time", 40], ["created_at", "2014-06-27 16:06:14.110125"], ["date", "2014-04-08"], ["distance", 2.0], ["steps", 2000], ["updated_at", "2014-06-27 16:06:14.110125"], ["user_id", 1]]
+  [1m[35m (0.7ms)[0m  COMMIT
+  [1m[36m (0.2ms)[0m  [1mBEGIN[0m
+  [1m[35mSQL (0.4ms)[0m  INSERT INTO "daily_workouts" ("active_time", "created_at", "date", "distance", "steps", "updated_at", "user_id") VALUES ($1, $2, $3, $4, $5, $6, $7) RETURNING "id"  [["active_time", 20], ["created_at", "2014-06-27 16:06:14.114479"], ["date", "2014-04-09"], ["distance", 3.0], ["steps", 3000], ["updated_at", "2014-06-27 16:06:14.114479"], ["user_id", 1]]
+  [1m[36m (0.4ms)[0m  [1mCOMMIT[0m
+  [1m[35m (0.2ms)[0m  BEGIN
+  [1m[36mSQL (0.3ms)[0m  [1mINSERT INTO "daily_workouts" ("active_time", "created_at", "date", "distance", "steps", "updated_at", "user_id") VALUES ($1, $2, $3, $4, $5, $6, $7) RETURNING "id"[0m  [["active_time", 40], ["created_at", "2014-06-27 16:06:14.117121"], ["date", "2014-04-09"], ["distance", 2.0], ["steps", 2000], ["updated_at", "2014-06-27 16:06:14.117121"], ["user_id", 2]]
+  [1m[35m (0.4ms)[0m  COMMIT
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35mSQL (0.3ms)[0m  INSERT INTO "daily_workouts" ("active_time", "created_at", "date", "distance", "steps", "updated_at", "user_id") VALUES ($1, $2, $3, $4, $5, $6, $7) RETURNING "id"  [["active_time", 31], ["created_at", "2014-06-27 16:06:14.119267"], ["date", "2014-04-08"], ["distance", 1.0], ["steps", 3000], ["updated_at", "2014-06-27 16:06:14.119267"], ["user_id", 2]]
+  [1m[36m (0.4ms)[0m  [1mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  BEGIN
+  [1m[36mSQL (0.4ms)[0m  [1mINSERT INTO "daily_workouts" ("active_time", "created_at", "date", "distance", "steps", "updated_at", "user_id") VALUES ($1, $2, $3, $4, $5, $6, $7) RETURNING "id"[0m  [["active_time", 31], ["created_at", "2014-06-27 16:06:14.121472"], ["date", "2014-04-08"], ["distance", 1.0], ["steps", 3000], ["updated_at", "2014-06-27 16:06:14.121472"], ["user_id", 3]]
+  [1m[35m (0.4ms)[0m  COMMIT
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35mSQL (0.3ms)[0m  INSERT INTO "daily_workouts" ("active_time", "created_at", "date", "distance", "steps", "updated_at", "user_id") VALUES ($1, $2, $3, $4, $5, $6, $7) RETURNING "id"  [["active_time", 31], ["created_at", "2014-06-27 16:06:14.123616"], ["date", "2014-04-08"], ["distance", 1.0], ["steps", 3000], ["updated_at", "2014-06-27 16:06:14.123616"], ["user_id", 3]]
+  [1m[36m (0.4ms)[0m  [1mCOMMIT[0m
+  [1m[35m (0.3ms)[0m  BEGIN
+  [1m[36mSQL (0.3ms)[0m  [1mINSERT INTO "daily_workouts" ("active_time", "created_at", "date", "distance", "steps", "updated_at", "user_id") VALUES ($1, $2, $3, $4, $5, $6, $7) RETURNING "id"[0m  [["active_time", 31], ["created_at", "2014-06-27 16:06:14.126249"], ["date", "2014-04-10"], ["distance", 1.0], ["steps", 3000], ["updated_at", "2014-06-27 16:06:14.126249"], ["user_id", 1]]
+  [1m[35m (0.4ms)[0m  COMMIT
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35mSQL (0.2ms)[0m  INSERT INTO "daily_workouts" ("active_time", "created_at", "date", "distance", "steps", "updated_at", "user_id") VALUES ($1, $2, $3, $4, $5, $6, $7) RETURNING "id"  [["active_time", 31], ["created_at", "2014-06-27 16:06:14.128601"], ["date", "2014-04-11"], ["distance", 1.0], ["steps", 3000], ["updated_at", "2014-06-27 16:06:14.128601"], ["user_id", 1]]
+  [1m[36m (0.4ms)[0m  [1mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  BEGIN
+  [1m[36mSQL (0.2ms)[0m  [1mINSERT INTO "daily_workouts" ("active_time", "created_at", "date", "distance", "steps", "updated_at", "user_id") VALUES ($1, $2, $3, $4, $5, $6, $7) RETURNING "id"[0m  [["active_time", 31], ["created_at", "2014-06-27 16:06:14.130494"], ["date", "2014-04-12"], ["distance", 1.0], ["steps", 3000], ["updated_at", "2014-06-27 16:06:14.130494"], ["user_id", 1]]
+  [1m[35m (0.3ms)[0m  COMMIT
+  [1m[36m (0.2ms)[0m  [1mBEGIN[0m
+  [1m[35mSQL (0.7ms)[0m  INSERT INTO "challenges" ("challenger_id", "created_at", "end_date", "start_date", "updated_at", "user_id") VALUES ($1, $2, $3, $4, $5, $6) RETURNING "id"  [["challenger_id", 2], ["created_at", "2014-06-27 16:06:14.179703"], ["end_date", "2014-04-09"], ["start_date", "2014-04-08"], ["updated_at", "2014-06-27 16:06:14.179703"], ["user_id", 1]]
+  [1m[36m (0.5ms)[0m  [1mCOMMIT[0m
+  [1m[35m (0.2ms)[0m  BEGIN
+  [1m[36mSQL (0.5ms)[0m  [1mINSERT INTO "challenges" ("challenger_id", "created_at", "end_date", "start_date", "updated_at", "user_id") VALUES ($1, $2, $3, $4, $5, $6) RETURNING "id"[0m  [["challenger_id", 3], ["created_at", "2014-06-27 16:06:14.184085"], ["end_date", "2014-04-09"], ["start_date", "2014-04-08"], ["updated_at", "2014-06-27 16:06:14.184085"], ["user_id", 2]]
+  [1m[35m (0.4ms)[0m  COMMIT
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35mSQL (0.3ms)[0m  INSERT INTO "challenges" ("challenger_id", "created_at", "end_date", "start_date", "updated_at", "user_id") VALUES ($1, $2, $3, $4, $5, $6) RETURNING "id"  [["challenger_id", 3], ["created_at", "2014-06-27 16:06:14.186985"], ["end_date", "2014-04-11"], ["start_date", "2014-04-10"], ["updated_at", "2014-06-27 16:06:14.186985"], ["user_id", 2]]
+  [1m[36m (0.3ms)[0m  [1mCOMMIT[0m
+  [1m[36mChallenge Load (2.7ms)[0m  [1mSELECT "challenges".* FROM "challenges"[0m
+  [1m[35mChallenge Load (2.4ms)[0m  SELECT  "challenges".* FROM "challenges"  WHERE "challenges"."id" = $1 LIMIT 1  [["id", 3]]
+  [1m[36m (116.8ms)[0m  [1mDROP DATABASE IF EXISTS "fit_fight_development"[0m
+  [1m[35m (237.5ms)[0m  CREATE DATABASE "fit_fight_development" ENCODING = 'unicode'
+  [1m[36mSQL (0.4ms)[0m  [1mCREATE EXTENSION IF NOT EXISTS "plpgsql"[0m
+  [1m[35m (7.8ms)[0m  CREATE TABLE "authorizations" ("id" serial primary key, "provider" character varying(255), "uid" character varying(255), "user_id" integer, "info" character varying(255), "created_at" timestamp, "updated_at" timestamp) 
+  [1m[36m (5.0ms)[0m  [1mCREATE TABLE "challenges" ("id" serial primary key, "user_id" integer, "user_points" integer, "start_date" date, "end_date" date, "winner_id" integer, "challenger_id" integer, "challenger_points" integer, "created_at" timestamp, "updated_at" timestamp) [0m
+  [1m[35m (3.6ms)[0m  CREATE TABLE "daily_workouts" ("id" serial primary key, "date" date, "user_id" integer, "steps" integer, "distance" float, "active_time" integer, "age" integer, "weight" integer, "created_at" timestamp, "updated_at" timestamp) 
+  [1m[36m (6.2ms)[0m  [1mCREATE TABLE "users" ("id" serial primary key, "fullname" character varying(255), "email" character varying(255), "oauth_token" character varying(255), "oauth_secret" character varying(255), "created_at" timestamp, "updated_at" timestamp) [0m
+  [1m[35m (2.0ms)[0m  CREATE UNIQUE INDEX  "index_users_on_email" ON "users" USING btree ("email")
+  [1m[36m (1.4ms)[0m  [1mCREATE TABLE "schema_migrations" ("version" character varying(255) NOT NULL) [0m
+  [1m[35m (1.6ms)[0m  CREATE UNIQUE INDEX  "unique_schema_migrations" ON "schema_migrations"  ("version")
+  [1m[36m (1.0ms)[0m  [1mSELECT version FROM "schema_migrations"[0m
+  [1m[35m (0.9ms)[0m  INSERT INTO "schema_migrations" (version) VALUES ('20140626161028')
+  [1m[36m (1.0ms)[0m  [1mINSERT INTO "schema_migrations" (version) VALUES ('20140625152825')[0m
+  [1m[35m (0.6ms)[0m  INSERT INTO "schema_migrations" (version) VALUES ('20140625153256')
+  [1m[36m (0.5ms)[0m  [1mINSERT INTO "schema_migrations" (version) VALUES ('20140625154053')[0m
+  [1m[35mActiveRecord::SchemaMigration Load (0.3ms)[0m  SELECT "schema_migrations".* FROM "schema_migrations"
+  [1m[36m (0.4ms)[0m  [1mBEGIN[0m
+  [1m[35mSQL (1.6ms)[0m  INSERT INTO "users" ("created_at", "email", "fullname", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"  [["created_at", "2014-06-27 16:07:04.801192"], ["email", "mikeepourhadi1@gmail.com"], ["fullname", "Mikee Pourhadi"], ["updated_at", "2014-06-27 16:07:04.801192"]]
+  [1m[36m (0.4ms)[0m  [1mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  BEGIN
+  [1m[36mSQL (0.6ms)[0m  [1mINSERT INTO "users" ("created_at", "email", "fullname", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["created_at", "2014-06-27 16:07:04.807983"], ["email", "petersmells@gmail.com"], ["fullname", "Peter Debelak"], ["updated_at", "2014-06-27 16:07:04.807983"]]
+  [1m[35m (0.4ms)[0m  COMMIT
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35mSQL (0.4ms)[0m  INSERT INTO "users" ("created_at", "email", "fullname", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"  [["created_at", "2014-06-27 16:07:04.811194"], ["email", "steve@gmail.com"], ["fullname", "Steve Yim"], ["updated_at", "2014-06-27 16:07:04.811194"]]
+  [1m[36m (0.4ms)[0m  [1mCOMMIT[0m
+  [1m[35m (0.2ms)[0m  BEGIN
+  [1m[36mSQL (0.8ms)[0m  [1mINSERT INTO "daily_workouts" ("active_time", "created_at", "date", "distance", "steps", "updated_at", "user_id") VALUES ($1, $2, $3, $4, $5, $6, $7) RETURNING "id"[0m  [["active_time", 40], ["created_at", "2014-06-27 16:07:04.828031"], ["date", "2014-04-08"], ["distance", 2.0], ["steps", 2000], ["updated_at", "2014-06-27 16:07:04.828031"], ["user_id", 1]]
+  [1m[35m (0.5ms)[0m  COMMIT
+  [1m[36m (0.2ms)[0m  [1mBEGIN[0m
+  [1m[35mSQL (0.4ms)[0m  INSERT INTO "daily_workouts" ("active_time", "created_at", "date", "distance", "steps", "updated_at", "user_id") VALUES ($1, $2, $3, $4, $5, $6, $7) RETURNING "id"  [["active_time", 20], ["created_at", "2014-06-27 16:07:04.832219"], ["date", "2014-04-09"], ["distance", 3.0], ["steps", 3000], ["updated_at", "2014-06-27 16:07:04.832219"], ["user_id", 1]]
+  [1m[36m (0.4ms)[0m  [1mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  BEGIN
+  [1m[36mSQL (0.3ms)[0m  [1mINSERT INTO "daily_workouts" ("active_time", "created_at", "date", "distance", "steps", "updated_at", "user_id") VALUES ($1, $2, $3, $4, $5, $6, $7) RETURNING "id"[0m  [["active_time", 40], ["created_at", "2014-06-27 16:07:04.834445"], ["date", "2014-04-09"], ["distance", 2.0], ["steps", 2000], ["updated_at", "2014-06-27 16:07:04.834445"], ["user_id", 2]]
+  [1m[35m (0.4ms)[0m  COMMIT
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35mSQL (0.3ms)[0m  INSERT INTO "daily_workouts" ("active_time", "created_at", "date", "distance", "steps", "updated_at", "user_id") VALUES ($1, $2, $3, $4, $5, $6, $7) RETURNING "id"  [["active_time", 31], ["created_at", "2014-06-27 16:07:04.836446"], ["date", "2014-04-08"], ["distance", 1.0], ["steps", 3000], ["updated_at", "2014-06-27 16:07:04.836446"], ["user_id", 2]]
+  [1m[36m (0.3ms)[0m  [1mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  BEGIN
+  [1m[36mSQL (0.3ms)[0m  [1mINSERT INTO "daily_workouts" ("active_time", "created_at", "date", "distance", "steps", "updated_at", "user_id") VALUES ($1, $2, $3, $4, $5, $6, $7) RETURNING "id"[0m  [["active_time", 31], ["created_at", "2014-06-27 16:07:04.838381"], ["date", "2014-04-08"], ["distance", 1.0], ["steps", 3000], ["updated_at", "2014-06-27 16:07:04.838381"], ["user_id", 3]]
+  [1m[35m (0.4ms)[0m  COMMIT
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35mSQL (0.3ms)[0m  INSERT INTO "daily_workouts" ("active_time", "created_at", "date", "distance", "steps", "updated_at", "user_id") VALUES ($1, $2, $3, $4, $5, $6, $7) RETURNING "id"  [["active_time", 31], ["created_at", "2014-06-27 16:07:04.840455"], ["date", "2014-04-08"], ["distance", 1.0], ["steps", 3000], ["updated_at", "2014-06-27 16:07:04.840455"], ["user_id", 3]]
+  [1m[36m (0.4ms)[0m  [1mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  BEGIN
+  [1m[36mSQL (0.2ms)[0m  [1mINSERT INTO "daily_workouts" ("active_time", "created_at", "date", "distance", "steps", "updated_at", "user_id") VALUES ($1, $2, $3, $4, $5, $6, $7) RETURNING "id"[0m  [["active_time", 31], ["created_at", "2014-06-27 16:07:04.842571"], ["date", "2014-04-10"], ["distance", 1.0], ["steps", 3000], ["updated_at", "2014-06-27 16:07:04.842571"], ["user_id", 1]]
+  [1m[35m (0.4ms)[0m  COMMIT
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35mSQL (0.2ms)[0m  INSERT INTO "daily_workouts" ("active_time", "created_at", "date", "distance", "steps", "updated_at", "user_id") VALUES ($1, $2, $3, $4, $5, $6, $7) RETURNING "id"  [["active_time", 31], ["created_at", "2014-06-27 16:07:04.844510"], ["date", "2014-04-11"], ["distance", 1.0], ["steps", 3000], ["updated_at", "2014-06-27 16:07:04.844510"], ["user_id", 1]]
+  [1m[36m (0.3ms)[0m  [1mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  BEGIN
+  [1m[36mSQL (0.4ms)[0m  [1mINSERT INTO "daily_workouts" ("active_time", "created_at", "date", "distance", "steps", "updated_at", "user_id") VALUES ($1, $2, $3, $4, $5, $6, $7) RETURNING "id"[0m  [["active_time", 31], ["created_at", "2014-06-27 16:07:04.846502"], ["date", "2014-04-12"], ["distance", 1.0], ["steps", 3000], ["updated_at", "2014-06-27 16:07:04.846502"], ["user_id", 1]]
+  [1m[35m (0.3ms)[0m  COMMIT
+  [1m[36m (0.2ms)[0m  [1mBEGIN[0m
+  [1m[35mSQL (0.6ms)[0m  INSERT INTO "challenges" ("challenger_id", "created_at", "end_date", "start_date", "updated_at", "user_id") VALUES ($1, $2, $3, $4, $5, $6) RETURNING "id"  [["challenger_id", 2], ["created_at", "2014-06-27 16:07:04.901277"], ["end_date", "2014-04-09"], ["start_date", "2014-04-08"], ["updated_at", "2014-06-27 16:07:04.901277"], ["user_id", 1]]
+  [1m[36m (0.4ms)[0m  [1mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  BEGIN
+  [1m[36mSQL (0.3ms)[0m  [1mINSERT INTO "challenges" ("challenger_id", "created_at", "end_date", "start_date", "updated_at", "user_id") VALUES ($1, $2, $3, $4, $5, $6) RETURNING "id"[0m  [["challenger_id", 3], ["created_at", "2014-06-27 16:07:04.904594"], ["end_date", "2014-04-09"], ["start_date", "2014-04-08"], ["updated_at", "2014-06-27 16:07:04.904594"], ["user_id", 2]]
+  [1m[35m (0.4ms)[0m  COMMIT
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35mSQL (0.3ms)[0m  INSERT INTO "challenges" ("challenger_id", "created_at", "end_date", "start_date", "updated_at", "user_id") VALUES ($1, $2, $3, $4, $5, $6) RETURNING "id"  [["challenger_id", 3], ["created_at", "2014-06-27 16:07:04.906839"], ["end_date", "2014-04-11"], ["start_date", "2014-04-10"], ["updated_at", "2014-06-27 16:07:04.906839"], ["user_id", 1]]
+  [1m[36m (0.4ms)[0m  [1mCOMMIT[0m
+  [1m[36mChallenge Load (1.0ms)[0m  [1mSELECT  "challenges".* FROM "challenges"  WHERE "challenges"."id" = $1 LIMIT 1[0m  [["id", 3]]
+PG::SyntaxError: ERROR:  syntax error at or near "="
+LINE 1: ... "users"."id" WHERE (strftime('%Y-%m-%d') BETWEEN = 'start_d...
+                                                             ^
+: SELECT "daily_workouts".* FROM "daily_workouts" INNER JOIN "users" ON "daily_workouts"."user_id" = "users"."id" WHERE (strftime('%Y-%m-%d') BETWEEN = 'start_date && end_date') AND "users"."id" = $1
+PG::SyntaxError: ERROR:  syntax error at or near "="
+LINE 1: ... "users"."id" WHERE (strftime('%Y-%m-%d') BETWEEN = 'start_d...
+                                                             ^
+: SELECT "daily_workouts".* FROM "daily_workouts" INNER JOIN "users" ON "daily_workouts"."user_id" = "users"."id" WHERE (strftime('%Y-%m-%d') BETWEEN = 'start_date && end_date') AND "users"."id" = $1
+  [1m[36mChallenge Load (0.7ms)[0m  [1mSELECT  "challenges".* FROM "challenges"  WHERE "challenges"."id" = $1 LIMIT 1[0m  [["id", 3]]
+  [1m[36mChallenge Load (0.8ms)[0m  [1mSELECT  "challenges".* FROM "challenges"  WHERE "challenges"."id" = $1 LIMIT 1[0m  [["id", 3]]
+  [1m[36mChallenge Load (0.7ms)[0m  [1mSELECT  "challenges".* FROM "challenges"  WHERE "challenges"."id" = $1 LIMIT 1[0m  [["id", 3]]
+  [1m[36mChallenge Load (0.8ms)[0m  [1mSELECT  "challenges".* FROM "challenges"  WHERE "challenges"."id" = $1 LIMIT 1[0m  [["id", 3]]
+  [1m[36mChallenge Load (0.8ms)[0m  [1mSELECT  "challenges".* FROM "challenges"  WHERE "challenges"."id" = $1 LIMIT 1[0m  [["id", 3]]
+PG::DatatypeMismatch: ERROR:  argument of AND must be type boolean, not type date
+LINE 1: ...ly_workouts"."user_id" = "users"."id" WHERE (date('now')) AN...
+                                                             ^
+: SELECT "daily_workouts".* FROM "daily_workouts" INNER JOIN "users" ON "daily_workouts"."user_id" = "users"."id" WHERE (date('now')) AND "users"."id" = $1
+  [1m[36mChallenge Load (0.7ms)[0m  [1mSELECT  "challenges".* FROM "challenges"  WHERE "challenges"."id" = $1 LIMIT 1[0m  [["id", 3]]
+PG::SyntaxError: ERROR:  syntax error at or near ")"
+LINE 1: ...user_id" = "users"."id" WHERE (date('now') BETWEEN) AND "use...
+                                                             ^
+: SELECT "daily_workouts".* FROM "daily_workouts" INNER JOIN "users" ON "daily_workouts"."user_id" = "users"."id" WHERE (date('now') BETWEEN) AND "users"."id" = $1
+  [1m[36mChallenge Load (0.7ms)[0m  [1mSELECT  "challenges".* FROM "challenges"  WHERE "challenges"."id" = $1 LIMIT 1[0m  [["id", 3]]
+PG::SyntaxError: ERROR:  syntax error at or near ")"
+LINE 1: ...outs"."user_id" = "users"."id" WHERE (date BETWEEN) AND "use...
+                                                             ^
+: SELECT "daily_workouts".* FROM "daily_workouts" INNER JOIN "users" ON "daily_workouts"."user_id" = "users"."id" WHERE (date BETWEEN) AND "users"."id" = $1
+  [1m[36mChallenge Load (0.7ms)[0m  [1mSELECT  "challenges".* FROM "challenges"  WHERE "challenges"."id" = $1 LIMIT 1[0m  [["id", 3]]
+PG::SyntaxError: ERROR:  syntax error at or near ")"
+LINE 1: ...s"."id" WHERE (date BETWEEN start_date && end_date) AND "use...
+                                                             ^
+: SELECT "daily_workouts".* FROM "daily_workouts" INNER JOIN "users" ON "daily_workouts"."user_id" = "users"."id" WHERE (date BETWEEN start_date && end_date) AND "users"."id" = $1
+  [1m[36mChallenge Load (1.1ms)[0m  [1mSELECT  "challenges".* FROM "challenges"  WHERE "challenges"."id" = $1 LIMIT 1[0m  [["id", 3]]
+  [1m[35mDailyWorkout Load (1.6ms)[0m  SELECT "daily_workouts".* FROM "daily_workouts"
+  [1m[36mChallenge Load (0.7ms)[0m  [1mSELECT  "challenges".* FROM "challenges"  WHERE "challenges"."id" = $1 LIMIT 1[0m  [["id", 3]]
+  [1m[35mDailyWorkout Load (1.0ms)[0m  SELECT "daily_workouts".* FROM "daily_workouts"
+  [1m[36mChallenge Load (0.7ms)[0m  [1mSELECT  "challenges".* FROM "challenges"  WHERE "challenges"."id" = $1 LIMIT 1[0m  [["id", 3]]
+  [1m[35mDailyWorkout Load (0.6ms)[0m  SELECT "daily_workouts".* FROM "daily_workouts"
+  [1m[36mChallenge Load (1.0ms)[0m  [1mSELECT  "challenges".* FROM "challenges"  WHERE "challenges"."id" = $1 LIMIT 1[0m  [["id", 3]]
+  [1m[35mDailyWorkout Load (0.8ms)[0m  SELECT "daily_workouts".* FROM "daily_workouts"
+  [1m[36mChallenge Load (0.7ms)[0m  [1mSELECT  "challenges".* FROM "challenges"  WHERE "challenges"."id" = $1 LIMIT 1[0m  [["id", 3]]
+  [1m[35mDailyWorkout Load (0.7ms)[0m  SELECT "daily_workouts".* FROM "daily_workouts"
+  [1m[36mChallenge Load (1.0ms)[0m  [1mSELECT  "challenges".* FROM "challenges"  WHERE "challenges"."id" = $1 LIMIT 1[0m  [["id", 3]]
+  [1m[35mDailyWorkout Load (2.1ms)[0m  SELECT "daily_workouts".* FROM "daily_workouts" INNER JOIN "users" ON "daily_workouts"."user_id" = "users"."id" WHERE ("daily_workouts"."date" BETWEEN '2014-04-10' AND '2014-04-11') AND "users"."id" = $1  [["id", 1]]
+  [1m[36mChallenge Load (0.7ms)[0m  [1mSELECT  "challenges".* FROM "challenges"  WHERE "challenges"."id" = $1 LIMIT 1[0m  [["id", 3]]
+  [1m[35mDailyWorkout Load (0.6ms)[0m  SELECT "daily_workouts".* FROM "daily_workouts"
+  [1m[36mChallenge Load (0.7ms)[0m  [1mSELECT  "challenges".* FROM "challenges"  WHERE "challenges"."id" = $1 LIMIT 1[0m  [["id", 3]]
+  [1m[35mDailyWorkout Load (1.0ms)[0m  SELECT "daily_workouts".* FROM "daily_workouts" INNER JOIN "users" ON "daily_workouts"."user_id" = "users"."id" WHERE "users"."id" = $1 AND ("daily_workouts"."date" BETWEEN '2014-04-10' AND '2014-04-11')  [["id", 1]]
+
+
+Started GET "/users/1/challenges" for 127.0.0.1 at 2014-06-27 11:40:10 -0500
+  [1m[36mActiveRecord::SchemaMigration Load (0.6ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+Processing by ChallengesController#index as HTML
+  Parameters: {"user_id"=>"1"}
+  [1m[35mUser Load (0.6ms)[0m  SELECT  "users".* FROM "users"  WHERE "users"."id" = $1 LIMIT 1  [["id", 1]]
+  [1m[36mChallenge Load (0.9ms)[0m  [1mSELECT "challenges".* FROM "challenges"  WHERE "challenges"."user_id" = $1[0m  [["user_id", 1]]
+  [1m[35mDailyWorkout Load (0.5ms)[0m  SELECT "daily_workouts".* FROM "daily_workouts"  WHERE "daily_workouts"."user_id" = $1  [["user_id", 1]]
+  [1m[36mDailyWorkout Load (0.7ms)[0m  [1mSELECT  "daily_workouts".* FROM "daily_workouts"  WHERE "daily_workouts"."date" = '2014-04-08' LIMIT 1[0m
+  [1m[35mDailyWorkout Load (0.8ms)[0m  SELECT  "daily_workouts".* FROM "daily_workouts"  WHERE "daily_workouts"."date" = '2014-04-09' LIMIT 1
+  [1m[36mDailyWorkout Load (0.8ms)[0m  [1mSELECT  "daily_workouts".* FROM "daily_workouts"  WHERE "daily_workouts"."date" = '2014-04-10' LIMIT 1[0m
+  [1m[35mDailyWorkout Load (0.5ms)[0m  SELECT  "daily_workouts".* FROM "daily_workouts"  WHERE "daily_workouts"."date" = '2014-04-11' LIMIT 1
+  [1m[36mDailyWorkout Load (0.4ms)[0m  [1mSELECT  "daily_workouts".* FROM "daily_workouts"  WHERE "daily_workouts"."date" = '2014-04-12' LIMIT 1[0m
+  [1m[35m (0.7ms)[0m  SELECT COUNT(*) FROM "daily_workouts" INNER JOIN "users" ON "daily_workouts"."user_id" = "users"."id" WHERE "users"."id" = $1 AND ("daily_workouts"."date" BETWEEN '2014-04-08' AND '2014-04-09')  [["id", 1]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  "daily_workouts".* FROM "daily_workouts"  WHERE "daily_workouts"."date" = '2014-04-08' LIMIT 1[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT  "daily_workouts".* FROM "daily_workouts"  WHERE "daily_workouts"."date" = '2014-04-09' LIMIT 1
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  "daily_workouts".* FROM "daily_workouts"  WHERE "daily_workouts"."date" = '2014-04-10' LIMIT 1[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT  "daily_workouts".* FROM "daily_workouts"  WHERE "daily_workouts"."date" = '2014-04-11' LIMIT 1
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  "daily_workouts".* FROM "daily_workouts"  WHERE "daily_workouts"."date" = '2014-04-12' LIMIT 1[0m
+  [1m[35mUser Load (0.4ms)[0m  SELECT  "users".* FROM "users"  WHERE "users"."id" = $1 LIMIT 1  [["id", 2]]
+  Rendered challenges/_challenge.html.erb (58.7ms)
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  "daily_workouts".* FROM "daily_workouts"  WHERE "daily_workouts"."date" = '2014-04-08' LIMIT 1[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT  "daily_workouts".* FROM "daily_workouts"  WHERE "daily_workouts"."date" = '2014-04-09' LIMIT 1
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  "daily_workouts".* FROM "daily_workouts"  WHERE "daily_workouts"."date" = '2014-04-10' LIMIT 1[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT  "daily_workouts".* FROM "daily_workouts"  WHERE "daily_workouts"."date" = '2014-04-11' LIMIT 1
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  "daily_workouts".* FROM "daily_workouts"  WHERE "daily_workouts"."date" = '2014-04-12' LIMIT 1[0m
+  [1m[35m (0.5ms)[0m  SELECT COUNT(*) FROM "daily_workouts" INNER JOIN "users" ON "daily_workouts"."user_id" = "users"."id" WHERE "users"."id" = $1 AND ("daily_workouts"."date" BETWEEN '2014-04-10' AND '2014-04-11')  [["id", 1]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  "daily_workouts".* FROM "daily_workouts"  WHERE "daily_workouts"."date" = '2014-04-08' LIMIT 1[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT  "daily_workouts".* FROM "daily_workouts"  WHERE "daily_workouts"."date" = '2014-04-09' LIMIT 1
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  "daily_workouts".* FROM "daily_workouts"  WHERE "daily_workouts"."date" = '2014-04-10' LIMIT 1[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT  "daily_workouts".* FROM "daily_workouts"  WHERE "daily_workouts"."date" = '2014-04-11' LIMIT 1
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  "daily_workouts".* FROM "daily_workouts"  WHERE "daily_workouts"."date" = '2014-04-12' LIMIT 1[0m
+  [1m[35mUser Load (0.4ms)[0m  SELECT  "users".* FROM "users"  WHERE "users"."id" = $1 LIMIT 1  [["id", 3]]
+  Rendered challenges/_challenge.html.erb (7.9ms)
+  [1m[36m (0.4ms)[0m  [1mSELECT COUNT(*) FROM "challenges"  WHERE "challenges"."challenger_id" = 1[0m
+  Rendered challenges/index.html.erb within layouts/application (130.3ms)
+  [1m[35mCACHE (0.0ms)[0m  SELECT  "users".* FROM "users"  WHERE "users"."id" = $1 LIMIT 1  [["id", 1]]
+Completed 200 OK in 267ms (Views: 210.9ms | ActiveRecord: 16.1ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2014-06-27 11:40:11 -0500
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2014-06-27 11:40:11 -0500
+
+
+Started GET "/assets/sessions.js?body=1" for 127.0.0.1 at 2014-06-27 11:40:11 -0500
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2014-06-27 11:40:11 -0500
+
+
+Started GET "/assets/turbolinks.js?body=1" for 127.0.0.1 at 2014-06-27 11:40:11 -0500
+
+
+Started GET "/assets/users.js?body=1" for 127.0.0.1 at 2014-06-27 11:40:11 -0500
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2014-06-27 11:40:11 -0500
+
+
+Started GET "/assets/hero.png" for 127.0.0.1 at 2014-06-27 11:40:11 -0500
+
+
+Started GET "/assets/challenger.png" for 127.0.0.1 at 2014-06-27 11:40:11 -0500
+
+
+Started GET "/assets/fit-fight-wall.png" for 127.0.0.1 at 2014-06-27 11:40:11 -0500
+
+
+Started GET "/users/1/challenges/1" for 127.0.0.1 at 2014-06-27 11:40:14 -0500
+Processing by ChallengesController#show as HTML
+  Parameters: {"user_id"=>"1", "id"=>"1"}
+  [1m[36mUser Load (0.9ms)[0m  [1mSELECT  "users".* FROM "users"  WHERE "users"."id" = $1 LIMIT 1[0m  [["id", 1]]
+  [1m[35mChallenge Load (0.5ms)[0m  SELECT  "challenges".* FROM "challenges"  WHERE "challenges"."id" = $1 LIMIT 1  [["id", 1]]
+  [1m[36mDailyWorkout Load (0.4ms)[0m  [1mSELECT "daily_workouts".* FROM "daily_workouts"  WHERE "daily_workouts"."user_id" = $1[0m  [["user_id", 1]]
+  [1m[35mDailyWorkout Load (0.5ms)[0m  SELECT  "daily_workouts".* FROM "daily_workouts"  WHERE "daily_workouts"."date" = '2014-04-08' LIMIT 1
+  [1m[36mDailyWorkout Load (0.5ms)[0m  [1mSELECT  "daily_workouts".* FROM "daily_workouts"  WHERE "daily_workouts"."date" = '2014-04-09' LIMIT 1[0m
+  [1m[35mDailyWorkout Load (0.5ms)[0m  SELECT  "daily_workouts".* FROM "daily_workouts"  WHERE "daily_workouts"."date" = '2014-04-10' LIMIT 1
+  [1m[36mDailyWorkout Load (1.0ms)[0m  [1mSELECT  "daily_workouts".* FROM "daily_workouts"  WHERE "daily_workouts"."date" = '2014-04-11' LIMIT 1[0m
+  [1m[35mDailyWorkout Load (0.5ms)[0m  SELECT  "daily_workouts".* FROM "daily_workouts"  WHERE "daily_workouts"."date" = '2014-04-12' LIMIT 1
+  [1m[36m (0.8ms)[0m  [1mSELECT COUNT(*) FROM "daily_workouts" INNER JOIN "users" ON "daily_workouts"."user_id" = "users"."id" WHERE "users"."id" = $1 AND ("daily_workouts"."date" BETWEEN '2014-04-08' AND '2014-04-09')[0m  [["id", 1]]
+  [1m[35mUser Load (0.5ms)[0m  SELECT  "users".* FROM "users"  WHERE "users"."id" = $1 LIMIT 1  [["id", 2]]
+  [1m[36mUser Load (0.4ms)[0m  [1mSELECT  "users".* FROM "users"  WHERE "users"."id" = $1 LIMIT 1[0m  [["id", 2]]
+  [1m[35mDailyWorkout Load (0.6ms)[0m  SELECT "daily_workouts".* FROM "daily_workouts" INNER JOIN "users" ON "daily_workouts"."user_id" = "users"."id" WHERE "users"."id" = $1 AND ("daily_workouts"."date" BETWEEN '2014-04-08' AND '2014-04-09')  [["id", 1]]
+  [1m[36mDailyWorkout Load (1.1ms)[0m  [1mSELECT "daily_workouts".* FROM "daily_workouts" INNER JOIN "users" ON "daily_workouts"."user_id" = "users"."id" WHERE "users"."id" = $1 AND ("daily_workouts"."date" BETWEEN '2014-04-08' AND '2014-04-09')[0m  [["id", 2]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT "daily_workouts".* FROM "daily_workouts" INNER JOIN "users" ON "daily_workouts"."user_id" = "users"."id" WHERE "users"."id" = $1 AND ("daily_workouts"."date" BETWEEN '2014-04-08' AND '2014-04-09')  [["id", 1]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT "daily_workouts".* FROM "daily_workouts" INNER JOIN "users" ON "daily_workouts"."user_id" = "users"."id" WHERE "users"."id" = $1 AND ("daily_workouts"."date" BETWEEN '2014-04-08' AND '2014-04-09')[0m  [["id", 2]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT "daily_workouts".* FROM "daily_workouts" INNER JOIN "users" ON "daily_workouts"."user_id" = "users"."id" WHERE "users"."id" = $1 AND ("daily_workouts"."date" BETWEEN '2014-04-08' AND '2014-04-09')  [["id", 1]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT "daily_workouts".* FROM "daily_workouts" INNER JOIN "users" ON "daily_workouts"."user_id" = "users"."id" WHERE "users"."id" = $1 AND ("daily_workouts"."date" BETWEEN '2014-04-08' AND '2014-04-09')[0m  [["id", 2]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT "daily_workouts".* FROM "daily_workouts" INNER JOIN "users" ON "daily_workouts"."user_id" = "users"."id" WHERE "users"."id" = $1 AND ("daily_workouts"."date" BETWEEN '2014-04-08' AND '2014-04-09')  [["id", 1]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT "daily_workouts".* FROM "daily_workouts" INNER JOIN "users" ON "daily_workouts"."user_id" = "users"."id" WHERE "users"."id" = $1 AND ("daily_workouts"."date" BETWEEN '2014-04-08' AND '2014-04-09')[0m  [["id", 2]]
+  Rendered challenges/show.html.erb within layouts/application (15.6ms)
+  [1m[35mCACHE (0.0ms)[0m  SELECT  "users".* FROM "users"  WHERE "users"."id" = $1 LIMIT 1  [["id", 1]]
+Completed 200 OK in 46ms (Views: 22.4ms | ActiveRecord: 8.5ms)
+
+
+Started GET "/users/1/challenges/3" for 127.0.0.1 at 2014-06-27 11:40:33 -0500
+Processing by ChallengesController#show as HTML
+  Parameters: {"user_id"=>"1", "id"=>"3"}
+  [1m[36mUser Load (0.3ms)[0m  [1mSELECT  "users".* FROM "users"  WHERE "users"."id" = $1 LIMIT 1[0m  [["id", 1]]
+  [1m[35mChallenge Load (0.5ms)[0m  SELECT  "challenges".* FROM "challenges"  WHERE "challenges"."id" = $1 LIMIT 1  [["id", 3]]
+  [1m[36mDailyWorkout Load (1.4ms)[0m  [1mSELECT "daily_workouts".* FROM "daily_workouts"  WHERE "daily_workouts"."user_id" = $1[0m  [["user_id", 1]]
+  [1m[35mDailyWorkout Load (0.5ms)[0m  SELECT  "daily_workouts".* FROM "daily_workouts"  WHERE "daily_workouts"."date" = '2014-04-08' LIMIT 1
+  [1m[36mDailyWorkout Load (0.6ms)[0m  [1mSELECT  "daily_workouts".* FROM "daily_workouts"  WHERE "daily_workouts"."date" = '2014-04-09' LIMIT 1[0m
+  [1m[35mDailyWorkout Load (0.6ms)[0m  SELECT  "daily_workouts".* FROM "daily_workouts"  WHERE "daily_workouts"."date" = '2014-04-10' LIMIT 1
+  [1m[36mDailyWorkout Load (0.6ms)[0m  [1mSELECT  "daily_workouts".* FROM "daily_workouts"  WHERE "daily_workouts"."date" = '2014-04-11' LIMIT 1[0m
+  [1m[35mDailyWorkout Load (0.6ms)[0m  SELECT  "daily_workouts".* FROM "daily_workouts"  WHERE "daily_workouts"."date" = '2014-04-12' LIMIT 1
+  [1m[36m (0.5ms)[0m  [1mSELECT COUNT(*) FROM "daily_workouts" INNER JOIN "users" ON "daily_workouts"."user_id" = "users"."id" WHERE "users"."id" = $1 AND ("daily_workouts"."date" BETWEEN '2014-04-10' AND '2014-04-11')[0m  [["id", 1]]
+  [1m[35mUser Load (0.2ms)[0m  SELECT  "users".* FROM "users"  WHERE "users"."id" = $1 LIMIT 1  [["id", 3]]
+  [1m[36mUser Load (0.3ms)[0m  [1mSELECT  "users".* FROM "users"  WHERE "users"."id" = $1 LIMIT 1[0m  [["id", 3]]
+  [1m[35mDailyWorkout Load (0.7ms)[0m  SELECT "daily_workouts".* FROM "daily_workouts" INNER JOIN "users" ON "daily_workouts"."user_id" = "users"."id" WHERE "users"."id" = $1 AND ("daily_workouts"."date" BETWEEN '2014-04-10' AND '2014-04-11')  [["id", 1]]
+  [1m[36mDailyWorkout Load (0.5ms)[0m  [1mSELECT "daily_workouts".* FROM "daily_workouts" INNER JOIN "users" ON "daily_workouts"."user_id" = "users"."id" WHERE "users"."id" = $1 AND ("daily_workouts"."date" BETWEEN '2014-04-10' AND '2014-04-11')[0m  [["id", 3]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT "daily_workouts".* FROM "daily_workouts" INNER JOIN "users" ON "daily_workouts"."user_id" = "users"."id" WHERE "users"."id" = $1 AND ("daily_workouts"."date" BETWEEN '2014-04-10' AND '2014-04-11')  [["id", 1]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT "daily_workouts".* FROM "daily_workouts" INNER JOIN "users" ON "daily_workouts"."user_id" = "users"."id" WHERE "users"."id" = $1 AND ("daily_workouts"."date" BETWEEN '2014-04-10' AND '2014-04-11')[0m  [["id", 3]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT "daily_workouts".* FROM "daily_workouts" INNER JOIN "users" ON "daily_workouts"."user_id" = "users"."id" WHERE "users"."id" = $1 AND ("daily_workouts"."date" BETWEEN '2014-04-10' AND '2014-04-11')  [["id", 1]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT "daily_workouts".* FROM "daily_workouts" INNER JOIN "users" ON "daily_workouts"."user_id" = "users"."id" WHERE "users"."id" = $1 AND ("daily_workouts"."date" BETWEEN '2014-04-10' AND '2014-04-11')[0m  [["id", 3]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT "daily_workouts".* FROM "daily_workouts" INNER JOIN "users" ON "daily_workouts"."user_id" = "users"."id" WHERE "users"."id" = $1 AND ("daily_workouts"."date" BETWEEN '2014-04-10' AND '2014-04-11')  [["id", 1]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT "daily_workouts".* FROM "daily_workouts" INNER JOIN "users" ON "daily_workouts"."user_id" = "users"."id" WHERE "users"."id" = $1 AND ("daily_workouts"."date" BETWEEN '2014-04-10' AND '2014-04-11')[0m  [["id", 3]]
+  Rendered challenges/show.html.erb within layouts/application (10.0ms)
+  [1m[35mCACHE (0.0ms)[0m  SELECT  "users".* FROM "users"  WHERE "users"."id" = $1 LIMIT 1  [["id", 1]]
+Completed 200 OK in 34ms (Views: 15.2ms | ActiveRecord: 7.4ms)
