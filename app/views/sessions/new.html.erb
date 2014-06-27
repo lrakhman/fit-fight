@@ -1,1 +1,166 @@
-<%= link_to 'Sign In', '/auth/fitbit' %>
+
+
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+  <%= stylesheet_link_tag 'application', media: 'all', 'data-turbolinks-track' => true %>
+  <%= javascript_include_tag 'application', 'data-turbolinks-track' => true %>
+  <%= csrf_meta_tags %>
+
+    <!--meta tags-->
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+
+    <title>FitFight</title>
+
+    <!--    Looking at my code?       -->
+
+
+        <!-- Fonts -->
+    <link href="http://netdna.bootstrapcdn.com/font-awesome/4.0.3/css/font-awesome.min.css" rel="stylesheet" type="text/css">
+    <link href='http://fonts.googleapis.com/css?family=Lora:400,700,400italic,700italic' rel='stylesheet' type='text/css'>
+    <link href='http://fonts.googleapis.com/css?family=Montserrat:400,700' rel='stylesheet' type='text/css'>
+    <!--google analytics-->
+
+
+  </head>
+<!-- NAVBAR
+================================================== -->
+  <body class='grayscale' id="page-top" data-spy="scroll" data-target=".navbar-custom">
+
+
+
+
+    <section class="intro">
+        <div class="intro-body">
+            <div class="container">
+                <div class="row">
+                    <div class="col-md-8 col-md-offset-2">
+                        <div class='land_logo'>
+                          <img src="<%= asset_path('logo.png') %>"><br>
+                        </div>
+                        <p class="intro-text"> Where Everyone Who Fights is a Winner</p>
+                        <div class="page-scroll">
+                            <a href="#about" class="btn btn-circle">
+                                <i class="fa fa-angle-double-down animated"></i>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="about" class="container content-section text-center">
+        <div class="row">
+            <div class="col-lg-8 col-lg-offset-2">
+                 <h3>FitFight</h3>
+
+                <p>Have a competitive streak? Want to get healthy? FitFight is here to help. Challenge your friends to a walk off, a run off, or even a dance off. Create your own challenges, invite your friends, and have fun exercising. Getting fit doesn't have to be boring. Join the movement.  </p>
+                <br>
+                <p></p>
+                <br>
+                <p></p>
+
+            </div>
+        </div>
+    </section>
+
+    <section id="team" class="text-center">
+        <div class="team-section">
+            <div class="container">
+                <div class="col-lg-12 col-lg-offset-0">
+                    <h2>FitFight Team</h2>
+
+                    <div>
+                      <img class='team_photo' src="<%= asset_path('Mikee.jpg') %>">
+                      <img class='team_photo' src="<%= asset_path('Lana.jpg') %>">
+                       <img class='team_photo' src="<%= asset_path('Steve.jpg') %>">
+                      <img class='team_photo' src="<%= asset_path('Liz.jpg') %>">
+                      <img class='team_photo' src="<%= asset_path('Peter.jpg') %>">
+
+
+
+
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+
+
+<!--mmmmmm-->
+ <section id="signup" class="text-center">
+        <div class="signup-section">
+            <div class="container">
+                <div class="col-lg-8 col-lg-offset-2">
+                     <h3>Sign Up</h3>
+                     <p>
+                      Come Join Our Fit Fight Family!
+
+
+                     </p>
+
+              <%= link_to 'Sign In', '/auth/fitbit', :class => "btn-default2" %>
+
+
+                  <br>
+                  <br>
+
+
+
+
+
+
+
+
+                  <ul class="list-inline banner-social-buttons">
+                   <ul class="list-inline banner-social-buttons">
+                    <li><a href="https://twitter.com/fitfightchicago" class="btn btn-default btn-lg"><i class="fa fa-twitter-square fa-fw"></i> <span class="network-name"></span></a>
+                    </li>
+                    <li><a href="https://www.facebook.com/fitfightchicago" class="btn btn-default btn-lg"><i class="fa fa-facebook-square fa-fw"></i> <span class="network-name"></
+                    </li>
+                    <li><a href="http://instagram.com/fitfightchicago" class="btn btn-default btn-lg"><i class="fa fa-instagram fa-fw"></i> <span class="network-name"></span></a>
+                    </li>
+
+
+
+                </ul>
+                <br>
+
+            </div>
+
+          </div>
+        </div>
+
+
+
+
+ <!--old-->
+
+
+
+
+   <!-- FOOTER -->
+
+    <section id='footer'>
+        <div class="row ">
+            <div class="col-lg-10 col-lg-offset-1">
+           &copy; 2014 FitFight, LLC. All Rights Reserved.
+            </div>
+        </div>
+    </section>
+
+
+    <!-- Bootstrap core JavaScript
+    ================================================== -->
+    <!-- Placed at the end of the document so the pages load faster -->
+
+
+
+
+
+
