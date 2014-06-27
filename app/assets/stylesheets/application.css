@@ -1,5 +1,6 @@
 body {
-  background-image:url('fit-fight-wall.png'); 
+  /*background-image:url('fit-fight-wall.png'); */
+  background-color: #FF5C33;
   background-size: 100%;
 }
 
@@ -75,4 +76,10 @@ header h1 {
   height: 5em;
   text-align: center;
 }
+.logo {
+  width: 300px;
+}
 
+img {
+  width: 300px;
+}
