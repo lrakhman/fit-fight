@@ -27,12 +27,10 @@ ActiveRecord::Schema.define(version: 20140626161028) do
 
   create_table "challenges", force: true do |t|
     t.integer  "user_id"
-    t.integer  "user_points"
     t.date     "start_date"
     t.date     "end_date"
     t.integer  "winner_id"
     t.integer  "challenger_id"
-    t.integer  "challenger_points"
     t.datetime "created_at"
     t.datetime "updated_at"
   end
