@@ -1,6 +1,7 @@
 require 'date'
 
 class User < ActiveRecord::Base
+
 	# validates :email, uniqueness: true, :format => /.+@.+\..+/
 	has_many :challenges
 	has_many :daily_workouts
@@ -13,8 +14,26 @@ class User < ActiveRecord::Base
 	# 	make client, call client.activity_on_date for each date that there is no daily workout, create a daily workout for each of those days up to today, find or create by today
 	# end
 
-	def self.sing
-		puts "Helloooooooo, there!"
+	def client
+		Fitgem::Client.new(
+			consumer_key: "2f490eb8444c48c1a3e5a3aa738c5018", 
+			consumer_secret: "01c8682329934edba0f407d27d0494d8", 
+			token: oauth_token, 
+			secret: oauth_secret
+		)
+	end
+
+	def sync_user
+
+
+		# 2.times do |days_ago|
+		# 	day = (Date.today - days_ago).to_s
+		# 	fitbit_data = client.activities_on_date(day)
+		# 	p fitbit_data
+		# 	# daily_workout = self.daily_workouts.find_or_create_by(date: day)
+		# 	# daily_workout.update(steps: fitbit_data['summary']['steps'], distance: fitbit_data['summary']['distances'][0]['distance'], active_time: fitbit_data['summary']['veryActiveMinutes'])
+		# end
+
 	end
 
 	def total_steps
