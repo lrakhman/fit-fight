@@ -1,5 +1,5 @@
 body {
-  background-image:url('fit-fight-wall.png'); 
+  background-image:url('<%= asset_path("fit-fight-wall.png") %>'); 
   background-size: 100%;
 }
 
