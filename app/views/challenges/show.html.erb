@@ -1,7 +1,55 @@
+<style>
+	.slice text {
+	 font-family: Arial;
+	}
+
+	#li1, #li2, #li3, #li4, #li5, #li6 path {
+	  stroke: red;
+	  stroke-width: 1;
+	  fill: none;
+	}
+
+	.axis {
+	  shape-rendering: crispEdges;
+	}
+
+	.x.axis line {
+	  stroke: lightgrey;
+	}
+
+	.x.axis .minor {
+	  stroke-opacity: .5;
+	}
+
+	.x.axis path {
+	  display: none;
+	}
+
+	.y.axis line, .y.axis path {
+	  fill: none;
+	  stroke: #000;
+	}
+</style>
+
+<script>
+	$(document).ready(function() {
+		var challenger_name = "<%= @challenger.fullname %>"
+		var challenger_points = <%= @challenge.user_points(@challenger) %>
+		var user_name = "<%= @user.fullname %>"
+		var user_points = <%= @challenge.user_points(@user) %>
+		var data = [{'label': challenger_name, 'value': challenger_points}, {'label': user_name, 'value': user_points}]
+		<% steps = @challenge.user_workouts.map { |workout| workout.steps } %>
+		var steps = <%= steps %>;
+		pie_chart(data);
+		line_chart(steps, 1);
+	});
+</script>
+
 <h1> Challenge Dashboard</h1>
-<h2> Your points = <%= @current_score %>
-<h2> <%= @challenger.fullname %>'s points = <%= @challenger_score %>
+<h2> Your points = <%= @challenge.user_points(@user) %>
+<h2> <%= @challenger.fullname %>'s points = <%= @challenge.user_points(@challenger) %>
 <h2> <%= @user.fullname %> V. <%= @challenger.fullname %></h2>
+<div id="pi"></div>
 
 <% if get_winner(@challenge) %>
 	<p>Winner: <%= get_winner(@challenge).fullname %> </p>
@@ -34,6 +82,7 @@
 			<td>Active Time: <%= user_workout.active_time %></td>
 	</tr>
 	<% end %>
+	<div id="li1"></div>
 	<tr>
 		<% @challenge.challenger_workouts.each do |challenger_workout| %>
 			<td>On <%= challenger_workout.date %></td>
