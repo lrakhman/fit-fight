@@ -51,4 +51,17 @@ class User < ActiveRecord::Base
 		active_time_array.inject(:+)
 	end
 
+	def client
+		Fitgem::Client.new(consumer_key: '2f490eb8444c48c1a3e5a3aa738c5018', consumer_secret: '01c8682329934edba0f407d27d0494d8', token: oauth_token, secret: oauth_secret)
+	end
+
+	def sync
+		4.times do |days_ago|
+			day = (Date.today - days_ago).to_s
+			fitbit_data = client.activities_on_date(day)
+			daily_workout = self.daily_workouts.find_or_create_by(date: day)
+			daily_workout.update(steps: fitbit_data['summary']['steps'], distance: fitbit_data['summary']['distances'][0]['distance'], active_time: fitbit_data['summary']['veryActiveMinutes'])
+		end
+	end
+
 end

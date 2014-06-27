@@ -1,29 +1,32 @@
 <h1>Your Stats, <%= @user.fullname %></h1>
 <img src="">
+<% if @user.daily_workouts.any? %>
+  <div>
+  	<p>Your steps for today: <%= @user.most_recent_workout.steps %></p>
 
-<div>
-	<p>Your steps for today: <%= @user.daily_workouts.first.steps %></p>
+  </div>
 
-</div>
+  <div>
+  	<p>Your distance for today: <%= @user.most_recent_workout.distance %></p>
+  </div>
 
-<div>
-	<p>Your distance for today: <%= @user.daily_workouts.first.distance %></p>
-</div>
+  <div>
+  	<p>Your active time for today: <%= @user.most_recent_workout.active_time %> </p>
+  </div>
 
-<div>
-	<p>Your active time for today: <%= @user.daily_workouts.first.active_time %> </p>
-</div>
+  <div>
+  	<p>Your TOTAL steps for this week: <%= @user.total_steps %> </p>
+  </div>
 
-<div>
-	<p>Your TOTAL steps for this week: <%= @user.total_steps %> </p>
-</div>
+  <div>
+  	<p>Your TOTAL distance for this week: <%= @user.total_distance %> miles </p>
+  </div>
 
-<div>
-	<p>Your TOTAL distance for this week: <%= @user.total_distance %> miles </p>
-</div>
-
-<div>
-	<p>Your TOTAL active time for this week: <%= @user.total_active_time %> minutes </p>
-</div>
+  <div>
+  	<p>Your TOTAL active time for this week: <%= @user.total_active_time %> minutes </p>
+  </div>
+<% else %>
+  <p>You have no workout data! Get to work!</p>
+<% end %>
 
 <p><%= link_to 'Edit my profile', edit_user_path %></p>
