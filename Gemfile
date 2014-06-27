@@ -30,7 +30,9 @@ gem 'spring',        group: :development
 gem 'bcrypt', '~> 3.1.7'
 gem 'fitgem'
 gem 'omniauth-fitbit', '~> 1.0.3'
-gem 'rails_12factor', group: :production
+gem 'rails_12factor'
+# gem 'bootstrap-sass', '~> 3.1.1'
+
 # Use unicorn as the app server
 # gem 'unicorn'
 
