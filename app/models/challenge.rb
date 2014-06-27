@@ -5,6 +5,14 @@ class Challenge < ActiveRecord::Base
 	has_many :user_workouts, through: :user, source: :daily_workouts
 	has_many :challenger_workouts, through: :challenger, source: :daily_workouts
 
+	def user_workouts
+    super.where(date: (start_date..end_date))
+	end
+
+	def challenger_workouts
+		super.where(date: (start_date..end_date))
+	end
+
 	def user_points(user)
 		user_points = 0
 		user.daily_workouts.each do |workout|
