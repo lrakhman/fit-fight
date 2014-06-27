@@ -6,8 +6,19 @@ A user creates and account by authorizing the app with FitBit and then signing i
 
 ### Setup
 
-You must have an token and secret as a developer with the FitBit API in order to query data from them. Then you can run this using Rails 4.
+You must first have a FitBit acccount to access this app. If you do not have one, navigate to www.fitbit.com and create one.
+
+We have no percent test coverage, and the tests will not pass due to database changes that have been made. Feel free to figure out the issue and fix it for us. 
+
+You must have an token and secret as a developer with the FitBit API in order to query data from them. Then you can run this using Rails 4. Environment variables are already set, so there is no need to set them.
+
+Launch rails server, navigate to your local host and sign in with your fitbit account. 
+
+There is no sync method with the FitBit gem, so there is no way to update your stats without some kind of seed file that creates users, daily workouts and challenges.
 
 ### Dependencies
 
 This app is dependent on Fitgem, a ruby gem designed to make interacting with the FitBit API easy. It is also dependent on OmniAuth.
+
+
+Good luck.
