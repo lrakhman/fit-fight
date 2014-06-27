@@ -10,11 +10,12 @@ class SessionsController < ApplicationController
     if authorization.nil?
       user = User.create!(fullname: auth_hash[:info].full_name, oauth_token: auth_hash.credentials.token, oauth_secret: auth_hash.credentials.secret)
       authorization = Authorization.create!(user: user, provider: auth_hash[:provider], uid: auth_hash[:uid])
+    else
+      authorization.user.update_attributes(oauth_token: auth_hash.credentials.token, oauth_secret: auth_hash.credentials.secret)
     end
 
     session[:user_id] = authorization.user_id
     redirect_to user_challenges_path(authorization.user)
-
   end
 
   def destroy

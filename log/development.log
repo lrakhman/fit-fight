@@ -28,3 +28,1009 @@ Migrating to CreateDailyWorkouts (20140625154053)
             WHERE name='index_users_on_email' AND type='index'
 [0m
   [1m[36mUser Load (47.8ms)[0m  [1mSELECT "users".* FROM "users"[0m
+
+
+Started GET "/" for 127.0.0.1 at 2014-06-27 10:15:12 -0500
+
+ActiveRecord::NoDatabaseError (FATAL:  database "fit_fight_development" does not exist
+Run `$ bin/rake db:create db:migrate` to create your database):
+  activerecord (4.1.1) lib/active_record/connection_adapters/postgresql_adapter.rb:891:in `rescue in connect'
+  activerecord (4.1.1) lib/active_record/connection_adapters/postgresql_adapter.rb:881:in `connect'
+  activerecord (4.1.1) lib/active_record/connection_adapters/postgresql_adapter.rb:568:in `initialize'
+  activerecord (4.1.1) lib/active_record/connection_adapters/postgresql_adapter.rb:41:in `new'
+  activerecord (4.1.1) lib/active_record/connection_adapters/postgresql_adapter.rb:41:in `postgresql_connection'
+  activerecord (4.1.1) lib/active_record/connection_adapters/abstract/connection_pool.rb:435:in `new_connection'
+  activerecord (4.1.1) lib/active_record/connection_adapters/abstract/connection_pool.rb:445:in `checkout_new_connection'
+  activerecord (4.1.1) lib/active_record/connection_adapters/abstract/connection_pool.rb:416:in `acquire_connection'
+  activerecord (4.1.1) lib/active_record/connection_adapters/abstract/connection_pool.rb:351:in `block in checkout'
+  /Users/lanarakhman/.rvm/rubies/ruby-2.1.1/lib/ruby/2.1.0/monitor.rb:211:in `mon_synchronize'
+  activerecord (4.1.1) lib/active_record/connection_adapters/abstract/connection_pool.rb:350:in `checkout'
+  activerecord (4.1.1) lib/active_record/connection_adapters/abstract/connection_pool.rb:265:in `block in connection'
+  /Users/lanarakhman/.rvm/rubies/ruby-2.1.1/lib/ruby/2.1.0/monitor.rb:211:in `mon_synchronize'
+  activerecord (4.1.1) lib/active_record/connection_adapters/abstract/connection_pool.rb:264:in `connection'
+  activerecord (4.1.1) lib/active_record/connection_adapters/abstract/connection_pool.rb:541:in `retrieve_connection'
+  activerecord (4.1.1) lib/active_record/connection_handling.rb:113:in `retrieve_connection'
+  activerecord (4.1.1) lib/active_record/connection_handling.rb:87:in `connection'
+  activerecord (4.1.1) lib/active_record/migration.rb:388:in `check_pending!'
+  activerecord (4.1.1) lib/active_record/migration.rb:377:in `call'
+  actionpack (4.1.1) lib/action_dispatch/middleware/callbacks.rb:29:in `block in call'
+  activesupport (4.1.1) lib/active_support/callbacks.rb:82:in `run_callbacks'
+  actionpack (4.1.1) lib/action_dispatch/middleware/callbacks.rb:27:in `call'
+  actionpack (4.1.1) lib/action_dispatch/middleware/reloader.rb:73:in `call'
+  actionpack (4.1.1) lib/action_dispatch/middleware/remote_ip.rb:76:in `call'
+  actionpack (4.1.1) lib/action_dispatch/middleware/debug_exceptions.rb:17:in `call'
+  actionpack (4.1.1) lib/action_dispatch/middleware/show_exceptions.rb:30:in `call'
+  railties (4.1.1) lib/rails/rack/logger.rb:38:in `call_app'
+  railties (4.1.1) lib/rails/rack/logger.rb:20:in `block in call'
+  activesupport (4.1.1) lib/active_support/tagged_logging.rb:68:in `block in tagged'
+  activesupport (4.1.1) lib/active_support/tagged_logging.rb:26:in `tagged'
+  activesupport (4.1.1) lib/active_support/tagged_logging.rb:68:in `tagged'
+  railties (4.1.1) lib/rails/rack/logger.rb:20:in `call'
+  actionpack (4.1.1) lib/action_dispatch/middleware/request_id.rb:21:in `call'
+  rack (1.5.2) lib/rack/methodoverride.rb:21:in `call'
+  rack (1.5.2) lib/rack/runtime.rb:17:in `call'
+  activesupport (4.1.1) lib/active_support/cache/strategy/local_cache_middleware.rb:26:in `call'
+  rack (1.5.2) lib/rack/lock.rb:17:in `call'
+  actionpack (4.1.1) lib/action_dispatch/middleware/static.rb:64:in `call'
+  rack (1.5.2) lib/rack/sendfile.rb:112:in `call'
+  railties (4.1.1) lib/rails/engine.rb:514:in `call'
+  railties (4.1.1) lib/rails/application.rb:144:in `call'
+  rack (1.5.2) lib/rack/lock.rb:17:in `call'
+  rack (1.5.2) lib/rack/content_length.rb:14:in `call'
+  rack (1.5.2) lib/rack/handler/webrick.rb:60:in `service'
+  /Users/lanarakhman/.rvm/rubies/ruby-2.1.1/lib/ruby/2.1.0/webrick/httpserver.rb:138:in `service'
+  /Users/lanarakhman/.rvm/rubies/ruby-2.1.1/lib/ruby/2.1.0/webrick/httpserver.rb:94:in `run'
+  /Users/lanarakhman/.rvm/rubies/ruby-2.1.1/lib/ruby/2.1.0/webrick/server.rb:295:in `block in start_thread'
+
+
+  Rendered /Users/lanarakhman/.rvm/gems/ruby-2.1.1/gems/actionpack-4.1.1/lib/action_dispatch/middleware/templates/rescues/_source.erb (0.6ms)
+  Rendered /Users/lanarakhman/.rvm/gems/ruby-2.1.1/gems/actionpack-4.1.1/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (1.2ms)
+  Rendered /Users/lanarakhman/.rvm/gems/ruby-2.1.1/gems/actionpack-4.1.1/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (1.0ms)
+  Rendered /Users/lanarakhman/.rvm/gems/ruby-2.1.1/gems/actionpack-4.1.1/lib/action_dispatch/middleware/templates/rescues/diagnostics.erb within rescues/layout (21.5ms)
+  [1m[36m (22.7ms)[0m  [1mCREATE TABLE "schema_migrations" ("version" character varying(255) NOT NULL) [0m
+  [1m[35m (10.6ms)[0m  CREATE UNIQUE INDEX  "unique_schema_migrations" ON "schema_migrations"  ("version")
+  [1m[36mActiveRecord::SchemaMigration Load (0.6ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+Migrating to CreateUsers (20140625152825)
+  [1m[35m (0.2ms)[0m  BEGIN
+  [1m[36m (20.2ms)[0m  [1mCREATE TABLE "users" ("id" serial primary key, "fullname" character varying(255), "email" character varying(255), "oauth_token" character varying(255), "oauth_secret" character varying(255), "created_at" timestamp, "updated_at" timestamp) [0m
+  [1m[35m (1.1ms)[0m  CREATE UNIQUE INDEX  "index_users_on_email" ON "users"  ("email")
+  [1m[36mSQL (15.6ms)[0m  [1mINSERT INTO "schema_migrations" ("version") VALUES ($1)[0m  [["version", "20140625152825"]]
+  [1m[35m (15.4ms)[0m  COMMIT
+Migrating to CreateChallenges (20140625153256)
+  [1m[36m (16.0ms)[0m  [1mBEGIN[0m
+  [1m[35m (18.8ms)[0m  CREATE TABLE "challenges" ("id" serial primary key, "user_id" integer, "user_points" integer, "start_date" date, "end_date" date, "winner_id" integer, "challenger_id" integer, "challenger_points" integer, "created_at" timestamp, "updated_at" timestamp) 
+  [1m[36mSQL (0.3ms)[0m  [1mINSERT INTO "schema_migrations" ("version") VALUES ($1)[0m  [["version", "20140625153256"]]
+  [1m[35m (0.8ms)[0m  COMMIT
+Migrating to CreateDailyWorkouts (20140625154053)
+  [1m[36m (15.5ms)[0m  [1mBEGIN[0m
+  [1m[35m (18.2ms)[0m  CREATE TABLE "daily_workouts" ("id" serial primary key, "date" date, "user_id" integer, "steps" integer, "distance" float, "active_time" integer, "age" integer, "weight" integer, "created_at" timestamp, "updated_at" timestamp) 
+  [1m[36mSQL (0.2ms)[0m  [1mINSERT INTO "schema_migrations" ("version") VALUES ($1)[0m  [["version", "20140625154053"]]
+  [1m[35m (0.7ms)[0m  COMMIT
+Migrating to CreateAuthorizations (20140626161028)
+  [1m[36m (16.3ms)[0m  [1mBEGIN[0m
+  [1m[35m (20.2ms)[0m  CREATE TABLE "authorizations" ("id" serial primary key, "provider" character varying(255), "uid" character varying(255), "user_id" integer, "info" character varying(255), "created_at" timestamp, "updated_at" timestamp) 
+  [1m[36mSQL (0.2ms)[0m  [1mINSERT INTO "schema_migrations" ("version") VALUES ($1)[0m  [["version", "20140626161028"]]
+  [1m[35m (0.6ms)[0m  COMMIT
+  [1m[36mActiveRecord::SchemaMigration Load (0.4ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+
+
+Started GET "/" for 127.0.0.1 at 2014-06-27 10:15:51 -0500
+  [1m[36mActiveRecord::SchemaMigration Load (0.4ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+Processing by SessionsController#new as HTML
+  Rendered sessions/new.html.erb within layouts/application (0.9ms)
+  [1m[35mUser Load (1.5ms)[0m  SELECT  "users".* FROM "users"  WHERE "users"."id" = $1 LIMIT 1  [["id", 1]]
+Completed 500 Internal Server Error in 340ms
+
+ActiveRecord::RecordNotFound (Couldn't find User with 'id'=1):
+  app/views/layouts/application.html.erb:12:in `_app_views_layouts_application_html_erb__1634683124012710873_2193378240'
+
+
+  Rendered /Users/lanarakhman/.rvm/gems/ruby-2.1.1/gems/actionpack-4.1.1/lib/action_dispatch/middleware/templates/rescues/_source.erb (0.7ms)
+  Rendered /Users/lanarakhman/.rvm/gems/ruby-2.1.1/gems/actionpack-4.1.1/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (1.3ms)
+  Rendered /Users/lanarakhman/.rvm/gems/ruby-2.1.1/gems/actionpack-4.1.1/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (1.0ms)
+  Rendered /Users/lanarakhman/.rvm/gems/ruby-2.1.1/gems/actionpack-4.1.1/lib/action_dispatch/middleware/templates/rescues/diagnostics.erb within rescues/layout (21.0ms)
+
+
+Started GET "/" for 127.0.0.1 at 2014-06-27 10:16:03 -0500
+Processing by SessionsController#new as HTML
+  Rendered sessions/new.html.erb within layouts/application (0.1ms)
+Completed 200 OK in 4ms (Views: 3.7ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2014-06-27 10:16:03 -0500
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2014-06-27 10:16:03 -0500
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2014-06-27 10:16:03 -0500
+
+
+Started GET "/assets/turbolinks.js?body=1" for 127.0.0.1 at 2014-06-27 10:16:03 -0500
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2014-06-27 10:16:03 -0500
+
+
+Started GET "/assets/sessions.js?body=1" for 127.0.0.1 at 2014-06-27 10:16:03 -0500
+
+
+Started GET "/assets/users.js?body=1" for 127.0.0.1 at 2014-06-27 10:16:03 -0500
+
+
+Started GET "/assets/fit-fight-wall.png" for 127.0.0.1 at 2014-06-27 10:16:03 -0500
+  [1m[36mUser Load (0.5ms)[0m  [1mSELECT "users".* FROM "users"[0m
+
+
+Started GET "/auth/fitbit" for 127.0.0.1 at 2014-06-27 10:21:25 -0500
+
+
+Started GET "/auth/fitbit" for 127.0.0.1 at 2014-06-27 10:21:25 -0500
+
+
+Started GET "/auth/fitbit/callback?oauth_token=b52bcf40ac99fc2260fde7ff9a34d83b&oauth_verifier=jr0mt93imp0tij1p3bjrn5au17" for 127.0.0.1 at 2014-06-27 10:21:28 -0500
+Processing by SessionsController#create as HTML
+  Parameters: {"oauth_token"=>"b52bcf40ac99fc2260fde7ff9a34d83b", "oauth_verifier"=>"jr0mt93imp0tij1p3bjrn5au17", "provider"=>"fitbit"}
+  [1m[36mAuthorization Load (1.1ms)[0m  [1mSELECT  "authorizations".* FROM "authorizations"  WHERE "authorizations"."uid" = '2S3XN6' LIMIT 1[0m
+  [1m[35m (0.2ms)[0m  BEGIN
+  [1m[36mSQL (1.1ms)[0m  [1mINSERT INTO "users" ("created_at", "fullname", "oauth_secret", "oauth_token", "updated_at") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["created_at", "2014-06-27 15:21:29.129359"], ["fullname", "Steve Yim"], ["oauth_secret", "30adbded78353a2a49f2f14cc7fda20a"], ["oauth_token", "565319c9793bcdd65eed988ac456f350"], ["updated_at", "2014-06-27 15:21:29.129359"]]
+  [1m[35m (15.4ms)[0m  COMMIT
+  [1m[36m (0.2ms)[0m  [1mBEGIN[0m
+  [1m[35mAuthorization Exists (0.3ms)[0m  SELECT  1 AS one FROM "authorizations"  WHERE ("authorizations"."uid" = '2S3XN6' AND "authorizations"."provider" = 'fitbit') LIMIT 1
+  [1m[36mSQL (16.2ms)[0m  [1mINSERT INTO "authorizations" ("created_at", "provider", "uid", "updated_at", "user_id") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["created_at", "2014-06-27 15:21:29.180045"], ["provider", "fitbit"], ["uid", "2S3XN6"], ["updated_at", "2014-06-27 15:21:29.180045"], ["user_id", 1]]
+  [1m[35m (15.4ms)[0m  COMMIT
+Redirected to http://localhost:3000/users/1/challenges
+Completed 302 Found in 148ms (ActiveRecord: 52.0ms)
+
+
+Started GET "/users/1/challenges" for 127.0.0.1 at 2014-06-27 10:21:29 -0500
+Processing by ChallengesController#index as HTML
+  Parameters: {"user_id"=>"1"}
+  [1m[36mUser Load (0.4ms)[0m  [1mSELECT  "users".* FROM "users"  WHERE "users"."id" = $1 LIMIT 1[0m  [["id", 1]]
+  [1m[35mChallenge Load (0.3ms)[0m  SELECT "challenges".* FROM "challenges"  WHERE "challenges"."user_id" = $1  [["user_id", 1]]
+  [1m[36m (0.2ms)[0m  [1mSELECT COUNT(*) FROM "challenges"  WHERE "challenges"."challenger_id" = 1[0m
+  Rendered challenges/index.html.erb within layouts/application (31.2ms)
+  [1m[35mCACHE (0.0ms)[0m  SELECT  "users".* FROM "users"  WHERE "users"."id" = $1 LIMIT 1  [["id", 1]]
+Completed 200 OK in 44ms (Views: 35.2ms | ActiveRecord: 2.6ms)
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2014-06-27 10:21:29 -0500
+
+
+Started GET "/assets/sessions.js?body=1" for 127.0.0.1 at 2014-06-27 10:21:29 -0500
+
+
+Started GET "/assets/turbolinks.js?body=1" for 127.0.0.1 at 2014-06-27 10:21:29 -0500
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2014-06-27 10:21:29 -0500
+
+
+Started GET "/assets/users.js?body=1" for 127.0.0.1 at 2014-06-27 10:21:29 -0500
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2014-06-27 10:21:29 -0500
+  [1m[35mUser Load (1.5ms)[0m  SELECT "users".* FROM "users"
+  [1m[36mUser Load (1.5ms)[0m  [1mSELECT  "users".* FROM "users"   ORDER BY "users"."id" ASC LIMIT 1[0m
+  [1m[36mUser Load (0.9ms)[0m  [1mSELECT  "users".* FROM "users"   ORDER BY "users"."id" DESC LIMIT 1[0m
+  [1m[35mDailyWorkout Load (18.1ms)[0m  SELECT  "daily_workouts".* FROM "daily_workouts"  WHERE "daily_workouts"."user_id" = $1 AND "daily_workouts"."date" = '2014-06-28' LIMIT 1  [["user_id", 1]]
+  [1m[36m (0.2ms)[0m  [1mBEGIN[0m
+  [1m[35mSQL (16.4ms)[0m  INSERT INTO "daily_workouts" ("created_at", "date", "updated_at", "user_id") VALUES ($1, $2, $3, $4) RETURNING "id"  [["created_at", "2014-06-27 18:38:48.824589"], ["date", "2014-06-28"], ["updated_at", "2014-06-27 18:38:48.824589"], ["user_id", 1]]
+  [1m[36m (84.1ms)[0m  [1mCOMMIT[0m
+  [1m[36mUser Load (1.7ms)[0m  [1mSELECT  "users".* FROM "users"   ORDER BY "users"."id" DESC LIMIT 1[0m
+  [1m[35mDailyWorkout Load (0.4ms)[0m  SELECT  "daily_workouts".* FROM "daily_workouts"  WHERE "daily_workouts"."user_id" = $1 AND "daily_workouts"."date" = '2014-06-27' LIMIT 1  [["user_id", 1]]
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35mSQL (0.3ms)[0m  INSERT INTO "daily_workouts" ("created_at", "date", "updated_at", "user_id") VALUES ($1, $2, $3, $4) RETURNING "id"  [["created_at", "2014-06-27 18:40:50.090508"], ["date", "2014-06-27"], ["updated_at", "2014-06-27 18:40:50.090508"], ["user_id", 1]]
+  [1m[36m (0.5ms)[0m  [1mCOMMIT[0m
+  [1m[35mDailyWorkout Load (1.1ms)[0m  SELECT "daily_workouts".* FROM "daily_workouts"
+  [1m[36m (18.2ms)[0m  [1mCREATE TABLE "schema_migrations" ("version" character varying(255) NOT NULL) [0m
+  [1m[35m (17.0ms)[0m  CREATE UNIQUE INDEX  "unique_schema_migrations" ON "schema_migrations"  ("version")
+  [1m[36mActiveRecord::SchemaMigration Load (0.4ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+Migrating to CreateUsers (20140625152825)
+  [1m[35m (0.2ms)[0m  BEGIN
+  [1m[36m (20.8ms)[0m  [1mCREATE TABLE "users" ("id" serial primary key, "fullname" character varying(255), "email" character varying(255), "oauth_token" character varying(255), "oauth_secret" character varying(255), "created_at" timestamp, "updated_at" timestamp) [0m
+  [1m[35m (1.2ms)[0m  CREATE UNIQUE INDEX  "index_users_on_email" ON "users"  ("email")
+  [1m[36mSQL (15.8ms)[0m  [1mINSERT INTO "schema_migrations" ("version") VALUES ($1)[0m  [["version", "20140625152825"]]
+  [1m[35m (15.8ms)[0m  COMMIT
+Migrating to CreateChallenges (20140625153256)
+  [1m[36m (15.4ms)[0m  [1mBEGIN[0m
+  [1m[35m (18.9ms)[0m  CREATE TABLE "challenges" ("id" serial primary key, "user_id" integer, "user_points" integer, "start_date" date, "end_date" date, "winner_id" integer, "challenger_id" integer, "challenger_points" integer, "created_at" timestamp, "updated_at" timestamp) 
+  [1m[36mSQL (0.2ms)[0m  [1mINSERT INTO "schema_migrations" ("version") VALUES ($1)[0m  [["version", "20140625153256"]]
+  [1m[35m (0.6ms)[0m  COMMIT
+Migrating to CreateDailyWorkouts (20140625154053)
+  [1m[36m (16.0ms)[0m  [1mBEGIN[0m
+  [1m[35m (18.7ms)[0m  CREATE TABLE "daily_workouts" ("id" serial primary key, "date" date, "user_id" integer, "steps" integer, "distance" float, "active_time" integer, "age" integer, "weight" integer, "created_at" timestamp, "updated_at" timestamp) 
+  [1m[36mSQL (0.2ms)[0m  [1mINSERT INTO "schema_migrations" ("version") VALUES ($1)[0m  [["version", "20140625154053"]]
+  [1m[35m (0.7ms)[0m  COMMIT
+Migrating to CreateAuthorizations (20140626161028)
+  [1m[36m (15.6ms)[0m  [1mBEGIN[0m
+  [1m[35m (20.9ms)[0m  CREATE TABLE "authorizations" ("id" serial primary key, "provider" character varying(255), "uid" character varying(255), "user_id" integer, "info" character varying(255), "created_at" timestamp, "updated_at" timestamp) 
+  [1m[36mSQL (0.2ms)[0m  [1mINSERT INTO "schema_migrations" ("version") VALUES ($1)[0m  [["version", "20140626161028"]]
+  [1m[35m (0.6ms)[0m  COMMIT
+  [1m[36mActiveRecord::SchemaMigration Load (0.2ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+
+
+Started GET "/" for 127.0.0.1 at 2014-06-27 14:02:38 -0500
+  [1m[36mActiveRecord::SchemaMigration Load (0.4ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+Processing by SessionsController#new as HTML
+  Rendered sessions/new.html.erb within layouts/application (2.3ms)
+  [1m[35mUser Load (17.9ms)[0m  SELECT  "users".* FROM "users"  WHERE "users"."id" = $1 LIMIT 1  [["id", 1]]
+Completed 500 Internal Server Error in 308ms
+
+ActiveRecord::RecordNotFound (Couldn't find User with 'id'=1):
+  app/views/layouts/application.html.erb:12:in `_app_views_layouts_application_html_erb___1067721845903740448_2170887460'
+
+
+  Rendered /Users/lanarakhman/.rvm/gems/ruby-2.1.1/gems/actionpack-4.1.1/lib/action_dispatch/middleware/templates/rescues/_source.erb (0.8ms)
+  Rendered /Users/lanarakhman/.rvm/gems/ruby-2.1.1/gems/actionpack-4.1.1/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (1.3ms)
+  Rendered /Users/lanarakhman/.rvm/gems/ruby-2.1.1/gems/actionpack-4.1.1/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (1.0ms)
+  Rendered /Users/lanarakhman/.rvm/gems/ruby-2.1.1/gems/actionpack-4.1.1/lib/action_dispatch/middleware/templates/rescues/diagnostics.erb within rescues/layout (21.9ms)
+
+
+Started GET "/" for 127.0.0.1 at 2014-06-27 14:02:50 -0500
+Processing by SessionsController#new as HTML
+  Rendered sessions/new.html.erb within layouts/application (0.3ms)
+Completed 200 OK in 24ms (Views: 23.9ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2014-06-27 14:02:50 -0500
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2014-06-27 14:02:50 -0500
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2014-06-27 14:02:50 -0500
+
+
+Started GET "/assets/turbolinks.js?body=1" for 127.0.0.1 at 2014-06-27 14:02:50 -0500
+
+
+Started GET "/assets/sessions.js?body=1" for 127.0.0.1 at 2014-06-27 14:02:50 -0500
+
+
+Started GET "/assets/users.js?body=1" for 127.0.0.1 at 2014-06-27 14:02:50 -0500
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2014-06-27 14:02:50 -0500
+
+
+Started GET "/assets/fit-fight-wall.png" for 127.0.0.1 at 2014-06-27 14:02:50 -0500
+
+
+Started GET "/auth/fitbit" for 127.0.0.1 at 2014-06-27 14:02:54 -0500
+
+
+Started GET "/auth/fitbit" for 127.0.0.1 at 2014-06-27 14:02:55 -0500
+
+
+Started GET "/auth/fitbit/callback?oauth_token=8788c302c5b0ded83f9ab00981a34b9d&oauth_verifier=inhepdkktvr39hljfhnbglifgl" for 127.0.0.1 at 2014-06-27 14:03:10 -0500
+Processing by SessionsController#create as HTML
+  Parameters: {"oauth_token"=>"8788c302c5b0ded83f9ab00981a34b9d", "oauth_verifier"=>"inhepdkktvr39hljfhnbglifgl", "provider"=>"fitbit"}
+  [1m[36mAuthorization Load (60.6ms)[0m  [1mSELECT  "authorizations".* FROM "authorizations"  WHERE "authorizations"."uid" = '2S3XN6' LIMIT 1[0m
+  [1m[35m (0.2ms)[0m  BEGIN
+  [1m[36mSQL (32.4ms)[0m  [1mINSERT INTO "users" ("created_at", "fullname", "oauth_secret", "oauth_token", "updated_at") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["created_at", "2014-06-27 19:03:11.311247"], ["fullname", "Steve Yim"], ["oauth_secret", "aa818b64c8694ad0658f03a322d70ac8"], ["oauth_token", "5f16824bfa06e3b04123dd88deebb3de"], ["updated_at", "2014-06-27 19:03:11.311247"]]
+  [1m[35m (84.5ms)[0m  COMMIT
+  [1m[36m (0.2ms)[0m  [1mBEGIN[0m
+  [1m[35mAuthorization Exists (0.4ms)[0m  SELECT  1 AS one FROM "authorizations"  WHERE ("authorizations"."uid" = '2S3XN6' AND "authorizations"."provider" = 'fitbit') LIMIT 1
+  [1m[36mSQL (16.6ms)[0m  [1mINSERT INTO "authorizations" ("created_at", "provider", "uid", "updated_at", "user_id") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["created_at", "2014-06-27 19:03:11.503871"], ["provider", "fitbit"], ["uid", "2S3XN6"], ["updated_at", "2014-06-27 19:03:11.503871"], ["user_id", 1]]
+  [1m[35m (15.6ms)[0m  COMMIT
+Redirected to http://localhost:3000/users/1/challenges
+Completed 302 Found in 604ms (ActiveRecord: 240.1ms)
+
+
+Started GET "/users/1/challenges" for 127.0.0.1 at 2014-06-27 14:03:11 -0500
+Processing by ChallengesController#index as HTML
+  Parameters: {"user_id"=>"1"}
+  [1m[36mUser Load (0.5ms)[0m  [1mSELECT  "users".* FROM "users"  WHERE "users"."id" = $1 LIMIT 1[0m  [["id", 1]]
+  [1m[35mChallenge Load (33.7ms)[0m  SELECT "challenges".* FROM "challenges"  WHERE "challenges"."user_id" = $1  [["user_id", 1]]
+  [1m[36m (0.2ms)[0m  [1mSELECT COUNT(*) FROM "challenges"  WHERE "challenges"."challenger_id" = 1[0m
+  Rendered challenges/index.html.erb within layouts/application (62.8ms)
+  [1m[35mCACHE (0.0ms)[0m  SELECT  "users".* FROM "users"  WHERE "users"."id" = $1 LIMIT 1  [["id", 1]]
+Completed 200 OK in 79ms (Views: 34.2ms | ActiveRecord: 36.0ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2014-06-27 14:03:11 -0500
+
+
+Started GET "/assets/users.js?body=1" for 127.0.0.1 at 2014-06-27 14:03:11 -0500
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2014-06-27 14:03:11 -0500
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2014-06-27 14:03:11 -0500
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2014-06-27 14:03:11 -0500
+
+
+Started GET "/assets/turbolinks.js?body=1" for 127.0.0.1 at 2014-06-27 14:03:11 -0500
+
+
+Started GET "/assets/sessions.js?body=1" for 127.0.0.1 at 2014-06-27 14:03:11 -0500
+
+
+Started GET "/assets/fit-fight-wall.png" for 127.0.0.1 at 2014-06-27 14:03:12 -0500
+
+
+Started DELETE "/sessions/1" for 127.0.0.1 at 2014-06-27 14:03:15 -0500
+Processing by SessionsController#destroy as HTML
+  Parameters: {"authenticity_token"=>"iY/faRssNtuyV12f7/Jb7+s+aiPF6Ym4MI1W1XyR4fM=", "id"=>"1"}
+Redirected to http://localhost:3000/
+Completed 302 Found in 1ms (ActiveRecord: 0.0ms)
+
+
+Started GET "/" for 127.0.0.1 at 2014-06-27 14:03:15 -0500
+Processing by SessionsController#new as HTML
+  Rendered sessions/new.html.erb within layouts/application (0.3ms)
+Completed 200 OK in 25ms (Views: 24.4ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2014-06-27 14:03:15 -0500
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2014-06-27 14:03:15 -0500
+
+
+Started GET "/assets/users.js?body=1" for 127.0.0.1 at 2014-06-27 14:03:15 -0500
+
+
+Started GET "/assets/turbolinks.js?body=1" for 127.0.0.1 at 2014-06-27 14:03:15 -0500
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2014-06-27 14:03:15 -0500
+
+
+Started GET "/assets/sessions.js?body=1" for 127.0.0.1 at 2014-06-27 14:03:15 -0500
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2014-06-27 14:03:15 -0500
+  [1m[36mUser Load (1.0ms)[0m  [1mSELECT  "users".* FROM "users"   ORDER BY "users"."id" DESC LIMIT 1[0m
+  [1m[35mDailyWorkout Load (31.2ms)[0m  SELECT  "daily_workouts".* FROM "daily_workouts"  WHERE "daily_workouts"."user_id" = $1 AND "daily_workouts"."date" = '2014-06-27' LIMIT 1  [["user_id", 1]]
+  [1m[36m (0.3ms)[0m  [1mBEGIN[0m
+  [1m[35mSQL (16.8ms)[0m  INSERT INTO "daily_workouts" ("created_at", "date", "updated_at", "user_id") VALUES ($1, $2, $3, $4) RETURNING "id"  [["created_at", "2014-06-27 19:04:09.219976"], ["date", "2014-06-27"], ["updated_at", "2014-06-27 19:04:09.219976"], ["user_id", 1]]
+  [1m[36m (37.9ms)[0m  [1mCOMMIT[0m
+  [1m[35mDailyWorkout Load (0.7ms)[0m  SELECT  "daily_workouts".* FROM "daily_workouts"  WHERE "daily_workouts"."user_id" = $1 AND "daily_workouts"."date" = '2014-06-27' LIMIT 1  [["user_id", 1]]
+  [1m[36mUser Load (1.0ms)[0m  [1mSELECT  "users".* FROM "users"   ORDER BY "users"."id" DESC LIMIT 1[0m
+  [1m[36mUser Load (0.7ms)[0m  [1mSELECT  "users".* FROM "users"   ORDER BY "users"."id" DESC LIMIT 1[0m
+  [1m[36mUser Load (0.7ms)[0m  [1mSELECT  "users".* FROM "users"   ORDER BY "users"."id" DESC LIMIT 1[0m
+  [1m[36mUser Load (0.7ms)[0m  [1mSELECT  "users".* FROM "users"   ORDER BY "users"."id" DESC LIMIT 1[0m
+  [1m[36mUser Load (1.0ms)[0m  [1mSELECT  "users".* FROM "users"   ORDER BY "users"."id" DESC LIMIT 1[0m
+  [1m[35mUser Load (0.7ms)[0m  SELECT  "users".* FROM "users"   ORDER BY "users"."id" DESC LIMIT 1
+
+
+Started GET "/auth/fitbit" for 127.0.0.1 at 2014-06-27 14:32:37 -0500
+
+
+Started GET "/auth/fitbit" for 127.0.0.1 at 2014-06-27 14:32:38 -0500
+
+
+Started GET "/auth/fitbit/callback?oauth_token=6551b762cd3e1d9beaf7795fbeec812b&oauth_verifier=a2qtgl8ipumgt95vcbgaoh0g3d" for 127.0.0.1 at 2014-06-27 14:32:42 -0500
+
+SyntaxError (/Users/lanarakhman/Desktop/fit-fight/fit-fight/app/controllers/sessions_controller.rb:14: syntax error, unexpected ':', expecting ')'
+...update_attributes(:oauth_token: auth_hash.credentials.token,...
+...                               ^
+/Users/lanarakhman/Desktop/fit-fight/fit-fight/app/controllers/sessions_controller.rb:14: syntax error, unexpected tLABEL, expecting '='
+...redentials.token, oauth_secret: auth_hash.credentials.secret)
+...                               ^
+/Users/lanarakhman/Desktop/fit-fight/fit-fight/app/controllers/sessions_controller.rb:14: syntax error, unexpected ')', expecting keyword_end
+/Users/lanarakhman/Desktop/fit-fight/fit-fight/app/controllers/sessions_controller.rb:29: syntax error, unexpected end-of-input, expecting keyword_end):
+  activesupport (4.1.1) lib/active_support/dependencies.rb:443:in `load'
+  activesupport (4.1.1) lib/active_support/dependencies.rb:443:in `block in load_file'
+  activesupport (4.1.1) lib/active_support/dependencies.rb:633:in `new_constants_in'
+  activesupport (4.1.1) lib/active_support/dependencies.rb:442:in `load_file'
+  activesupport (4.1.1) lib/active_support/dependencies.rb:342:in `require_or_load'
+  activesupport (4.1.1) lib/active_support/dependencies.rb:480:in `load_missing_constant'
+  activesupport (4.1.1) lib/active_support/dependencies.rb:180:in `const_missing'
+  activesupport (4.1.1) lib/active_support/inflector/methods.rb:238:in `const_get'
+  activesupport (4.1.1) lib/active_support/inflector/methods.rb:238:in `block in constantize'
+  activesupport (4.1.1) lib/active_support/inflector/methods.rb:236:in `each'
+  activesupport (4.1.1) lib/active_support/inflector/methods.rb:236:in `inject'
+  activesupport (4.1.1) lib/active_support/inflector/methods.rb:236:in `constantize'
+  activesupport (4.1.1) lib/active_support/dependencies.rb:552:in `get'
+  activesupport (4.1.1) lib/active_support/dependencies.rb:583:in `constantize'
+  actionpack (4.1.1) lib/action_dispatch/routing/route_set.rb:76:in `controller_reference'
+  actionpack (4.1.1) lib/action_dispatch/routing/route_set.rb:66:in `controller'
+  actionpack (4.1.1) lib/action_dispatch/routing/route_set.rb:44:in `call'
+  actionpack (4.1.1) lib/action_dispatch/journey/router.rb:71:in `block in call'
+  actionpack (4.1.1) lib/action_dispatch/journey/router.rb:59:in `each'
+  actionpack (4.1.1) lib/action_dispatch/journey/router.rb:59:in `call'
+  actionpack (4.1.1) lib/action_dispatch/routing/route_set.rb:676:in `call'
+  omniauth (1.2.1) lib/omniauth/strategy.rb:404:in `call_app!'
+  omniauth (1.2.1) lib/omniauth/strategy.rb:362:in `callback_phase'
+  omniauth-oauth (1.0.1) lib/omniauth/strategies/oauth.rb:58:in `callback_phase'
+  omniauth (1.2.1) lib/omniauth/strategy.rb:227:in `callback_call'
+  omniauth (1.2.1) lib/omniauth/strategy.rb:184:in `call!'
+  omniauth (1.2.1) lib/omniauth/strategy.rb:164:in `call'
+  omniauth (1.2.1) lib/omniauth/builder.rb:59:in `call'
+  rack (1.5.2) lib/rack/etag.rb:23:in `call'
+  rack (1.5.2) lib/rack/conditionalget.rb:25:in `call'
+  rack (1.5.2) lib/rack/head.rb:11:in `call'
+  actionpack (4.1.1) lib/action_dispatch/middleware/params_parser.rb:27:in `call'
+  actionpack (4.1.1) lib/action_dispatch/middleware/flash.rb:254:in `call'
+  rack (1.5.2) lib/rack/session/abstract/id.rb:225:in `context'
+  rack (1.5.2) lib/rack/session/abstract/id.rb:220:in `call'
+  actionpack (4.1.1) lib/action_dispatch/middleware/cookies.rb:560:in `call'
+  activerecord (4.1.1) lib/active_record/query_cache.rb:36:in `call'
+  activerecord (4.1.1) lib/active_record/connection_adapters/abstract/connection_pool.rb:621:in `call'
+  activerecord (4.1.1) lib/active_record/migration.rb:380:in `call'
+  actionpack (4.1.1) lib/action_dispatch/middleware/callbacks.rb:29:in `block in call'
+  activesupport (4.1.1) lib/active_support/callbacks.rb:82:in `run_callbacks'
+  actionpack (4.1.1) lib/action_dispatch/middleware/callbacks.rb:27:in `call'
+  actionpack (4.1.1) lib/action_dispatch/middleware/reloader.rb:73:in `call'
+  actionpack (4.1.1) lib/action_dispatch/middleware/remote_ip.rb:76:in `call'
+  actionpack (4.1.1) lib/action_dispatch/middleware/debug_exceptions.rb:17:in `call'
+  actionpack (4.1.1) lib/action_dispatch/middleware/show_exceptions.rb:30:in `call'
+  railties (4.1.1) lib/rails/rack/logger.rb:38:in `call_app'
+  railties (4.1.1) lib/rails/rack/logger.rb:20:in `block in call'
+  activesupport (4.1.1) lib/active_support/tagged_logging.rb:68:in `block in tagged'
+  activesupport (4.1.1) lib/active_support/tagged_logging.rb:26:in `tagged'
+  activesupport (4.1.1) lib/active_support/tagged_logging.rb:68:in `tagged'
+  railties (4.1.1) lib/rails/rack/logger.rb:20:in `call'
+  actionpack (4.1.1) lib/action_dispatch/middleware/request_id.rb:21:in `call'
+  rack (1.5.2) lib/rack/methodoverride.rb:21:in `call'
+  rack (1.5.2) lib/rack/runtime.rb:17:in `call'
+  activesupport (4.1.1) lib/active_support/cache/strategy/local_cache_middleware.rb:26:in `call'
+  rack (1.5.2) lib/rack/lock.rb:17:in `call'
+  actionpack (4.1.1) lib/action_dispatch/middleware/static.rb:64:in `call'
+  rack (1.5.2) lib/rack/sendfile.rb:112:in `call'
+  railties (4.1.1) lib/rails/engine.rb:514:in `call'
+  railties (4.1.1) lib/rails/application.rb:144:in `call'
+  rack (1.5.2) lib/rack/lock.rb:17:in `call'
+  rack (1.5.2) lib/rack/content_length.rb:14:in `call'
+  rack (1.5.2) lib/rack/handler/webrick.rb:60:in `service'
+  /Users/lanarakhman/.rvm/rubies/ruby-2.1.1/lib/ruby/2.1.0/webrick/httpserver.rb:138:in `service'
+  /Users/lanarakhman/.rvm/rubies/ruby-2.1.1/lib/ruby/2.1.0/webrick/httpserver.rb:94:in `run'
+  /Users/lanarakhman/.rvm/rubies/ruby-2.1.1/lib/ruby/2.1.0/webrick/server.rb:295:in `block in start_thread'
+
+
+  Rendered /Users/lanarakhman/.rvm/gems/ruby-2.1.1/gems/actionpack-4.1.1/lib/action_dispatch/middleware/templates/rescues/_source.erb (0.9ms)
+  Rendered /Users/lanarakhman/.rvm/gems/ruby-2.1.1/gems/actionpack-4.1.1/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (1.7ms)
+  Rendered /Users/lanarakhman/.rvm/gems/ruby-2.1.1/gems/actionpack-4.1.1/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (1.0ms)
+  Rendered /Users/lanarakhman/.rvm/gems/ruby-2.1.1/gems/actionpack-4.1.1/lib/action_dispatch/middleware/templates/rescues/diagnostics.erb within rescues/layout (23.4ms)
+
+
+Started GET "/auth/fitbit/callback?oauth_token=6551b762cd3e1d9beaf7795fbeec812b&oauth_verifier=a2qtgl8ipumgt95vcbgaoh0g3d" for 127.0.0.1 at 2014-06-27 14:33:03 -0500
+
+OAuth::Unauthorized (401 Unauthorized):
+  oauth (0.4.7) lib/oauth/consumer.rb:216:in `token_request'
+  oauth (0.4.7) lib/oauth/tokens/request_token.rb:18:in `get_access_token'
+  omniauth-oauth (1.0.1) lib/omniauth/strategies/oauth.rb:57:in `callback_phase'
+  omniauth (1.2.1) lib/omniauth/strategy.rb:227:in `callback_call'
+  omniauth (1.2.1) lib/omniauth/strategy.rb:184:in `call!'
+  omniauth (1.2.1) lib/omniauth/strategy.rb:164:in `call'
+  omniauth (1.2.1) lib/omniauth/builder.rb:59:in `call'
+  rack (1.5.2) lib/rack/etag.rb:23:in `call'
+  rack (1.5.2) lib/rack/conditionalget.rb:25:in `call'
+  rack (1.5.2) lib/rack/head.rb:11:in `call'
+  actionpack (4.1.1) lib/action_dispatch/middleware/params_parser.rb:27:in `call'
+  actionpack (4.1.1) lib/action_dispatch/middleware/flash.rb:254:in `call'
+  rack (1.5.2) lib/rack/session/abstract/id.rb:225:in `context'
+  rack (1.5.2) lib/rack/session/abstract/id.rb:220:in `call'
+  actionpack (4.1.1) lib/action_dispatch/middleware/cookies.rb:560:in `call'
+  activerecord (4.1.1) lib/active_record/query_cache.rb:36:in `call'
+  activerecord (4.1.1) lib/active_record/connection_adapters/abstract/connection_pool.rb:621:in `call'
+  activerecord (4.1.1) lib/active_record/migration.rb:380:in `call'
+  actionpack (4.1.1) lib/action_dispatch/middleware/callbacks.rb:29:in `block in call'
+  activesupport (4.1.1) lib/active_support/callbacks.rb:82:in `run_callbacks'
+  actionpack (4.1.1) lib/action_dispatch/middleware/callbacks.rb:27:in `call'
+  actionpack (4.1.1) lib/action_dispatch/middleware/reloader.rb:73:in `call'
+  actionpack (4.1.1) lib/action_dispatch/middleware/remote_ip.rb:76:in `call'
+  actionpack (4.1.1) lib/action_dispatch/middleware/debug_exceptions.rb:17:in `call'
+  actionpack (4.1.1) lib/action_dispatch/middleware/show_exceptions.rb:30:in `call'
+  railties (4.1.1) lib/rails/rack/logger.rb:38:in `call_app'
+  railties (4.1.1) lib/rails/rack/logger.rb:20:in `block in call'
+  activesupport (4.1.1) lib/active_support/tagged_logging.rb:68:in `block in tagged'
+  activesupport (4.1.1) lib/active_support/tagged_logging.rb:26:in `tagged'
+  activesupport (4.1.1) lib/active_support/tagged_logging.rb:68:in `tagged'
+  railties (4.1.1) lib/rails/rack/logger.rb:20:in `call'
+  actionpack (4.1.1) lib/action_dispatch/middleware/request_id.rb:21:in `call'
+  rack (1.5.2) lib/rack/methodoverride.rb:21:in `call'
+  rack (1.5.2) lib/rack/runtime.rb:17:in `call'
+  activesupport (4.1.1) lib/active_support/cache/strategy/local_cache_middleware.rb:26:in `call'
+  rack (1.5.2) lib/rack/lock.rb:17:in `call'
+  actionpack (4.1.1) lib/action_dispatch/middleware/static.rb:64:in `call'
+  rack (1.5.2) lib/rack/sendfile.rb:112:in `call'
+  railties (4.1.1) lib/rails/engine.rb:514:in `call'
+  railties (4.1.1) lib/rails/application.rb:144:in `call'
+  rack (1.5.2) lib/rack/lock.rb:17:in `call'
+  rack (1.5.2) lib/rack/content_length.rb:14:in `call'
+  rack (1.5.2) lib/rack/handler/webrick.rb:60:in `service'
+  /Users/lanarakhman/.rvm/rubies/ruby-2.1.1/lib/ruby/2.1.0/webrick/httpserver.rb:138:in `service'
+  /Users/lanarakhman/.rvm/rubies/ruby-2.1.1/lib/ruby/2.1.0/webrick/httpserver.rb:94:in `run'
+  /Users/lanarakhman/.rvm/rubies/ruby-2.1.1/lib/ruby/2.1.0/webrick/server.rb:295:in `block in start_thread'
+
+
+  Rendered /Users/lanarakhman/.rvm/gems/ruby-2.1.1/gems/actionpack-4.1.1/lib/action_dispatch/middleware/templates/rescues/_source.erb (0.6ms)
+  Rendered /Users/lanarakhman/.rvm/gems/ruby-2.1.1/gems/actionpack-4.1.1/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (1.1ms)
+  Rendered /Users/lanarakhman/.rvm/gems/ruby-2.1.1/gems/actionpack-4.1.1/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (1.8ms)
+  Rendered /Users/lanarakhman/.rvm/gems/ruby-2.1.1/gems/actionpack-4.1.1/lib/action_dispatch/middleware/templates/rescues/diagnostics.erb within rescues/layout (21.2ms)
+
+
+Started GET "/auth/fitbit" for 127.0.0.1 at 2014-06-27 14:33:09 -0500
+
+
+Started GET "/auth/fitbit" for 127.0.0.1 at 2014-06-27 14:33:10 -0500
+
+
+Started GET "/auth/fitbit/callback?oauth_token=43a6f818e984eebd658324140dfdc8b5&oauth_verifier=17r6e2mii3bue2535qj3kv4qoi" for 127.0.0.1 at 2014-06-27 14:33:12 -0500
+Processing by SessionsController#create as HTML
+  Parameters: {"oauth_token"=>"43a6f818e984eebd658324140dfdc8b5", "oauth_verifier"=>"17r6e2mii3bue2535qj3kv4qoi", "provider"=>"fitbit"}
+  [1m[36mAuthorization Load (15.8ms)[0m  [1mSELECT  "authorizations".* FROM "authorizations"  WHERE "authorizations"."uid" = '2S3XN6' LIMIT 1[0m
+  [1m[35mUser Load (0.3ms)[0m  SELECT  "users".* FROM "users"  WHERE "users"."id" = $1 LIMIT 1  [["id", 1]]
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35mSQL (0.3ms)[0m  UPDATE "users" SET "oauth_secret" = $1, "oauth_token" = $2, "updated_at" = $3 WHERE "users"."id" = 1  [["oauth_secret", "d301a0c77890f0a3ff497e33a4ee9bc3"], ["oauth_token", "c3d4a1c82b6c98e4e0bab33eb8b07c86"], ["updated_at", "2014-06-27 19:33:12.918072"]]
+  [1m[36m (30.7ms)[0m  [1mCOMMIT[0m
+Redirected to http://localhost:3000/users/1/challenges
+Completed 302 Found in 100ms (ActiveRecord: 52.1ms)
+
+
+Started GET "/users/1/challenges" for 127.0.0.1 at 2014-06-27 14:33:13 -0500
+Processing by ChallengesController#index as HTML
+  Parameters: {"user_id"=>"1"}
+  [1m[35mUser Load (0.3ms)[0m  SELECT  "users".* FROM "users"  WHERE "users"."id" = $1 LIMIT 1  [["id", 1]]
+  [1m[36mChallenge Load (0.3ms)[0m  [1mSELECT "challenges".* FROM "challenges"  WHERE "challenges"."user_id" = $1[0m  [["user_id", 1]]
+  [1m[35m (0.2ms)[0m  SELECT COUNT(*) FROM "challenges"  WHERE "challenges"."challenger_id" = 1
+  Rendered challenges/index.html.erb within layouts/application (7.4ms)
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  "users".* FROM "users"  WHERE "users"."id" = $1 LIMIT 1[0m  [["id", 1]]
+Completed 200 OK in 54ms (Views: 42.4ms | ActiveRecord: 2.9ms)
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2014-06-27 14:33:13 -0500
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2014-06-27 14:33:13 -0500
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2014-06-27 14:33:13 -0500
+
+
+Started GET "/assets/users.js?body=1" for 127.0.0.1 at 2014-06-27 14:33:13 -0500
+
+
+Started GET "/assets/turbolinks.js?body=1" for 127.0.0.1 at 2014-06-27 14:33:13 -0500
+
+
+Started GET "/assets/sessions.js?body=1" for 127.0.0.1 at 2014-06-27 14:33:13 -0500
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2014-06-27 14:33:13 -0500
+
+
+Started GET "/assets/fit-fight-wall.png" for 127.0.0.1 at 2014-06-27 14:33:13 -0500
+  [1m[36mUser Load (0.8ms)[0m  [1mSELECT  "users".* FROM "users"   ORDER BY "users"."id" DESC LIMIT 1[0m
+  [1m[35mUser Load (0.9ms)[0m  SELECT  "users".* FROM "users"   ORDER BY "users"."id" DESC LIMIT 1
+  [1m[36mUser Load (1.3ms)[0m  [1mSELECT  "users".* FROM "users"   ORDER BY "users"."id" DESC LIMIT 1[0m
+  [1m[36mUser Load (1.1ms)[0m  [1mSELECT  "users".* FROM "users"   ORDER BY "users"."id" DESC LIMIT 1[0m
+  [1m[35mAuthorization Load (0.9ms)[0m  SELECT  "authorizations".* FROM "authorizations"  WHERE "authorizations"."user_id" = $1  ORDER BY "authorizations"."id" ASC LIMIT 1  [["user_id", 1]]
+  [1m[36mUser Load (0.8ms)[0m  [1mSELECT  "users".* FROM "users"   ORDER BY "users"."id" DESC LIMIT 1[0m
+  [1m[35mAuthorization Load (0.4ms)[0m  SELECT  "authorizations".* FROM "authorizations"  WHERE "authorizations"."user_id" = $1  ORDER BY "authorizations"."id" ASC LIMIT 1  [["user_id", 1]]
+  [1m[36mUser Load (0.9ms)[0m  [1mSELECT  "users".* FROM "users"   ORDER BY "users"."id" DESC LIMIT 1[0m
+  [1m[35mAuthorization Load (0.5ms)[0m  SELECT  "authorizations".* FROM "authorizations"  WHERE "authorizations"."user_id" = $1  ORDER BY "authorizations"."id" ASC LIMIT 1  [["user_id", 1]]
+  [1m[36mUser Load (0.7ms)[0m  [1mSELECT  "users".* FROM "users"   ORDER BY "users"."id" DESC LIMIT 1[0m
+  [1m[35mAuthorization Load (0.5ms)[0m  SELECT  "authorizations".* FROM "authorizations"  WHERE "authorizations"."user_id" = $1  ORDER BY "authorizations"."id" ASC LIMIT 1  [["user_id", 1]]
+  [1m[36mUser Load (0.6ms)[0m  [1mSELECT  "users".* FROM "users"   ORDER BY "users"."id" DESC LIMIT 1[0m
+  [1m[35mAuthorization Load (0.5ms)[0m  SELECT  "authorizations".* FROM "authorizations"  WHERE "authorizations"."user_id" = $1  ORDER BY "authorizations"."id" ASC LIMIT 1  [["user_id", 1]]
+  [1m[36mUser Load (0.7ms)[0m  [1mSELECT  "users".* FROM "users"   ORDER BY "users"."id" DESC LIMIT 1[0m
+  [1m[35mAuthorization Load (0.7ms)[0m  SELECT  "authorizations".* FROM "authorizations"  WHERE "authorizations"."user_id" = $1  ORDER BY "authorizations"."id" ASC LIMIT 1  [["user_id", 1]]
+  [1m[36mUser Load (0.7ms)[0m  [1mSELECT  "users".* FROM "users"   ORDER BY "users"."id" DESC LIMIT 1[0m
+  [1m[35mAuthorization Load (0.5ms)[0m  SELECT  "authorizations".* FROM "authorizations"  WHERE "authorizations"."user_id" = $1  ORDER BY "authorizations"."id" ASC LIMIT 1  [["user_id", 1]]
+  [1m[36mUser Load (0.8ms)[0m  [1mSELECT  "users".* FROM "users"   ORDER BY "users"."id" DESC LIMIT 1[0m
+
+
+Started DELETE "/sessions/1" for 127.0.0.1 at 2014-06-27 14:43:27 -0500
+Processing by SessionsController#destroy as HTML
+  Parameters: {"authenticity_token"=>"o2va+2HsvP8IAj2rIZDmgqoHNMBJnLFY/4Y2TUXa3nY=", "id"=>"1"}
+Redirected to http://localhost:3000/
+Completed 302 Found in 1ms (ActiveRecord: 0.0ms)
+
+
+Started GET "/" for 127.0.0.1 at 2014-06-27 14:43:28 -0500
+Processing by SessionsController#new as HTML
+  Rendered sessions/new.html.erb within layouts/application (0.2ms)
+Completed 200 OK in 54ms (Views: 46.5ms | ActiveRecord: 1.3ms)
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2014-06-27 14:43:28 -0500
+
+
+Started GET "/assets/sessions.js?body=1" for 127.0.0.1 at 2014-06-27 14:43:28 -0500
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2014-06-27 14:43:28 -0500
+
+
+Started GET "/assets/users.js?body=1" for 127.0.0.1 at 2014-06-27 14:43:28 -0500
+
+
+Started GET "/assets/turbolinks.js?body=1" for 127.0.0.1 at 2014-06-27 14:43:28 -0500
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2014-06-27 14:43:28 -0500
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2014-06-27 14:43:28 -0500
+
+
+Started GET "/auth/fitbit" for 127.0.0.1 at 2014-06-27 14:43:31 -0500
+
+
+Started GET "/auth/fitbit" for 127.0.0.1 at 2014-06-27 14:43:32 -0500
+
+
+Started GET "/auth/fitbit/callback?oauth_token=47c3efcdfbde77510ce455131c4ed3be&oauth_verifier=a791som5e26guf62ifrli62mbt" for 127.0.0.1 at 2014-06-27 14:43:34 -0500
+Processing by SessionsController#create as HTML
+  Parameters: {"oauth_token"=>"47c3efcdfbde77510ce455131c4ed3be", "oauth_verifier"=>"a791som5e26guf62ifrli62mbt", "provider"=>"fitbit"}
+  [1m[35mAuthorization Load (0.2ms)[0m  SELECT  "authorizations".* FROM "authorizations"  WHERE "authorizations"."uid" = '2S3XN6' LIMIT 1
+  [1m[36mUser Load (0.3ms)[0m  [1mSELECT  "users".* FROM "users"  WHERE "users"."id" = $1 LIMIT 1[0m  [["id", 1]]
+  [1m[35m (0.1ms)[0m  BEGIN
+  [1m[36mSQL (0.4ms)[0m  [1mUPDATE "users" SET "oauth_secret" = $1, "oauth_token" = $2, "updated_at" = $3 WHERE "users"."id" = 1[0m  [["oauth_secret", "ef59dd0e3910127a4f7c57a5add204e6"], ["oauth_token", "d823cc546fe189adfd33864bcb3444f2"], ["updated_at", "2014-06-27 19:43:35.269442"]]
+  [1m[35m (0.5ms)[0m  COMMIT
+Redirected to http://localhost:3000/users/1/challenges
+Completed 302 Found in 62ms (ActiveRecord: 3.3ms)
+
+
+Started GET "/users/1/challenges" for 127.0.0.1 at 2014-06-27 14:43:35 -0500
+Processing by ChallengesController#index as HTML
+  Parameters: {"user_id"=>"1"}
+  [1m[36mUser Load (0.4ms)[0m  [1mSELECT  "users".* FROM "users"  WHERE "users"."id" = $1 LIMIT 1[0m  [["id", 1]]
+  [1m[35mChallenge Load (0.2ms)[0m  SELECT "challenges".* FROM "challenges"  WHERE "challenges"."user_id" = $1  [["user_id", 1]]
+  [1m[36m (0.2ms)[0m  [1mSELECT COUNT(*) FROM "challenges"  WHERE "challenges"."challenger_id" = 1[0m
+  Rendered challenges/index.html.erb within layouts/application (5.3ms)
+  [1m[35mCACHE (0.0ms)[0m  SELECT  "users".* FROM "users"  WHERE "users"."id" = $1 LIMIT 1  [["id", 1]]
+Completed 200 OK in 20ms (Views: 9.7ms | ActiveRecord: 2.3ms)
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2014-06-27 14:43:35 -0500
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2014-06-27 14:43:35 -0500
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2014-06-27 14:43:35 -0500
+
+
+Started GET "/assets/turbolinks.js?body=1" for 127.0.0.1 at 2014-06-27 14:43:35 -0500
+
+
+Started GET "/assets/users.js?body=1" for 127.0.0.1 at 2014-06-27 14:43:35 -0500
+
+
+Started GET "/assets/sessions.js?body=1" for 127.0.0.1 at 2014-06-27 14:43:35 -0500
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2014-06-27 14:43:35 -0500
+  [1m[36m (2.5ms)[0m  [1mCREATE TABLE "schema_migrations" ("version" character varying(255) NOT NULL) [0m
+  [1m[35m (1.6ms)[0m  CREATE UNIQUE INDEX  "unique_schema_migrations" ON "schema_migrations"  ("version")
+  [1m[36mActiveRecord::SchemaMigration Load (0.3ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+Migrating to CreateUsers (20140625152825)
+  [1m[35m (0.3ms)[0m  BEGIN
+  [1m[36m (21.8ms)[0m  [1mCREATE TABLE "users" ("id" serial primary key, "fullname" character varying(255), "email" character varying(255), "oauth_token" character varying(255), "oauth_secret" character varying(255), "created_at" timestamp, "updated_at" timestamp) [0m
+  [1m[35m (2.3ms)[0m  CREATE UNIQUE INDEX  "index_users_on_email" ON "users"  ("email")
+  [1m[36mSQL (15.6ms)[0m  [1mINSERT INTO "schema_migrations" ("version") VALUES ($1)[0m  [["version", "20140625152825"]]
+  [1m[35m (16.2ms)[0m  COMMIT
+Migrating to CreateChallenges (20140625153256)
+  [1m[36m (15.7ms)[0m  [1mBEGIN[0m
+  [1m[35m (19.0ms)[0m  CREATE TABLE "challenges" ("id" serial primary key, "user_id" integer, "user_points" integer, "start_date" date, "end_date" date, "winner_id" integer, "challenger_id" integer, "challenger_points" integer, "created_at" timestamp, "updated_at" timestamp) 
+  [1m[36mSQL (0.3ms)[0m  [1mINSERT INTO "schema_migrations" ("version") VALUES ($1)[0m  [["version", "20140625153256"]]
+  [1m[35m (0.7ms)[0m  COMMIT
+Migrating to CreateDailyWorkouts (20140625154053)
+  [1m[36m (16.6ms)[0m  [1mBEGIN[0m
+  [1m[35m (18.0ms)[0m  CREATE TABLE "daily_workouts" ("id" serial primary key, "date" date, "user_id" integer, "steps" integer, "distance" float, "active_time" integer, "age" integer, "weight" integer, "created_at" timestamp, "updated_at" timestamp) 
+  [1m[36mSQL (0.2ms)[0m  [1mINSERT INTO "schema_migrations" ("version") VALUES ($1)[0m  [["version", "20140625154053"]]
+  [1m[35m (0.6ms)[0m  COMMIT
+Migrating to CreateAuthorizations (20140626161028)
+  [1m[36m (15.3ms)[0m  [1mBEGIN[0m
+  [1m[35m (17.8ms)[0m  CREATE TABLE "authorizations" ("id" serial primary key, "provider" character varying(255), "uid" character varying(255), "user_id" integer, "info" character varying(255), "created_at" timestamp, "updated_at" timestamp) 
+  [1m[36mSQL (0.2ms)[0m  [1mINSERT INTO "schema_migrations" ("version") VALUES ($1)[0m  [["version", "20140626161028"]]
+  [1m[35m (0.5ms)[0m  COMMIT
+  [1m[36mActiveRecord::SchemaMigration Load (0.2ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+
+
+Started GET "/" for 127.0.0.1 at 2014-06-27 14:47:24 -0500
+  [1m[36mActiveRecord::SchemaMigration Load (0.4ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+Processing by SessionsController#new as HTML
+  Rendered sessions/new.html.erb within layouts/application (3.5ms)
+  [1m[35mUser Load (0.5ms)[0m  SELECT  "users".* FROM "users"  WHERE "users"."id" = $1 LIMIT 1  [["id", 1]]
+Completed 500 Internal Server Error in 279ms
+
+ActiveRecord::RecordNotFound (Couldn't find User with 'id'=1):
+  app/views/layouts/application.html.erb:12:in `_app_views_layouts_application_html_erb__2616076658146899914_2165239640'
+
+
+  Rendered /Users/lanarakhman/.rvm/gems/ruby-2.1.1/gems/actionpack-4.1.1/lib/action_dispatch/middleware/templates/rescues/_source.erb (0.8ms)
+  Rendered /Users/lanarakhman/.rvm/gems/ruby-2.1.1/gems/actionpack-4.1.1/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (1.5ms)
+  Rendered /Users/lanarakhman/.rvm/gems/ruby-2.1.1/gems/actionpack-4.1.1/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (1.3ms)
+  Rendered /Users/lanarakhman/.rvm/gems/ruby-2.1.1/gems/actionpack-4.1.1/lib/action_dispatch/middleware/templates/rescues/diagnostics.erb within rescues/layout (21.5ms)
+
+
+Started DELETE "/sessions/1" for 127.0.0.1 at 2014-06-27 14:47:26 -0500
+Processing by SessionsController#destroy as HTML
+  Parameters: {"authenticity_token"=>"nZaMpyJp9vYlbSQdogVG2tOZjocBo+Q3eFmPD63NK2w=", "id"=>"1"}
+Redirected to http://localhost:3000/
+Completed 302 Found in 1ms (ActiveRecord: 0.0ms)
+
+
+Started GET "/" for 127.0.0.1 at 2014-06-27 14:47:31 -0500
+Processing by SessionsController#new as HTML
+  Rendered sessions/new.html.erb within layouts/application (0.2ms)
+Completed 200 OK in 6ms (Views: 5.6ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2014-06-27 14:47:31 -0500
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2014-06-27 14:47:31 -0500
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2014-06-27 14:47:31 -0500
+
+
+Started GET "/assets/users.js?body=1" for 127.0.0.1 at 2014-06-27 14:47:31 -0500
+
+
+Started GET "/assets/sessions.js?body=1" for 127.0.0.1 at 2014-06-27 14:47:31 -0500
+
+
+Started GET "/assets/turbolinks.js?body=1" for 127.0.0.1 at 2014-06-27 14:47:31 -0500
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2014-06-27 14:47:31 -0500
+
+
+Started GET "/assets/fit-fight-wall.png" for 127.0.0.1 at 2014-06-27 14:47:31 -0500
+
+
+Started GET "/auth/fitbit" for 127.0.0.1 at 2014-06-27 14:47:33 -0500
+
+
+Started GET "/auth/fitbit" for 127.0.0.1 at 2014-06-27 14:47:34 -0500
+
+
+Started GET "/auth/fitbit/callback?oauth_token=67ffad593320498a0e97e4f0ab0013a1&oauth_verifier=j8hv2ssl67o1amooagrp08u0fe" for 127.0.0.1 at 2014-06-27 14:47:37 -0500
+Processing by SessionsController#create as HTML
+  Parameters: {"oauth_token"=>"67ffad593320498a0e97e4f0ab0013a1", "oauth_verifier"=>"j8hv2ssl67o1amooagrp08u0fe", "provider"=>"fitbit"}
+  [1m[36mAuthorization Load (0.7ms)[0m  [1mSELECT  "authorizations".* FROM "authorizations"  WHERE "authorizations"."uid" = '2S3XN6' LIMIT 1[0m
+Completed 500 Internal Server Error in 45ms
+
+NoMethodError (undefined method `[]' for nil:NilClass):
+  app/controllers/sessions_controller.rb:12:in `create'
+
+
+  Rendered /Users/lanarakhman/.rvm/gems/ruby-2.1.1/gems/actionpack-4.1.1/lib/action_dispatch/middleware/templates/rescues/_source.erb (0.7ms)
+  Rendered /Users/lanarakhman/.rvm/gems/ruby-2.1.1/gems/actionpack-4.1.1/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (1.4ms)
+  Rendered /Users/lanarakhman/.rvm/gems/ruby-2.1.1/gems/actionpack-4.1.1/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (1.3ms)
+  Rendered /Users/lanarakhman/.rvm/gems/ruby-2.1.1/gems/actionpack-4.1.1/lib/action_dispatch/middleware/templates/rescues/diagnostics.erb within rescues/layout (17.1ms)
+
+
+Started GET "/auth/fitbit" for 127.0.0.1 at 2014-06-27 14:49:45 -0500
+
+
+Started GET "/auth/fitbit" for 127.0.0.1 at 2014-06-27 14:49:45 -0500
+
+
+Started GET "/auth/fitbit/callback?oauth_token=568a6ceebac593b87f38f7084d822674&oauth_verifier=mjpslvh4b3dqpaam1s02mel4ko" for 127.0.0.1 at 2014-06-27 14:49:48 -0500
+Processing by SessionsController#create as HTML
+  Parameters: {"oauth_token"=>"568a6ceebac593b87f38f7084d822674", "oauth_verifier"=>"mjpslvh4b3dqpaam1s02mel4ko", "provider"=>"fitbit"}
+  [1m[35mAuthorization Load (0.2ms)[0m  SELECT  "authorizations".* FROM "authorizations"  WHERE "authorizations"."uid" = '2S3XN6' LIMIT 1
+Completed 500 Internal Server Error in 15ms
+
+NoMethodError (undefined method `[]' for nil:NilClass):
+  app/controllers/sessions_controller.rb:13:in `create'
+
+
+  Rendered /Users/lanarakhman/.rvm/gems/ruby-2.1.1/gems/actionpack-4.1.1/lib/action_dispatch/middleware/templates/rescues/_source.erb (0.8ms)
+  Rendered /Users/lanarakhman/.rvm/gems/ruby-2.1.1/gems/actionpack-4.1.1/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (2.1ms)
+  Rendered /Users/lanarakhman/.rvm/gems/ruby-2.1.1/gems/actionpack-4.1.1/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (1.1ms)
+  Rendered /Users/lanarakhman/.rvm/gems/ruby-2.1.1/gems/actionpack-4.1.1/lib/action_dispatch/middleware/templates/rescues/diagnostics.erb within rescues/layout (23.3ms)
+
+
+Started GET "/auth/fitbit" for 127.0.0.1 at 2014-06-27 14:50:52 -0500
+
+
+Started GET "/auth/fitbit" for 127.0.0.1 at 2014-06-27 14:50:52 -0500
+
+
+Started GET "/auth/fitbit/callback?oauth_token=35b561b1c1e7dedb3b9d7f5d8e278df2&oauth_verifier=lhdr1pm56frp6l9caiut9pjq93" for 127.0.0.1 at 2014-06-27 14:50:55 -0500
+Processing by SessionsController#create as HTML
+  Parameters: {"oauth_token"=>"35b561b1c1e7dedb3b9d7f5d8e278df2", "oauth_verifier"=>"lhdr1pm56frp6l9caiut9pjq93", "provider"=>"fitbit"}
+  [1m[36mAuthorization Load (0.3ms)[0m  [1mSELECT  "authorizations".* FROM "authorizations"  WHERE "authorizations"."uid" = '2S3XN6' LIMIT 1[0m
+Completed 500 Internal Server Error in 14ms
+
+NoMethodError (undefined method `[]' for nil:NilClass):
+  app/controllers/sessions_controller.rb:14:in `create'
+
+
+  Rendered /Users/lanarakhman/.rvm/gems/ruby-2.1.1/gems/actionpack-4.1.1/lib/action_dispatch/middleware/templates/rescues/_source.erb (2.6ms)
+  Rendered /Users/lanarakhman/.rvm/gems/ruby-2.1.1/gems/actionpack-4.1.1/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (1.7ms)
+  Rendered /Users/lanarakhman/.rvm/gems/ruby-2.1.1/gems/actionpack-4.1.1/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (1.4ms)
+  Rendered /Users/lanarakhman/.rvm/gems/ruby-2.1.1/gems/actionpack-4.1.1/lib/action_dispatch/middleware/templates/rescues/diagnostics.erb within rescues/layout (27.0ms)
+
+
+Started GET "/auth/fitbit" for 127.0.0.1 at 2014-06-27 14:51:26 -0500
+
+
+Started GET "/auth/fitbit" for 127.0.0.1 at 2014-06-27 14:51:26 -0500
+
+
+Started GET "/auth/fitbit/callback?oauth_token=fe87b70d996f124a158023a9094481e7&oauth_verifier=r37u04077rfh3iunae02uim2sg" for 127.0.0.1 at 2014-06-27 14:51:28 -0500
+Processing by SessionsController#create as HTML
+  Parameters: {"oauth_token"=>"fe87b70d996f124a158023a9094481e7", "oauth_verifier"=>"r37u04077rfh3iunae02uim2sg", "provider"=>"fitbit"}
+  [1m[35mAuthorization Load (0.4ms)[0m  SELECT  "authorizations".* FROM "authorizations"  WHERE "authorizations"."uid" = '2S3XN6' LIMIT 1
+Completed 500 Internal Server Error in 11ms
+
+NoMethodError (undefined method `[]' for nil:NilClass):
+  app/controllers/sessions_controller.rb:16:in `create'
+
+
+  Rendered /Users/lanarakhman/.rvm/gems/ruby-2.1.1/gems/actionpack-4.1.1/lib/action_dispatch/middleware/templates/rescues/_source.erb (0.7ms)
+  Rendered /Users/lanarakhman/.rvm/gems/ruby-2.1.1/gems/actionpack-4.1.1/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (1.7ms)
+  Rendered /Users/lanarakhman/.rvm/gems/ruby-2.1.1/gems/actionpack-4.1.1/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (1.4ms)
+  Rendered /Users/lanarakhman/.rvm/gems/ruby-2.1.1/gems/actionpack-4.1.1/lib/action_dispatch/middleware/templates/rescues/diagnostics.erb within rescues/layout (25.8ms)
+
+
+Started GET "/auth/fitbit" for 127.0.0.1 at 2014-06-27 14:55:11 -0500
+
+
+Started GET "/auth/fitbit" for 127.0.0.1 at 2014-06-27 14:55:12 -0500
+
+
+Started GET "/auth/fitbit/callback?oauth_token=8d0f976c0df0089e82da9d74c7bc9b43&oauth_verifier=5qd0g9st2ranh9dcgsbulk7r2c" for 127.0.0.1 at 2014-06-27 14:55:15 -0500
+Processing by SessionsController#create as HTML
+  Parameters: {"oauth_token"=>"8d0f976c0df0089e82da9d74c7bc9b43", "oauth_verifier"=>"5qd0g9st2ranh9dcgsbulk7r2c", "provider"=>"fitbit"}
+  [1m[36mAuthorization Load (0.4ms)[0m  [1mSELECT  "authorizations".* FROM "authorizations"  WHERE "authorizations"."uid" = '2S3XN6' LIMIT 1[0m
+  [1m[35m (0.2ms)[0m  BEGIN
+  [1m[36mSQL (15.8ms)[0m  [1mINSERT INTO "users" ("created_at", "fullname", "oauth_secret", "oauth_token", "updated_at") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["created_at", "2014-06-27 19:55:15.954413"], ["fullname", "Steve Yim"], ["oauth_secret", "7c54cda501aaff838e357544a49fbc36"], ["oauth_token", "536a18639618c3678793fb8fe5a88029"], ["updated_at", "2014-06-27 19:55:15.954413"]]
+  [1m[35m (18.1ms)[0m  COMMIT
+  [1m[36m (0.2ms)[0m  [1mBEGIN[0m
+  [1m[35mAuthorization Exists (0.5ms)[0m  SELECT  1 AS one FROM "authorizations"  WHERE ("authorizations"."uid" = '2S3XN6' AND "authorizations"."provider" = 'fitbit') LIMIT 1
+  [1m[36mSQL (16.0ms)[0m  [1mINSERT INTO "authorizations" ("created_at", "provider", "uid", "updated_at", "user_id") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["created_at", "2014-06-27 19:55:16.295308"], ["provider", "fitbit"], ["uid", "2S3XN6"], ["updated_at", "2014-06-27 19:55:16.295308"], ["user_id", 1]]
+  [1m[35m (16.0ms)[0m  COMMIT
+Redirected to http://localhost:3000/users/1/challenges
+Completed 302 Found in 492ms (ActiveRecord: 72.7ms)
+
+
+Started GET "/users/1/challenges" for 127.0.0.1 at 2014-06-27 14:55:16 -0500
+Processing by ChallengesController#index as HTML
+  Parameters: {"user_id"=>"1"}
+  [1m[36mUser Load (0.6ms)[0m  [1mSELECT  "users".* FROM "users"  WHERE "users"."id" = $1 LIMIT 1[0m  [["id", 1]]
+  [1m[35mChallenge Load (23.9ms)[0m  SELECT "challenges".* FROM "challenges"  WHERE "challenges"."user_id" = $1  [["user_id", 1]]
+  [1m[36m (0.2ms)[0m  [1mSELECT COUNT(*) FROM "challenges"  WHERE "challenges"."challenger_id" = 1[0m
+  Rendered challenges/index.html.erb within layouts/application (57.8ms)
+  [1m[35mCACHE (0.0ms)[0m  SELECT  "users".* FROM "users"  WHERE "users"."id" = $1 LIMIT 1  [["id", 1]]
+Completed 200 OK in 76ms (Views: 39.2ms | ActiveRecord: 26.2ms)
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2014-06-27 14:55:16 -0500
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2014-06-27 14:55:16 -0500
+
+
+Started GET "/assets/sessions.js?body=1" for 127.0.0.1 at 2014-06-27 14:55:16 -0500
+
+
+Started GET "/assets/turbolinks.js?body=1" for 127.0.0.1 at 2014-06-27 14:55:16 -0500
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2014-06-27 14:55:16 -0500
+
+
+Started GET "/assets/users.js?body=1" for 127.0.0.1 at 2014-06-27 14:55:16 -0500
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2014-06-27 14:55:16 -0500
+
+
+Started GET "/assets/fit-fight-wall.png" for 127.0.0.1 at 2014-06-27 14:55:16 -0500
+
+
+Started GET "/users/1/edit" for 127.0.0.1 at 2014-06-27 14:55:19 -0500
+Processing by UsersController#edit as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mUser Load (0.3ms)[0m  [1mSELECT  "users".* FROM "users"  WHERE "users"."id" = $1 LIMIT 1[0m  [["id", 1]]
+  Rendered users/edit.html.erb within layouts/application (161.0ms)
+  [1m[35mUser Load (0.3ms)[0m  SELECT  "users".* FROM "users"  WHERE "users"."id" = $1 LIMIT 1  [["id", 1]]
+Completed 200 OK in 220ms (Views: 217.4ms | ActiveRecord: 0.6ms)
+  [1m[36mUser Load (1.0ms)[0m  [1mSELECT  "users".* FROM "users"   ORDER BY "users"."id" DESC LIMIT 1[0m
+  [1m[35mAuthorization Load (0.8ms)[0m  SELECT  "authorizations".* FROM "authorizations"  WHERE "authorizations"."user_id" = $1  ORDER BY "authorizations"."id" ASC LIMIT 1  [["user_id", 1]]
+  [1m[36mUser Load (0.8ms)[0m  [1mSELECT  "users".* FROM "users"   ORDER BY "users"."id" DESC LIMIT 1[0m
+  [1m[35mAuthorization Load (0.8ms)[0m  SELECT  "authorizations".* FROM "authorizations"  WHERE "authorizations"."user_id" = $1  ORDER BY "authorizations"."id" ASC LIMIT 1  [["user_id", 1]]
+  [1m[36mUser Load (1.3ms)[0m  [1mSELECT  "users".* FROM "users"   ORDER BY "users"."id" DESC LIMIT 1[0m
+  [1m[35mAuthorization Load (0.9ms)[0m  SELECT  "authorizations".* FROM "authorizations"  WHERE "authorizations"."user_id" = $1  ORDER BY "authorizations"."id" ASC LIMIT 1  [["user_id", 1]]
+  [1m[36mUser Load (0.8ms)[0m  [1mSELECT  "users".* FROM "users"   ORDER BY "users"."id" DESC LIMIT 1[0m
+  [1m[35mAuthorization Load (0.5ms)[0m  SELECT  "authorizations".* FROM "authorizations"  WHERE "authorizations"."user_id" = $1  ORDER BY "authorizations"."id" ASC LIMIT 1  [["user_id", 1]]
+  [1m[36mUser Load (1.0ms)[0m  [1mSELECT  "users".* FROM "users"   ORDER BY "users"."id" DESC LIMIT 1[0m
+  [1m[35mUser Load (0.7ms)[0m  SELECT  "users".* FROM "users"   ORDER BY "users"."id" DESC LIMIT 1
+  [1m[36mAuthorization Load (0.6ms)[0m  [1mSELECT  "authorizations".* FROM "authorizations"  WHERE "authorizations"."user_id" = $1  ORDER BY "authorizations"."id" ASC LIMIT 1[0m  [["user_id", 1]]
+  [1m[36mUser Load (0.8ms)[0m  [1mSELECT  "users".* FROM "users"   ORDER BY "users"."id" ASC LIMIT 1[0m
+
+
+Started DELETE "/sessions/1" for 127.0.0.1 at 2014-06-27 15:10:12 -0500
+Processing by SessionsController#destroy as HTML
+  Parameters: {"authenticity_token"=>"Me/NW9s89c8Jn8x4JIR3yMjysSbujNzE/fjddmDyEZA=", "id"=>"1"}
+Redirected to http://localhost:3000/
+Completed 302 Found in 1ms (ActiveRecord: 0.0ms)
+
+
+Started GET "/" for 127.0.0.1 at 2014-06-27 15:10:12 -0500
+Processing by SessionsController#new as HTML
+  Rendered sessions/new.html.erb within layouts/application (0.3ms)
+Completed 200 OK in 53ms (Views: 45.3ms | ActiveRecord: 1.4ms)
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2014-06-27 15:10:13 -0500
+
+
+Started GET "/assets/turbolinks.js?body=1" for 127.0.0.1 at 2014-06-27 15:10:13 -0500
+
+
+Started GET "/assets/sessions.js?body=1" for 127.0.0.1 at 2014-06-27 15:10:13 -0500
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2014-06-27 15:10:13 -0500
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2014-06-27 15:10:13 -0500
+
+
+Started GET "/assets/users.js?body=1" for 127.0.0.1 at 2014-06-27 15:10:13 -0500
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2014-06-27 15:10:13 -0500
+
+
+Started GET "/assets/fit-fight-wall.png" for 127.0.0.1 at 2014-06-27 15:10:13 -0500
+
+
+Started GET "/auth/fitbit" for 127.0.0.1 at 2014-06-27 15:10:14 -0500
+
+
+Started GET "/auth/fitbit" for 127.0.0.1 at 2014-06-27 15:10:15 -0500
+
+
+Started GET "/auth/fitbit/callback?oauth_token=64d1fdd513a3f3b89fa1c8ae41c02b9c&oauth_verifier=k9g0sqqcn68b7rti26p453i0po" for 127.0.0.1 at 2014-06-27 15:10:19 -0500
+Processing by SessionsController#create as HTML
+  Parameters: {"oauth_token"=>"64d1fdd513a3f3b89fa1c8ae41c02b9c", "oauth_verifier"=>"k9g0sqqcn68b7rti26p453i0po", "provider"=>"fitbit"}
+  [1m[36mAuthorization Load (0.3ms)[0m  [1mSELECT  "authorizations".* FROM "authorizations"  WHERE "authorizations"."uid" = '2S3XN6' LIMIT 1[0m
+  [1m[35mUser Load (0.3ms)[0m  SELECT  "users".* FROM "users"  WHERE "users"."id" = $1 LIMIT 1  [["id", 1]]
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35mSQL (0.3ms)[0m  UPDATE "users" SET "oauth_secret" = $1, "oauth_token" = $2, "updated_at" = $3 WHERE "users"."id" = 1  [["oauth_secret", "08d9c1c8ab7e9fd7258399be2ee168ec"], ["oauth_token", "8cd45d450850920e9dc98968c84b497a"], ["updated_at", "2014-06-27 20:10:19.447024"]]
+  [1m[36m (41.7ms)[0m  [1mCOMMIT[0m
+Redirected to http://localhost:3000/users/1/challenges
+Completed 302 Found in 97ms (ActiveRecord: 44.2ms)
+
+
+Started GET "/users/1/challenges" for 127.0.0.1 at 2014-06-27 15:10:19 -0500
+Processing by ChallengesController#index as HTML
+  Parameters: {"user_id"=>"1"}
+  [1m[35mUser Load (0.3ms)[0m  SELECT  "users".* FROM "users"  WHERE "users"."id" = $1 LIMIT 1  [["id", 1]]
+  [1m[36mChallenge Load (0.2ms)[0m  [1mSELECT "challenges".* FROM "challenges"  WHERE "challenges"."user_id" = $1[0m  [["user_id", 1]]
+  [1m[35m (0.3ms)[0m  SELECT COUNT(*) FROM "challenges"  WHERE "challenges"."challenger_id" = 1
+  Rendered challenges/index.html.erb within layouts/application (6.6ms)
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  "users".* FROM "users"  WHERE "users"."id" = $1 LIMIT 1[0m  [["id", 1]]
+Completed 200 OK in 18ms (Views: 9.6ms | ActiveRecord: 3.0ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2014-06-27 15:10:19 -0500
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2014-06-27 15:10:19 -0500
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2014-06-27 15:10:19 -0500
+
+
+Started GET "/assets/turbolinks.js?body=1" for 127.0.0.1 at 2014-06-27 15:10:19 -0500
+
+
+Started GET "/assets/users.js?body=1" for 127.0.0.1 at 2014-06-27 15:10:19 -0500
+
+
+Started GET "/assets/sessions.js?body=1" for 127.0.0.1 at 2014-06-27 15:10:19 -0500
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2014-06-27 15:10:19 -0500
+
+
+Started GET "/assets/fit-fight-wall.png" for 127.0.0.1 at 2014-06-27 15:10:19 -0500
