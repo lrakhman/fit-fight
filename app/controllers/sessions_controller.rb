@@ -1,6 +1,7 @@
 class SessionsController < ApplicationController
   def new
     @user = User.new
+    render layout: false
   end
 
   def create
@@ -14,7 +15,6 @@ class SessionsController < ApplicationController
 
     session[:user_id] = authorization.user_id
     redirect_to user_challenges_path(authorization.user)
-
   end
 
   def destroy
