@@ -5053,3 +5053,70 @@ Started GET "/assets/users.js?body=1" for 127.0.0.1 at 2014-06-27 18:51:26 -0500
 
 
 Started GET "/assets/fit-fight-wall.png" for 127.0.0.1 at 2014-06-27 18:51:26 -0500
+
+
+Started GET "/" for 127.0.0.1 at 2014-06-27 18:54:00 -0500
+  [1m[36mActiveRecord::SchemaMigration Load (0.6ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+Processing by SessionsController#new as HTML
+  Rendered sessions/new.html.erb within layouts/application (2.1ms)
+Completed 200 OK in 115ms (Views: 81.6ms | ActiveRecord: 2.8ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2014-06-27 18:54:00 -0500
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2014-06-27 18:54:00 -0500
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2014-06-27 18:54:00 -0500
+
+
+Started GET "/assets/users.js?body=1" for 127.0.0.1 at 2014-06-27 18:54:01 -0500
+
+
+Started GET "/assets/sessions.js?body=1" for 127.0.0.1 at 2014-06-27 18:54:01 -0500
+
+
+Started GET "/assets/turbolinks.js?body=1" for 127.0.0.1 at 2014-06-27 18:54:01 -0500
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2014-06-27 18:54:01 -0500
+
+
+Started GET "/assets/fit-fight-wall.png" for 127.0.0.1 at 2014-06-27 18:54:01 -0500
+
+
+Started GET "/" for 127.0.0.1 at 2014-06-27 18:54:04 -0500
+Processing by SessionsController#new as HTML
+  Rendered sessions/new.html.erb within layouts/application (0.1ms)
+Completed 200 OK in 6ms (Views: 5.0ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2014-06-27 18:54:04 -0500
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2014-06-27 18:54:04 -0500
+
+
+Started GET "/assets/turbolinks.js?body=1" for 127.0.0.1 at 2014-06-27 18:54:04 -0500
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2014-06-27 18:54:04 -0500
+
+
+Started GET "/assets/sessions.js?body=1" for 127.0.0.1 at 2014-06-27 18:54:05 -0500
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2014-06-27 18:54:05 -0500
+
+
+Started GET "/assets/users.js?body=1" for 127.0.0.1 at 2014-06-27 18:54:05 -0500
+
+
+Started GET "/assets/fit-fight-wall.png" for 127.0.0.1 at 2014-06-27 18:54:05 -0500
+
+
+Started GET "/auth/fitbit" for 127.0.0.1 at 2014-06-27 18:54:06 -0500
+
+
+Started GET "/auth/fitbit" for 127.0.0.1 at 2014-06-27 18:54:07 -0500
