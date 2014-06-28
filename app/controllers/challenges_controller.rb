@@ -4,9 +4,13 @@ class ChallengesController < ApplicationController
   def index
     @user = User.find(session[:user_id])
     @challenged_list = Challenge.where(challenger_id: session[:user_id])
+    
     if @user.email
-      session[:email_error].clear
+      if session[:email_error]
+        session[:email_error].clear
+      end
     end
+    
   end
 
   def new
