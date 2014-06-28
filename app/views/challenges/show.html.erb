@@ -23,7 +23,7 @@
 
 <h1> Challenge Dashboard</h1>
 <h2> Your points = <%= @challenge.user_points(@user) %>
-<h2> <%= @challenger.fullname %>'s points = <%= challenge.total_points - challenge.user_points(@user) %>
+<h2> <%= @challenger.fullname %>'s points = <%= @challenge.total_points - @challenge.user_points(@user) %>
 <h2> <%= @user.fullname %> V. <%= @challenger.fullname %></h2>
 <div id="pi"></div>
 
