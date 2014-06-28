@@ -5,14 +5,7 @@ class User < ActiveRecord::Base
 	# validates :email, uniqueness: true, :format => /.+@.+\..+/
 	has_many :challenges
 	has_many :daily_workouts
-	has_one :most_recent_workout, -> { 'ORDER date, desc, limit 1' }
-
 	has_many :authorizations
-
-	# def sync
-
-	# 	make client, call client.activity_on_date for each date that there is no daily workout, create a daily workout for each of those days up to today, find or create by today
-	# end
 
 	def client
 		Fitgem::Client.new(
@@ -23,18 +16,10 @@ class User < ActiveRecord::Base
 		)
 	end
 
-	def sync_user
-
-
-		# 2.times do |days_ago|
-		# 	day = (Date.today - days_ago).to_s
-		# 	fitbit_data = client.activities_on_date(day)
-		# 	p fitbit_data
-		# 	# daily_workout = self.daily_workouts.find_or_create_by(date: day)
-		# 	# daily_workout.update(steps: fitbit_data['summary']['steps'], distance: fitbit_data['summary']['distances'][0]['distance'], active_time: fitbit_data['summary']['veryActiveMinutes'])
-		# end
-
+	def most_recent_workout
+		daily_workouts.order(date: :desc).first
 	end
+
 
 	def total_steps
 		steps_array = self.daily_workouts.map {|workout| workout.steps}
