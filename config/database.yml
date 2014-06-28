@@ -13,8 +13,7 @@ development:
   adapter: postgresql
   encoding: unicode
   database: fit_fight_development
-  pool: 5
-  username: 
+  pool: 5 
   password:
 
 # Warning: The database defined as "test" will be erased and
