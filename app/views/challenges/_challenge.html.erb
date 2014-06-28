@@ -14,7 +14,7 @@
     <div id="content-2-1">
       <h1>VS.</h1>
       <h3>Points: <%= challenge.user_points(@user) %></h3>
-      <h3>Challenger's points: <%= challenge.total_points - challenge.user_points(@user)%></h3>
+      <h3>Challenger's points: <%= challenge.user_points(challenge.challenger) %></h3>
     </div>
     <div id="content-2-2">
       <h3><%= challenge.challenger.fullname %></h3>

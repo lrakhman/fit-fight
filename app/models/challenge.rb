@@ -28,8 +28,6 @@ class Challenge < ActiveRecord::Base
 				if workout.active_time > challenger_workout.active_time
 					user_points += 1
 				end
-			else
-				user_points += 3
 			end
 		end	
 		user_points
