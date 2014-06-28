@@ -7235,7 +7235,7 @@ body.grayscale .signup-section {
   filter: invert(100%);
 }
 
-img {
+.land_logo img {
   width: 500px;
 }
 

@@ -1,0 +1,51 @@
+#challenge_partial {
+  max-width: 600px;
+  clear: both;
+  margin: 0 auto;
+}
+#content-1 {
+  width: 33%;
+  float: left;
+}
+#content-2 {
+  width: 67%;
+  float: right;
+}
+#content-2-1 {
+  width: 50%;
+  float: left;
+}
+#content-2-2 {
+  width: 50%;
+  float: right;
+}
+.slice text {
+ font-family: Arial;
+}
+#li1, #li2, #li3, #li4, #li5, #li6 path {
+  stroke: red;
+  stroke-width: 1;
+  fill: none;
+}
+.axis {
+  shape-rendering: crispEdges;
+}
+.x.axis line {
+  stroke: lightgrey;
+}
+.x.axis .minor {
+  stroke-opacity: .5;
+}
+.x.axis path {
+  display: none;
+}
+.y.axis line, .y.axis path {
+  fill: none;
+  stroke: #000;
+}
+#left_user {
+  float: left;
+}
+#right_challenger {
+  float: right;
+}
