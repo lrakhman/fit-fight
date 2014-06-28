@@ -35,10 +35,6 @@ class User < ActiveRecord::Base
 		active_time_array.inject(:+)
 	end
 
-	def client
-		Fitgem::Client.new(consumer_key: '2f490eb8444c48c1a3e5a3aa738c5018', consumer_secret: '01c8682329934edba0f407d27d0494d8', token: oauth_token, secret: oauth_secret)
-	end
-
 	def sync
 		4.times do |days_ago|
 			day = (Date.today - days_ago).to_s
