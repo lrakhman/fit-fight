@@ -29,7 +29,7 @@ class Challenge < ActiveRecord::Base
 					user_points += 1
 				end
 			end
-		end	
+		end
 		user_points
 	end
 
