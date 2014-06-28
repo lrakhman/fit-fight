@@ -13,20 +13,23 @@ class Challenge < ActiveRecord::Base
 		super.where(date: (start_date..end_date))
 	end
 
-	def user_points(user)
+	def user_points(this_user)
 		user_points = 0
-		user.daily_workouts.each do |workout|
-			
-			challenger_workout = DailyWorkout.find_by_date(workout.date)
-			
-			if workout.steps > challenger_workout.steps
-				user_points += 1
-			end
-			if workout.distance > challenger_workout.distance
-				user_points += 1
-			end
-			if workout.active_time > challenger_workout.active_time
-				user_points += 1
+		this_user.daily_workouts.each do |workout|
+			other_user = [user, challenger].reject { |u| u == this_user }.first
+			challenger_workout = other_user.daily_workouts.where(date: workout.date).first
+			if challenger_workout
+				if workout.steps > challenger_workout.steps
+					user_points += 1
+				end
+				if workout.distance > challenger_workout.distance
+					user_points += 1
+				end
+				if workout.active_time > challenger_workout.active_time
+					user_points += 1
+				end
+			else
+				user_points += 3
 			end
 		end	
 		user_points
@@ -36,34 +39,52 @@ class Challenge < ActiveRecord::Base
 		self.user_workouts.count * 3
 	end
 
+	def user_step_array
+		self.user_workouts.map {|workout| workout.steps}
+	end
+
 	def user_total_steps
-		steps_array = self.user_workouts.map {|workout| workout.steps}
-		steps_array.inject(:+)
+		user_step_array.inject(:+)
+	end
+
+	def challenger_step_array
+		self.challenger_workouts.map {|workout| workout.steps}
 	end
 
 	def challenger_total_steps
-		steps_array = self.challenger_workouts.map {|workout| workout.steps}
-		steps_array.inject(:+)
+		challenger_step_array.inject(:+)
+	end
+
+	def user_distance_array
+		self.user_workouts.map {|workout| workout.distance}
 	end
 
 	def user_total_distance
-		distance_array = self.user_workouts.map {|workout| workout.distance}
-		distance_array.inject(:+)
+		user_distance_array.inject(:+)
+	end
+
+	def challenger_distance_array
+		self.challenger_workouts.map {|workout| workout.distance}
 	end
 
 	def challenger_total_distance
-		distance_array = self.challenger_workouts.map {|workout| workout.distance}
-		distance_array.inject(:+)
+		challenger_distance_array.inject(:+)
+	end
+
+	def user_active_time_array
+		self.user_workouts.map {|workout| workout.active_time}
 	end
 
 	def user_total_active_time
-		active_time_array = self.user_workouts.map {|workout| workout.active_time}
-		active_time_array.inject(:+)
+		user_active_time_array.inject(:+)
+	end
+
+	def challenger_active_time_array
+		self.challenger_workouts.map {|workout| workout.active_time}
 	end
 
 	def challenger_total_active_time
-		active_time_array = self.challenger_workouts.map {|workout| workout.active_time}
-		active_time_array.inject(:+)
+		challenger_active_time_array.inject(:+)
 	end
 
 end
