@@ -4,7 +4,6 @@ class User < ActiveRecord::Base
 	# validates :email, uniqueness: true, :format => /.+@.+\..+/
 	has_many :challenges
 	has_many :daily_workouts
-	has_one :most_recent_workout, -> { 'ORDER date, desc, limit 1' }
 
 	has_many :authorizations
 
@@ -20,6 +19,10 @@ class User < ActiveRecord::Base
 	def total_steps
 		steps_array = self.daily_workouts.map {|workout| workout.steps}
 		steps_array.inject(:+)
+	end
+
+	def most_recent_workout
+		daily_workouts.order(date: :desc).first
 	end
 
 	def total_distance

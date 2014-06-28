@@ -4049,3 +4049,29 @@ Started GET "/assets/hero.png" for 127.0.0.1 at 2014-06-27 14:08:14 -0500
 
 
 Started GET "/assets/challenger.png" for 127.0.0.1 at 2014-06-27 14:08:14 -0500
+  [1m[36mUser Load (0.7ms)[0m  [1mSELECT  "users".* FROM "users"   ORDER BY "users"."id" ASC LIMIT 1[0m
+  [1m[35mUser Load (0.7ms)[0m  SELECT  "users".* FROM "users"   ORDER BY "users"."id" ASC LIMIT 1
+  [1m[36mDailyWorkout Load (0.4ms)[0m  [1mSELECT  "daily_workouts".* FROM "daily_workouts"  WHERE "daily_workouts"."user_id" = $1 LIMIT 1[0m  [["user_id", 1]]
+  [1m[35mUser Load (0.5ms)[0m  SELECT  "users".* FROM "users"   ORDER BY "users"."id" ASC LIMIT 1
+  [1m[36mUser Load (0.4ms)[0m  [1mSELECT  "users".* FROM "users"   ORDER BY "users"."id" ASC LIMIT 1[0m
+  [1m[35mDailyWorkout Load (0.2ms)[0m  SELECT "daily_workouts".* FROM "daily_workouts"  WHERE "daily_workouts"."user_id" = $1  [["user_id", 1]]
+  [1m[36mUser Load (0.5ms)[0m  [1mSELECT  "users".* FROM "users"   ORDER BY "users"."id" ASC LIMIT 1[0m
+  [1m[35m (0.2ms)[0m  BEGIN
+  [1m[36mSQL (0.9ms)[0m  [1mINSERT INTO "daily_workouts" ("created_at", "date", "updated_at", "user_id") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["created_at", "2014-06-28 00:09:48.036994"], ["date", "2014-06-27"], ["updated_at", "2014-06-28 00:09:48.036994"], ["user_id", 1]]
+  [1m[35m (0.6ms)[0m  COMMIT
+  [1m[36mUser Load (0.7ms)[0m  [1mSELECT  "users".* FROM "users"   ORDER BY "users"."id" ASC LIMIT 1[0m
+  [1m[35mDailyWorkout Load (0.5ms)[0m  SELECT  "daily_workouts".* FROM "daily_workouts"  WHERE "daily_workouts"."user_id" = $1 LIMIT 1  [["user_id", 1]]
+  [1m[36mUser Load (0.7ms)[0m  [1mSELECT  "users".* FROM "users"   ORDER BY "users"."id" ASC LIMIT 1[0m
+  [1m[35m (0.2ms)[0m  BEGIN
+  [1m[36mSQL (0.3ms)[0m  [1mINSERT INTO "daily_workouts" ("created_at", "date", "updated_at", "user_id") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["created_at", "2014-06-28 00:10:53.998549"], ["date", "2014-06-26"], ["updated_at", "2014-06-28 00:10:53.998549"], ["user_id", 1]]
+  [1m[35m (0.4ms)[0m  COMMIT
+  [1m[36mUser Load (0.7ms)[0m  [1mSELECT  "users".* FROM "users"   ORDER BY "users"."id" ASC LIMIT 1[0m
+  [1m[35mDailyWorkout Load (0.3ms)[0m  SELECT  "daily_workouts".* FROM "daily_workouts"  WHERE "daily_workouts"."user_id" = $1 LIMIT 1  [["user_id", 1]]
+  [1m[36mUser Load (0.7ms)[0m  [1mSELECT  "users".* FROM "users"   ORDER BY "users"."id" ASC LIMIT 1[0m
+  [1m[35m (0.2ms)[0m  BEGIN
+  [1m[36mSQL (0.4ms)[0m  [1mINSERT INTO "daily_workouts" ("created_at", "date", "updated_at", "user_id") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["created_at", "2014-06-28 00:11:06.576654"], ["date", "2014-06-28"], ["updated_at", "2014-06-28 00:11:06.576654"], ["user_id", 1]]
+  [1m[35m (0.5ms)[0m  COMMIT
+  [1m[36mUser Load (0.5ms)[0m  [1mSELECT  "users".* FROM "users"   ORDER BY "users"."id" ASC LIMIT 1[0m
+  [1m[35mDailyWorkout Load (0.4ms)[0m  SELECT  "daily_workouts".* FROM "daily_workouts"  WHERE "daily_workouts"."user_id" = $1 LIMIT 1  [["user_id", 1]]
+  [1m[36mUser Load (0.7ms)[0m  [1mSELECT  "users".* FROM "users"   ORDER BY "users"."id" ASC LIMIT 1[0m
+  [1m[35mDailyWorkout Load (0.6ms)[0m  SELECT  "daily_workouts".* FROM "daily_workouts"  WHERE "daily_workouts"."user_id" = $1  ORDER BY "daily_workouts"."date" DESC LIMIT 1  [["user_id", 1]]
