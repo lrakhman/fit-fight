@@ -8,10 +8,23 @@ require File.expand_path("../../config/environment", __FILE__)
 require 'rspec/rails'
 require 'rspec/autorun'
 require 'database_cleaner'
-
+require "rack_session_access/capybara"
 # Requires supporting ruby files with custom matchers and macros, etc,
 # in spec/support/ and its subdirectories.
 Dir[Rails.root.join("spec/support/**/*.rb")].each {|f| require f}
+
+# OmniAuth.config.test_mode = true
+
+# OmniAuth.config.mock_auth[:fitbit] = OmniAuth::AuthHash.new({
+#   provider: 'fitbit',
+#   uid: '12345',
+#   full_name: 'Michael Pourhadi',
+#   credentials: {
+#       token: '2f490eb8444c48c1a3e5a3aa738c5018',
+#       secret: '01c8682329934edba0f407d27d0494d8'
+#   }
+# })
+
 
 RSpec.configure do |config|
   config.include Capybara::DSL
