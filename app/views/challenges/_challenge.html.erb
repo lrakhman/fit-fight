@@ -1,5 +1,4 @@
-<div id="main">
-  <div id="content-1">
+<div id="challenge_partial">
     <%= link_to 'View Stats', user_challenge_path(@user.id, challenge.id) %>
 
     <% if get_winner(challenge) %>
@@ -7,19 +6,19 @@
     <% else %>
       <p>Front Runner: <%= get_front_runner(challenge).fullname %></p>
     <% end %>
-
-    <h1><%= challenge.user.fullname %></h1>
-    <%= image_tag('hero.png') %>
+   <div id="content-1">
+    <h3><%= challenge.user.fullname %></h3>
+    <%= image_tag('hero.png', class: 'thumbnail') %>
   </div>
   <div id="content-2">
     <div id="content-2-1">
       <h1>VS.</h1>
-      <h1>Points: <%= challenge.user_points(@user) %></h1>
-      <h1>Challenger's points: <%= challenge.total_points - challenge.user_points(@user)%></h1>
+      <h3>Points: <%= challenge.user_points(@user) %></h3>
+      <h3>Challenger's points: <%= challenge.user_points(challenge.challenger) %></h3>
     </div>
     <div id="content-2-2">
-      <h1><%= challenge.challenger.fullname %></h1>
-      <%= image_tag('challenger.png') %>
+      <h3><%= challenge.challenger.fullname %></h3>
+      <%= image_tag('challenger.png', class: 'thumbnail') %>
     </div>
   </div>
 </div>

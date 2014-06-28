@@ -6025,6 +6025,10 @@ body.grayscale .signup-section {
   filter: invert(100%);
 }
 
+.land_logo img {
+  width: 500px;
+}
+
 .landing_container {
 /*  background-color: white;*/
   margin: 20px auto;

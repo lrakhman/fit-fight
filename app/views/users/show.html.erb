@@ -1,32 +1,71 @@
 <h1>Your Stats, <%= @user.fullname %></h1>
 <img src="">
+
+<%= button_to "Sync with FitBit", '/users/sync' , :method => "post" , :id => "sync" %>
+
 <% if @user.daily_workouts.any? %>
   <div>
-  	<p>Your steps for today: <%= @user.most_recent_workout.steps %></p>
+  	<p>Steps for today: <span id="steps"><%= @user.most_recent_workout.steps %></span></p>
 
   </div>
 
   <div>
-  	<p>Your distance for today: <%= @user.most_recent_workout.distance %></p>
+  	<p>Distance for today: <span id="distance"><%= @user.most_recent_workout.distance %> miles</span></p>
   </div>
 
   <div>
-  	<p>Your active time for today: <%= @user.most_recent_workout.active_time %> </p>
+  	<p>Active time for today: <span id="active_time"><%= @user.most_recent_workout.active_time %> minutes</span></p>
   </div>
 
   <div>
-  	<p>Your TOTAL steps for this week: <%= @user.total_steps %> </p>
+  	<p>Total steps: <span id="total_steps"> <%= @user.total_steps %></span> </p>
   </div>
 
   <div>
-  	<p>Your TOTAL distance for this week: <%= @user.total_distance %> miles </p>
+  	<p>Total distance: <span id="total_distance"> <%= @user.total_distance %> miles</span>  </p>
   </div>
 
   <div>
-  	<p>Your TOTAL active time for this week: <%= @user.total_active_time %> minutes </p>
+  	<p>Total active time: <span id="total_active_time"><%= @user.total_active_time %> minutes</span></p>
   </div>
 <% else %>
   <p>You have no workout data! Get to work!</p>
 <% end %>
 
 <p><%= link_to 'Edit my profile', edit_user_path %></p>
+
+<script>
+
+$(document).on('ready', function() {
+  var hide = function(){
+    $('#steps').hide().fadeIn(1700);
+    $('#distance').hide().fadeIn(2500);
+    $('#active_time').hide().fadeIn(3100);
+    $('#total_steps').hide().fadeIn(1700);
+    $('#total_distance').hide().fadeIn(2500);
+    $('#total_active_time').hide().fadeIn(3100);
+  };
+  hide();
+  $('.button_to').on('submit', function(e){
+    e.preventDefault();
+    $.ajax({
+      type: 'POST',
+      url: "/users/sync_fitbit",
+      dataType: 'JSON',
+      success: function(data){
+        console.log(data);
+        $('#steps').html(data.new_tally.steps);
+        $('#distance').html(data.new_tally.distance + " " + "miles");
+        $('#active_time').html(data.new_tally.active_time + " " + "minutes");
+        $('#total_steps').html(data.steps);
+        $('#total_distance').html(data.distance + " " + "miles");
+        $('#total_active_time').html(data.active_time + " " + "minutes");
+        hide();
+      }
+    })
+  });
+
+});
+
+
+</script>

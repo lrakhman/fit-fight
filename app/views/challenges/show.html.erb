@@ -1,7 +1,31 @@
+<script>
+	$(document).ready(function() {
+		var challenger_name = "<%= @challenger.fullname %>"
+		var challenger_points = <%= @challenge.user_points(@challenger) %>
+		var user_name = "<%= @user.fullname %>"
+		var user_points = <%= @challenge.user_points(@user) %>
+		var data = [{'label': challenger_name, 'value': challenger_points}, {'label': user_name, 'value': user_points}]
+		var user_steps = <%= @challenge.user_step_array %>;
+		var user_distance = <%= @challenge.user_distance_array %>;
+		var user_active_time = <%= @challenge.user_active_time_array %>;
+		var challenger_steps = <%= @challenge.challenger_step_array %>;
+		var challenger_distance = <%= @challenge.challenger_distance_array %>;
+		var challenger_active_time = <%= @challenge.challenger_active_time_array %>;
+		pie_chart(data);
+		line_chart(user_steps, 1);
+		line_chart(user_distance, 2);
+		line_chart(user_active_time, 3);
+		line_chart(challenger_steps, 4);
+		line_chart(challenger_distance, 5);
+		line_chart(challenger_active_time, 6);
+	});
+</script>
+
 <h1> Challenge Dashboard</h1>
-<h2> Your points = <%= @current_score %>
-<h2> <%= @challenger.fullname %>'s points = <%= @challenger_score %>
+<h2> Your points = <%= @challenge.user_points(@user) %>
+<h2> <%= @challenger.fullname %>'s points = <%= @challenge.user_points(@challenger) %>
 <h2> <%= @user.fullname %> V. <%= @challenger.fullname %></h2>
+<div id="pi"></div>
 
 <% if get_winner(@challenge) %>
 	<p>Winner: <%= get_winner(@challenge).fullname %> </p>
@@ -22,27 +46,23 @@
 </ul>
 
 <h2> BY DATE: </h2>
-	
-		
-<table>
-	<% @challenge.user_workouts.each do |user_workout| %>
-	<tr>		
-			<td>On <%= user_workout.date %></td>
-			<td><%= @user.fullname %>:</td>
-			<td>Steps: <%= user_workout.steps %></td>
-			<td>Distance: <%= user_workout.distance %></td>
-			<td>Active Time: <%= user_workout.active_time %></td>
-	</tr>
-	<% end %>
-	<tr>
-		<% @challenge.challenger_workouts.each do |challenger_workout| %>
-			<td>On <%= challenger_workout.date %></td>
-			<td><%= @challenge.challenger.fullname %>:</td>
-			<td>Steps: <%= challenger_workout.steps %></td>
-			<td>Distance: <%= challenger_workout.distance %></td>
-			<td>Active Time: <%= challenger_workout.active_time %></td>
-	</tr>
-	<% end %>
-</table>
-
-
+	<div id="holder">
+		<div id="left_user">
+			<h1><%= @user.fullname %></h1>
+			<h2>Steps:</h2>
+			<div id="li1"></div>
+			<h2>Distance (in miles):</h2>
+			<div id="li2"></div>
+			<h2>Very Active Time (in minutes):</h2>
+			<div id="li3"></div>
+		</div>
+		<div id="right_challenger">
+			<h1><%= @challenger.fullname %></h1>
+			<h2>Steps:</h2>
+			<div id="li4"></div>
+			<h2>Distance (in miles):</h2>
+			<div id="li5"></div>
+			<h2>Very Active Time (in minutes):</h2>
+			<div id="li6"></div>
+		</div>
+	</div>

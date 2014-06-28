@@ -20,10 +20,13 @@ class User < ActiveRecord::Base
 		daily_workouts.order(date: :desc).first
 	end
 
-
 	def total_steps
 		steps_array = self.daily_workouts.map {|workout| workout.steps}
 		steps_array.inject(:+)
+	end
+
+	def most_recent_workout
+		daily_workouts.order(date: :desc).first
 	end
 
 	def total_distance
@@ -34,10 +37,6 @@ class User < ActiveRecord::Base
 	def total_active_time
 		active_time_array = self.daily_workouts.map {|workout| workout.active_time}
 		active_time_array.inject(:+)
-	end
-
-	def client
-		Fitgem::Client.new(consumer_key: '2f490eb8444c48c1a3e5a3aa738c5018', consumer_secret: '01c8682329934edba0f407d27d0494d8', token: oauth_token, secret: oauth_secret)
 	end
 
 	def sync
