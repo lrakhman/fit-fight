@@ -1,0 +1,24 @@
+
+
+
+.container_challenger {
+  background-color: gray;
+  color: black;
+  padding: 20px;
+}
+
+.challenges {
+  text-decoration: none;
+  list-style-type: none;
+    text-align: center;
+}
+li.challenges2 {
+  display: inline;
+  font-size: 24px;
+  padding: 15px;
+
+}
+
+.title{
+  text-align: center;
+}

@@ -1,5 +1,7 @@
 
 /*
 *= require_tree .
-*= require_self
-*= require_landing_page*/
+*= require_landing_page
+*= require_nav_bar
+*= require_general_page
+*/

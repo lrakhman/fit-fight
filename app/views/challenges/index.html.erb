@@ -1,9 +1,12 @@
-<ul>
-  <li><%= link_to 'Stats Page', user_path(@user) %></li>
-  <li><%= link_to 'New Challenge', new_user_challenge_path %></li>
+
+
+<div class='container_challenger'>
+<ul class= 'challenges'>
+  <li class='challenges2'><%= link_to 'Stats Page', user_path(@user) %></li>
+  <li class='challenges2'><%= link_to 'New Challenge', new_user_challenge_path %></li>
 </ul>
 
-<h1>Challenges</h1>
+<h1 class='title'>Challenges</h1>
 
 <% @user.challenges.each do |challenge| %>
   <%= render partial: 'challenge', locals: {challenge: challenge} %>
@@ -14,3 +17,4 @@
 	  <%= render partial: 'challenge', locals: {challenge: challenge} %>
 	<% end %>
 <% end %>
+</div>

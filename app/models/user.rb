@@ -1,4 +1,4 @@
-require 'date'
+git require 'date'
 
 class User < ActiveRecord::Base
 
@@ -9,9 +9,9 @@ class User < ActiveRecord::Base
 
 	def client
 		Fitgem::Client.new(
-			consumer_key: "2f490eb8444c48c1a3e5a3aa738c5018", 
-			consumer_secret: "01c8682329934edba0f407d27d0494d8", 
-			token: oauth_token, 
+			consumer_key: "2f490eb8444c48c1a3e5a3aa738c5018",
+			consumer_secret: "01c8682329934edba0f407d27d0494d8",
+			token: oauth_token,
 			secret: oauth_secret
 		)
 	end

@@ -9,12 +9,6 @@
   </head>
 <body>
 
-
-
-
-
-
-
   <% if session[:user_id] %>
     <% user = User.find(session[:user_id]) %>
   <% end %>
@@ -22,20 +16,31 @@
     <header>
     <!-- LOGO IMAGE LINK -->
     </header>
-    <nav>
-      <ul>
-        <% if session[:user_id] %>
-          <% user = User.find(session[:user_id]) %>
-          <li><%= link_to user.fullname, edit_user_path(session[:user_id]) %></li>
-          <li><%= link_to 'Logout', session_path(user), method: :delete %></li>
-        <% end %>
-      </ul>
-    </nav>
-  </div>
+
+
+
+ <nav class="navbar_bar">
+        <div class='logo_font'>
+            <%= link_to "FITFIGHT", user_challenges_path(@user), :class => "logo_nav" %>
+
+          <ul class="navbar">
+            <% if session[:user_id] %>
+              <% user = User.find(session[:user_id]) %>
+              <li class="nav_selection"><%= link_to user.fullname, edit_user_path(session[:user_id]) %></li>
+              <li class="nav_selection"><%= link_to 'Logout', session_path(user), method: :delete %></li>
+            <% end %>
+          </ul>
+            </div>
+ </nav>
+
+   <div class="container">
+    <br><br><br><br><br><br><br><br>
+      <!-- /.container -->
+
 
 
 <%= yield %>
 
-
+  </div>
 </body>
 </html>
