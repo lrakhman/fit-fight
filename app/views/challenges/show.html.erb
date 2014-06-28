@@ -71,27 +71,18 @@
 
 <h2> BY DATE: </h2>
 	
-		
-<table>
-	<% @challenge.user_workouts.each do |user_workout| %>
-	<tr>		
-			<td>On <%= user_workout.date %></td>
-			<td><%= @user.fullname %>:</td>
-			<td>Steps: <%= user_workout.steps %></td>
-			<td>Distance: <%= user_workout.distance %></td>
-			<td>Active Time: <%= user_workout.active_time %></td>
-	</tr>
-	<% end %>
+	<h1><%= @user.fullname %></h1>
+	<h2>Steps:</h2>
 	<div id="li1"></div>
-	<tr>
-		<% @challenge.challenger_workouts.each do |challenger_workout| %>
-			<td>On <%= challenger_workout.date %></td>
-			<td><%= @challenge.challenger.fullname %>:</td>
-			<td>Steps: <%= challenger_workout.steps %></td>
-			<td>Distance: <%= challenger_workout.distance %></td>
-			<td>Active Time: <%= challenger_workout.active_time %></td>
-	</tr>
-	<% end %>
-</table>
+	<h2>Distance (in miles):</h2>
+	<div id="li2"></div>
+	<h2>Very Active Time (in minutes):</h2>
+	<div id="li3"></div>
 
-
+	<h1><%= @challenger.fullname %></h1>
+	<h2>Steps:</h2>
+	<div id="li4"></div>
+	<h2>Distance (in miles):</h2>
+	<div id="li5"></div>
+	<h2>Very Active Time (in minutes):</h2>
+	<div id="li6"></div>
