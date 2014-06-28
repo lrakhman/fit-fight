@@ -1,6 +1,7 @@
 class UsersController < ApplicationController
+  respond_to :html, :js
+	include SessionsHelper
 
-	  include SessionsHelper
 
   def new
     @user = User.new
@@ -18,6 +19,7 @@ class UsersController < ApplicationController
 
   def show
     @user = User.find(session[:user_id])
+    @user.sync
   end
 
   def edit
@@ -33,7 +35,10 @@ class UsersController < ApplicationController
   	redirect_to user_challenges_path(@user)
 	end
 
-
+  def sync
+    @user = User.find(session[:user_id])
+    @user.sync
+  end
 
   private
 

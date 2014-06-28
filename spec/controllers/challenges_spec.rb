@@ -1,9 +1,11 @@
+require 'spec_helper'
+
 feature 'New Challenge' do
 
   let! (:user) { User.create(email: 'pdebelak@example.com', fullname: 'Peter Debelak') }
   let! (:user2) { User.create(email: 'syim@example.com', fullname: 'Stephen Yim') }
 
-  scenario 'creates a new challenge' do
+  xscenario 'creates a new challenge' do
     visit '/'
     within('form') do
       fill_in 'email', with: 'pdebelak@example.com'
@@ -20,7 +22,7 @@ feature 'New Challenge' do
     expect(current_url).to eq user_challenges_url(user)
   end
 
-  scenario 'wont create a challenge if the challenger doesnt exist' do
+  xscenario 'wont create a challenge if the challenger doesnt exist' do
     visit '/'
     within('form') do
       fill_in 'email', with: 'pdebelak@example.com'
@@ -41,16 +43,15 @@ end
 
 feature 'View Challenge' do
 
-  # before do 
+  # background do 
   #   request.env["omniauth.auth"] = OmniAuth.config.mock_auth[:fitbit] 
   # end
 
-  let! (:user) {User.create(fullname: "Michael Pourhadi", oauth_token: "2f490eb8444c48c1a3e5a3aa738c5018", oauth_secret: "01c8682329934edba0f407d27d0494d8")}
-  let! (:challenge) {Challenge.create(user_id: 1, start_date: '2014-06-26', end_date: '2014-06-27', winner_id: nil, challenger_id: 2)}
-  let! (:challenge2) {Challenge.create(user_id: 1, start_date: '2014-07-26', end_date: '2014-07-28', winner_id: nil, challenger_id: 2)}
-
-  scenario 'show page is accessible via the index' do
-    visit "/auth/fitbit"
+  it 'show page is accessible via the index' do
+    user = User.create(email: 'mikeepourhadi@gmail.com', fullname: 'Michael Pourhadi') 
+    puts "*******************************************************"
+    puts user
+    page.set_rack_session(:user_id => user.id)
     visit "/users/#{user.id}/challenges"
     expect(page).to have_content("FIT FIGHT")
     

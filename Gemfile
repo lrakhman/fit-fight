@@ -36,13 +36,16 @@ gem 'rails_12factor'
 # Use unicorn as the app server
 # gem 'unicorn'
 
+#for testing capybara and mocking the session
 # Use Capistrano for deployment
 # gem 'capistrano-rails', group: :development
 
 # Use debugger
 # gem 'debugger', group: [:development, :testpec-rails', '~> 3.0.0'
 group :development, :test do
-  gem 'rspec-rails', '~> 3.0.0'
-  gem 'capybara'
+  gem 'rspec-rails', '~> 2.14.1'
+  gem 'capybara', '~> 2.2.1'
   gem 'database_cleaner', '~> 1.2.0'
+  gem 'rack_session_access'
+  gem 'shoulda-matchers', require: false
 end
