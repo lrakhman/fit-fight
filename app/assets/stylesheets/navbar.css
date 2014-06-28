@@ -59,9 +59,12 @@ body {
   background-color: black;
 }
 .container{
-  color: white;
+  color: #FF3300;
 }
 
 .button{
+  color: black;
+}
+#sync {
   color: black;
 }
