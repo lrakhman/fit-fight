@@ -1,4 +1,4 @@
-git require 'date'
+require 'date'
 
 class User < ActiveRecord::Base
 
