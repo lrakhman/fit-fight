@@ -17,7 +17,7 @@
 #   runner "AnotherModel.prune_old_records"
 # end
 
-# # Learn more: http://github.com/javan/whenever
+# Learn more: http://github.com/javan/whenever
 # every 1.minute do
-#   runner "User.sync"
+#  runner "User.sync"
 # end
