@@ -47,7 +47,7 @@ feature 'View Challenge' do
   #   request.env["omniauth.auth"] = OmniAuth.config.mock_auth[:fitbit] 
   # end
 
-  it 'show page is accessible via the index' do
+  xit 'show page is accessible via the index' do
     user = User.create(email: 'mikeepourhadi@gmail.com', fullname: 'Michael Pourhadi') 
     puts "*******************************************************"
     puts user
