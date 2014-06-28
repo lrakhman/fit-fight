@@ -18,11 +18,11 @@
   </div>
 
   <div>
-  	<p>Total steps:<span id="total_steps"> <%= @user.total_steps %></span> </p>
+  	<p>Total steps: <span id="total_steps"> <%= @user.total_steps %></span> </p>
   </div>
 
   <div>
-  	<p>Total distance: <span id="total_distance"><%= @user.total_distance %> miles</span>  </p>
+  	<p>Total distance: <span id="total_distance"> <%= @user.total_distance %> miles</span>  </p>
   </div>
 
   <div>
@@ -35,32 +35,37 @@
 <p><%= link_to 'Edit my profile', edit_user_path %></p>
 
 <script>
-  $(document).on('ready', function() {
-    var hide = function(){
-      $('#steps').hide().fadeIn(1700);
-      $('#distance').hide().fadeIn(2500);
-      $('#active_time').hide().fadeIn(3100);
-      $('#total_steps').hide().fadeIn(1700);
-      $('#total_distance').hide().fadeIn(2500);
-      $('#total_active_time').hide().fadeIn(3100);
-    };
-    hide();
-    $('.button_to').on('submit', function(e){
-      e.preventDefault();
-      $.ajax({
-        type: 'POST',
-        url: "/users/sync_fitbit",
-        dataType: 'JSON',
-        success: function(data){
-          console.log(data);
-          $('#steps').html(data.steps);
-          $('#distance').html(data.distance + " " + "miles");
-          $('#active_time').html(data.active_time + " " + "minutes");
-          hide();
-        }
-      })
-    });
 
+$(document).on('ready', function() {
+  var hide = function(){
+    $('#steps').hide().fadeIn(1700);
+    $('#distance').hide().fadeIn(2500);
+    $('#active_time').hide().fadeIn(3100);
+    $('#total_steps').hide().fadeIn(1700);
+    $('#total_distance').hide().fadeIn(2500);
+    $('#total_active_time').hide().fadeIn(3100);
+  };
+  hide();
+  $('.button_to').on('submit', function(e){
+    e.preventDefault();
+    $.ajax({
+      type: 'POST',
+      url: "/users/sync_fitbit",
+      dataType: 'JSON',
+      success: function(data){
+        console.log(data);
+        $('#steps').html(data.new_tally.steps);
+        $('#distance').html(data.new_tally.distance + " " + "miles");
+        $('#active_time').html(data.new_tally.active_time + " " + "minutes");
+        $('#total_steps').html(data.steps);
+        $('#total_distance').html(data.distance + " " + "miles");
+        $('#total_active_time').html(data.active_time + " " + "minutes");
+        hide();
+      }
+    })
   });
+
+});
+
 
 </script>

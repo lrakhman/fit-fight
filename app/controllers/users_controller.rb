@@ -43,9 +43,10 @@ class UsersController < ApplicationController
     @distance = @user.total_distance
     @active_time = @user.total_active_time
 
+    @workout = {steps: @steps, distance: @distance, active_time: @active_time, new_tally: @daily_workout}
     respond_to do |format|
       format.html
-      format.json { render json: @daily_workout.to_json }
+      format.json { render json: @workout.to_json }
     end
   end
 
