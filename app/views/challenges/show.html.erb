@@ -29,6 +29,12 @@
 	  fill: none;
 	  stroke: #000;
 	}
+	#left_user {
+		float: left;
+	}
+	#right_challenger {
+		float: right;
+	}
 </style>
 
 <script>
@@ -38,10 +44,25 @@
 		var user_name = "<%= @user.fullname %>"
 		var user_points = <%= @challenge.user_points(@user) %>
 		var data = [{'label': challenger_name, 'value': challenger_points}, {'label': user_name, 'value': user_points}]
-		<% steps = @challenge.user_workouts.map { |workout| workout.steps } %>
-		var steps = <%= steps %>;
+		<% user_steps = @challenge.user_workouts.map { |workout| workout.steps } %>
+		<% user_distance = @challenge.user_workouts.map { |workout| workout.distance } %>
+		<% user_active_time = @challenge.user_workouts.map { |workout| workout.active_time } %>
+		<% challenger_steps = @challenge.challenger_workouts.map { |workout| workout.steps } %>
+		<% challenger_distance = @challenge.challenger_workouts.map { |workout| workout.distance } %>
+		<% challenger_active_time = @challenge.challenger_workouts.map { |workout| workout.active_time } %>
+		var user_steps = <%= user_steps %>;
+		var user_distance = <%= user_distance %>;
+		var user_active_time = <%= user_active_time %>;
+		var challenger_steps = <%= challenger_steps %>;
+		var challenger_distance = <%= challenger_distance %>;
+		var challenger_active_time = <%= challenger_active_time %>;
 		pie_chart(data);
-		line_chart(steps, 1);
+		line_chart(user_steps, 1);
+		line_chart(user_distance, 2);
+		line_chart(user_active_time, 3);
+		line_chart(challenger_steps, 4);
+		line_chart(challenger_distance, 5);
+		line_chart(challenger_active_time, 6);
 	});
 </script>
 
@@ -70,19 +91,23 @@
 </ul>
 
 <h2> BY DATE: </h2>
-	
-	<h1><%= @user.fullname %></h1>
-	<h2>Steps:</h2>
-	<div id="li1"></div>
-	<h2>Distance (in miles):</h2>
-	<div id="li2"></div>
-	<h2>Very Active Time (in minutes):</h2>
-	<div id="li3"></div>
-
-	<h1><%= @challenger.fullname %></h1>
-	<h2>Steps:</h2>
-	<div id="li4"></div>
-	<h2>Distance (in miles):</h2>
-	<div id="li5"></div>
-	<h2>Very Active Time (in minutes):</h2>
-	<div id="li6"></div>
+	<div id="holder">
+		<div id="left_user">
+			<h1><%= @user.fullname %></h1>
+			<h2>Steps:</h2>
+			<div id="li1"></div>
+			<h2>Distance (in miles):</h2>
+			<div id="li2"></div>
+			<h2>Very Active Time (in minutes):</h2>
+			<div id="li3"></div>
+		</div>
+		<div id="right_challenger">
+			<h1><%= @challenger.fullname %></h1>
+			<h2>Steps:</h2>
+			<div id="li4"></div>
+			<h2>Distance (in miles):</h2>
+			<div id="li5"></div>
+			<h2>Very Active Time (in minutes):</h2>
+			<div id="li6"></div>
+		</div>
+	</div>
