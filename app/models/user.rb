@@ -20,7 +20,6 @@ class User < ActiveRecord::Base
 		daily_workouts.order(date: :desc).first
 	end
 
-
 	def total_steps
 		steps_array = self.daily_workouts.map {|workout| workout.steps}
 		steps_array.inject(:+)
