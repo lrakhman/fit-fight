@@ -2,31 +2,41 @@
 <html>
 <head>
   <title>FitFight</title>
+
   <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track' => true %>
   <%= javascript_include_tag 'application', 'data-turbolinks-track' => true %>
   <%= csrf_meta_tags %>
   <script src="http://d3js.org/d3.v3.min.js" charset="utf-8"></script>
-  
   </head>
 <body>
+
+
+
+
+
+
+
   <% if session[:user_id] %>
     <% user = User.find(session[:user_id]) %>
   <% end %>
   <div id="top">
     <header>
-      <h1>LOGO FOR FIT FIGHT</h1>
+    <!-- LOGO IMAGE LINK -->
     </header>
     <nav>
       <ul>
         <% if session[:user_id] %>
-          <li><%= link_to 'Update Profile', edit_user_path(session[:user_id]) %></li>
+          <% user = User.find(session[:user_id]) %>
+          <li><%= link_to user.fullname, edit_user_path(session[:user_id]) %></li>
           <li><%= link_to 'Logout', session_path(user), method: :delete %></li>
         <% end %>
       </ul>
     </nav>
   </div>
-  <div class="container">
+
+
 <%= yield %>
-  </div>
+
+
 </body>
 </html>

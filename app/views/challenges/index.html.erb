@@ -10,7 +10,7 @@
 <% end %>
 
 <% if @challenged_list.any? %>
-	<% @challenged_list.challenges.each do |challenge| %>
+	<% @challenged_list.each do |challenge| %>
 	  <%= render partial: 'challenge', locals: {challenge: challenge} %>
 	<% end %>
 <% end %>

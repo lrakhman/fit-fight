@@ -17,7 +17,7 @@ class UsersController < ApplicationController
   end
 
   def show
-    @user = current_user #session[:user_id]
+    @user = User.find(session[:user_id])
   end
 
   def edit
