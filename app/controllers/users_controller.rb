@@ -1,7 +1,5 @@
 class UsersController < ApplicationController
-  respond_to :html, :js
 	include SessionsHelper
-
 
   def new
     @user = User.new
@@ -19,7 +17,6 @@ class UsersController < ApplicationController
 
   def show
     @user = User.find(session[:user_id])
-    @user.sync
   end
 
   def edit
@@ -35,9 +32,21 @@ class UsersController < ApplicationController
   	redirect_to user_challenges_path(@user)
 	end
 
-  def sync
+  def sync_fitbit
     @user = User.find(session[:user_id])
-    @user.sync
+
+    day = Date.today
+    fitbit_data = @user.client.activities_on_date(day)
+    @daily_workout = @user.daily_workouts.find_or_create_by(date: day)
+    @daily_workout.update(steps: fitbit_data['summary']['steps'], distance: fitbit_data['summary']['distances'][0]['distance'], active_time: fitbit_data['summary']['veryActiveMinutes'])
+    @steps = @user.total_steps
+    @distance = @user.total_distance
+    @active_time = @user.total_active_time
+
+    respond_to do |format|
+      format.html
+      format.json { render json: @daily_workout.to_json }
+    end
   end
 
   private
