@@ -10,6 +10,8 @@ Rails.application.routes.draw do
 
  	get   '/login', :to => 'sessions#new', :as => :login
  	get 	'/logout', :to => 'session#destroy'
+ 	post '/users/sync_fitbit', :to => 'users#sync_fitbit'
 	match '/auth/:provider/callback', :to => 'sessions#create', via: [:get, :post]
 	match '/auth/failure', :to => 'sessions#failure', via: [:get]
+
 end

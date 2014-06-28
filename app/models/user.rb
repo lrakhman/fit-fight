@@ -1,19 +1,23 @@
 require 'date'
 
 class User < ActiveRecord::Base
+
 	# validates :email, uniqueness: true, :format => /.+@.+\..+/
 	has_many :challenges
 	has_many :daily_workouts
-
 	has_many :authorizations
 
-	# def sync
+	def client
+		Fitgem::Client.new(
+			consumer_key: "2f490eb8444c48c1a3e5a3aa738c5018",
+			consumer_secret: "01c8682329934edba0f407d27d0494d8",
+			token: oauth_token,
+			secret: oauth_secret
+		)
+	end
 
-	# 	make client, call client.activity_on_date for each date that there is no daily workout, create a daily workout for each of those days up to today, find or create by today
-	# end
-
-	def self.sing
-		puts "Helloooooooo, there!"
+	def most_recent_workout
+		daily_workouts.order(date: :desc).first
 	end
 
 	def total_steps
@@ -33,10 +37,6 @@ class User < ActiveRecord::Base
 	def total_active_time
 		active_time_array = self.daily_workouts.map {|workout| workout.active_time}
 		active_time_array.inject(:+)
-	end
-
-	def client
-		Fitgem::Client.new(consumer_key: '2f490eb8444c48c1a3e5a3aa738c5018', consumer_secret: '01c8682329934edba0f407d27d0494d8', token: oauth_token, secret: oauth_secret)
 	end
 
 	def sync

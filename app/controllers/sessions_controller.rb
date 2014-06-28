@@ -18,7 +18,13 @@ class SessionsController < ApplicationController
     authorization.user.sync
 
     session[:user_id] = authorization.user_id
-    redirect_to user_challenges_path(authorization.user)
+
+    if authorization.user.email.nil?
+      session[:email_error] = "Please add an email address so you can challenge others!"
+      redirect_to edit_user_path(authorization.user)
+    else
+      redirect_to user_challenges_path(authorization.user)
+    end
   end
 
   def destroy

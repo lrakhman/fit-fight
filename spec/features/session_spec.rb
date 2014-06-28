@@ -5,7 +5,7 @@ feature 'Login In' do
   let! (:user) { User.create(email: 'pdebelak@example.com', password: '123456', fullname: 'Peter Debelak') }
 
   context 'with valid credentials' do
-    scenario 'signs me in' do
+    xscenario 'signs me in' do
       # Given I'm on the login page
       visit '/'
       # And I have filled in the form with valid credentials
@@ -21,7 +21,7 @@ feature 'Login In' do
   end
 
   context "with invalid credentials" do
-    scenario "does not sign me in" do
+    xscenario "does not sign me in" do
        # Given I'm on the login page
       visit '/'
       # And I have filled in the form with valid credentials
@@ -41,7 +41,7 @@ feature 'Login Out' do
 
   let! (:user) { User.create(email: 'pdebelak@example.com', password: '123456', fullname: 'Peter Debelak') }
 
-  scenario 'signs me out' do
+  xscenario 'signs me out' do
     visit '/'
     within('form') do
       fill_in 'email', with: 'pdebelak@example.com'
