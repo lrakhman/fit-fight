@@ -5,18 +5,12 @@
 		var user_name = "<%= @user.fullname %>"
 		var user_points = <%= @challenge.user_points(@user) %>
 		var data = [{'label': challenger_name, 'value': challenger_points}, {'label': user_name, 'value': user_points}]
-		<% user_steps = @challenge.user_workouts.map { |workout| workout.steps } %>
-		<% user_distance = @challenge.user_workouts.map { |workout| workout.distance } %>
-		<% user_active_time = @challenge.user_workouts.map { |workout| workout.active_time } %>
-		<% challenger_steps = @challenge.challenger_workouts.map { |workout| workout.steps } %>
-		<% challenger_distance = @challenge.challenger_workouts.map { |workout| workout.distance } %>
-		<% challenger_active_time = @challenge.challenger_workouts.map { |workout| workout.active_time } %>
-		var user_steps = <%= user_steps %>;
-		var user_distance = <%= user_distance %>;
-		var user_active_time = <%= user_active_time %>;
-		var challenger_steps = <%= challenger_steps %>;
-		var challenger_distance = <%= challenger_distance %>;
-		var challenger_active_time = <%= challenger_active_time %>;
+		var user_steps = <%= @challenge.user_step_array %>;
+		var user_distance = <%= @challenge.user_distance_array %>;
+		var user_active_time = <%= @challenge.user_active_time_array %>;
+		var challenger_steps = <%= @challenge.challenger_step_array %>;
+		var challenger_distance = <%= @challenge.challenger_distance_array %>;
+		var challenger_active_time = <%= @challenge.challenger_active_time_array %>;
 		pie_chart(data);
 		line_chart(user_steps, 1);
 		line_chart(user_distance, 2);
