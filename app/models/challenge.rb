@@ -13,24 +13,28 @@ class Challenge < ActiveRecord::Base
 		super.where(date: (start_date..end_date))
 	end
 
-	def user_points(this_user)
+	def user_points
 		user_points = 0
-		this_user.daily_workouts.each do |workout|
-			other_user = [user, challenger].reject { |u| u == this_user }.first
-			challenger_workout = other_user.daily_workouts.where(date: workout.date).first
-			if challenger_workout
-				if workout.steps > challenger_workout.steps
-					user_points += 1
-				end
-				if workout.distance > challenger_workout.distance
-					user_points += 1
-				end
-				if workout.active_time > challenger_workout.active_time
-					user_points += 1
-				end
+		user_workouts.each do |workout|
+			challenger_workout = challenger_workouts.find_by_date(workout.date)
+			unless challenger_workout
+				challenger_workout = challenger.daily_workouts.create(date: workout.date, steps: 0, distance: 0, active_time: 0)
+			end
+			if workout.steps > challenger_workout.steps
+				user_points += 1
+			end
+			if workout.distance > challenger_workout.distance
+				user_points += 1
+			end
+			if workout.active_time > challenger_workout.active_time
+				user_points += 1
 			end
 		end
 		user_points
+	end
+
+	def other_user(this_user)
+		[user, challenger].reject { |u| u == this_user }.first
 	end
 
 	def total_points

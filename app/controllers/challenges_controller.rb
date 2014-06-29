@@ -18,9 +18,9 @@ class ChallengesController < ApplicationController
   end
 
   def show
-    @user = User.find(session[:user_id])
     @challenge = Challenge.find(params[:id])
-    @challenger = User.find(@challenge.challenger.id)
+    @user = @challenge.user
+    @challenger = @challenge.challenger
   end
 
   def create

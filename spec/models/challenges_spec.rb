@@ -50,8 +50,7 @@ describe Challenge do
       user2.daily_workouts.create(date: '2014-06-27', steps: 0, distance: 0.0, active_time: 1)
       user1.daily_workouts.create(date: '2014-06-28', steps: 0, distance: 1.0, active_time: 1)
       user2.daily_workouts.create(date: '2014-06-28', steps: 1, distance: 0.0, active_time: 0)
-      expect(challenge.user_points(user1)).to eq 4
-      expect(challenge.user_points(user2)).to eq 2
+      expect(challenge.user_points).to eq 4
     end
   end
   describe '#total_points' do

@@ -1,9 +1,9 @@
 <script>
 	$(document).ready(function() {
 		var challenger_name = "<%= @challenger.fullname %>"
-		var challenger_points = <%= @challenge.user_points(@challenger) %>
+		var challenger_points = <%= @challenge.total_points - @challenge.user_points %>
 		var user_name = "<%= @user.fullname %>"
-		var user_points = <%= @challenge.user_points(@user) %>
+		var user_points = <%= @challenge.user_points %>
 		var data = [{'label': challenger_name, 'value': challenger_points}, {'label': user_name, 'value': user_points}]
 		var user_steps = <%= @challenge.user_step_array %>;
 		var user_distance = <%= @challenge.user_distance_array %>;
@@ -22,8 +22,8 @@
 </script>
 
 <h1> Challenge Dashboard</h1>
-<h2> Your points = <%= @challenge.user_points(@user) %>
-<h2> <%= @challenger.fullname %>'s points = <%= @challenge.user_points(@challenger) %>
+<h2> <%= @user.fullname %>'s points = <%= @challenge.user_points %>
+<h2> <%= @challenger.fullname %>'s points = <%= @challenge.total_points - @challenge.user_points %>
 <h2> <%= @user.fullname %> V. <%= @challenger.fullname %></h2>
 <div id="pi"></div>
 
@@ -36,11 +36,11 @@
 	<h3>start: <%= @challenge.start_date %> end: <%= @challenge.end_date %></h3>
 
 <h2> TOTAL STATS: </h2>
-	<p>Total steps: <%= @challenge.user_total_steps %> </p>
+	<p><%= @user.fullname %>'s total steps: <%= @challenge.user_total_steps %> </p>
 		<p><%= @challenger.fullname %>'s total steps: <%= @challenge.challenger_total_steps %> </p>
-	<br><p>Total distance: <%= @challenge.user_total_distance %></p>
+	<br><p><%= @user.fullname %>'s total distance: <%= @challenge.user_total_distance %></p>
 		<p><%= @challenger.fullname %>'s total distance: <%= @challenge.challenger_total_distance %> </p>
-	<br><p>Total active time: <%= @challenge.user_total_active_time %></p>
+	<br><p><%= @user.fullname%>'s total active time: <%= @challenge.user_total_active_time %></p>
 		<p><%= @challenger.fullname %>'s total active time: <%= @challenge.challenger_total_active_time %> </p>
 
 <h2> BY DATE: </h2>
