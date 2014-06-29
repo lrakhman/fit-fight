@@ -1,6 +1,4 @@
 
-
-
 .container_challenger {
   background-color: gray;
   color: black;
@@ -29,3 +27,6 @@ body {
   color: white;
 }
 
+.stats {
+  color: white;
+}
