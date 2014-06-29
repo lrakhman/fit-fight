@@ -59,7 +59,29 @@ body {
   background-color: black;
 }
 .container{
-  color: #FF3300;
+  color: orange;
+}
+
+#user_fullname, #user_email {
+  color: black;
+}
+
+h1 {
+  color: white;
+}
+
+.container h2{
+  font-size: 4em;
+  color: white;
+}
+
+.container h3{
+  color: white;
+  font-size: 4em;
+}
+
+.col-lg-8 col-lg-offset-2{
+  color: black;
 }
 
 .button{
@@ -68,3 +90,11 @@ body {
 #sync {
   color: black;
 }
+#stats p{
+  color: white;
+}
+
+.stats span{
+  color: orange;
+} 
+
