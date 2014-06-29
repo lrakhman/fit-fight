@@ -1,3 +1,35 @@
+
+.container_challenger {
+  background-color: gray;
+  color: black;
+  padding: 20px;
+  overflow: auto;
+  width: 100%;
+}
+
+.challenges {
+  text-decoration: none;
+  list-style-type: none;
+    text-align: center;
+}
+li.challenges2 {
+  display: inline;
+  font-size: 24px;
+  padding: 15px;
+
+}
+
+.title{
+  text-align: center;
+}
+
+body {
+  color: white;
+}
+
+.stats {
+  color: white;
+}
 /*!
  * Bootstrap v3.1.1 (http://getbootstrap.com)
  * Copyright 2011-2014 Twitter, Inc.
@@ -5,6 +37,7 @@
  */
 
 /*! normalize.css v3.0.0 | MIT License | git.io/normalize */
+
 
 
 html {
@@ -6059,4 +6092,167 @@ p {
   padding: 20px;
 }
 
+.stats {
+  color: white;
+}
+
+nav {
+  position: fixed;
+  width: 100%;
+}
+
+
+.navbar_bar{
+  background-color: black;
+  border-bottom: 2px solid gray;
+  top: 0;
+}
+
+.man{
+  width: 10px;
+  -webkit-filter: invert(100%);
+  filter: invert(100%);
+  margin-top: -15px;
+}
+
+
+.navbar {
+  text-decoration: none;
+  list-style-type: none;
+  float: right;
+   vertical-align: middle;
+}
+
+.logo_nav {
+  font-size: 36px;
+  margin: 15px;
+  vertical-align: middle;
+}
+
+a:hover{
+  color: orange;
+  text-decoration: none;
+}
+
+a {
+  padding: 5px;
+}
+
+li.nav_selection {
+float: left;
+padding-right: 60px;
+margin-right: 5px;
+font-size: 18px;
+margin-top: 10px
+}
+
+.logo_font{
+  font-family: sans-serif;
+  padding-top: 10px;
+  font-size: 36px;
+  vertical-align: middle;
+}
+
+body {
+  background-color: black;
+}
+.container{
+  color: orange;
+}
+
+#user_fullname, #user_email {
+  color: black;
+}
+
+h1 {
+  color: white;
+}
+
+.container h2{
+  font-size: 4em;
+  color: white;
+}
+
+.container h3{
+  color: white;
+  font-size: 4em;
+}
+
+.col-lg-8 col-lg-offset-2{
+  color: black;
+}
+
+.button{
+  color: black;
+}
+#sync {
+  color: black;
+}
+#stats p{
+  color: white;
+}
+
+.stats span{
+  color: orange;
+} 
+
+#challenge_partial {
+  max-width: 600px;
+  clear: both;
+  margin: 0 auto;
+  text-align: center;
+}
+#content-1 {
+  width: 33%;
+  float: left;
+}
+#content-2 {
+  width: 67%;
+  float: right;
+}
+#content-2-1 {
+  width: 50%;
+  float: left;
+}
+#content-2-2 {
+  width: 50%;
+  float: right;
+}
+.slice text {
+ font-family: Arial;
+}
+#li1, #li2, #li3, #li4, #li5, #li6 path {
+  stroke: red;
+  stroke-width: 1;
+  fill: none;
+}
+.axis {
+  shape-rendering: crispEdges;
+}
+.x.axis line {
+  stroke: lightgrey;
+}
+.x.axis .minor {
+  stroke-opacity: .5;
+}
+.x.axis path {
+  display: none;
+}
+.y.axis line, .y.axis path {
+  fill: none;
+  stroke: #000;
+}
+#left_user {
+  float: left;
+}
+#right_challenger {
+  float: right;
+}
+
+/*
+
+*= require_landing_page
+*= require_nav_bar
+*= require_general_page
+*/
 
