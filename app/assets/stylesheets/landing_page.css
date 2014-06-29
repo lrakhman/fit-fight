@@ -4695,7 +4695,7 @@ body {
     overflow: hidden;
     margin-left: 10px;
     float: left;
-    background: url(/assets/placeholder2.jpg) no-repeat right #dddddd;
+    background-image: url(/assets/placeholder2.jpg) no-repeat right #dddddd;
     border: 1px solid #ccc;
     -webkit-border-radius: 3px;
     -moz-border-radius: 3px;
