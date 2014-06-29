@@ -26,12 +26,17 @@ class ChallengesController < ApplicationController
   def create
     @user = User.find(session[:user_id])
     challenger = User.find_by_email(params[:challenger_email])
-    if challenger
-      challenge = @user.challenges.create(challenger_id: challenger.id, start_date: params[:start_date], end_date: params[:end_date])
-      redirect_to user_challenges_path(@user)
-    else
-      @errors = "There is no challenger with that email."
+    unless params[:start_date] != "" && params[:end_date] != ""
+      @errors = "You must put both a start and end date."
       render :new
+    else
+      if challenger
+        challenge = @user.challenges.create(challenger_id: challenger.id, start_date: params[:start_date], end_date: params[:end_date])
+        redirect_to user_challenges_path(@user)
+      else
+        @errors = "There is no challenger with that email."
+        render :new
+      end
     end
   end
 end
