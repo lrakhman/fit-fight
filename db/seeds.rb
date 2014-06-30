@@ -30,6 +30,6 @@ DailyWorkout.create(date: "2014-06-27", user_id: 2, steps: 3000, distance: 4, ac
 DailyWorkout.create(date: "2014-06-28", user_id: 3, steps: 3000, distance: 4, active_time: 31)
 
 Challenge.create(user_id: 4, start_date: "2014-04-08", end_date: "2014-04-09", challenger_id: 2)
-Challenge.create(user_id: 2, start_date: "2014-04-08", end_date: "2014-04-09", challenger_id: 3)
+Challenge.create(user_id: 1, start_date: "2014-04-08", end_date: "2014-04-09", challenger_id: 3)
 Challenge.create(user_id: 4, start_date: "2014-04-10", end_date: "2014-04-11", challenger_id: 3)
 Challenge.create(user_id: 4, start_date: "2014-06-25", end_date: "2014-06-30", challenger_id: 3)
